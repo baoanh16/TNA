@@ -34,7 +34,7 @@ const clean_images = () => del('./dist/img')
 ////////////////////////////////////////////
 // Copy images from source to dist
 export function copy_images() {
-	return gulp.src('./src/img/**.{gif,png,jpg,jpeg,svg}')
+	return gulp.src('./src/img/**/**.{gif,png,jpg,jpeg,svg}')
 		.pipe(gulp.dest('./dist/img'))
 }
 // END HERE

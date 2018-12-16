@@ -1,0 +1,179 @@
+.cart
+	position: relative
+	.cart-panel
+		z-index: 110
+		position: absolute
+		top: calc(100% + .9rem)
+		background: white
+		border-radius: 5px
+		box-shadow: 0 0 .25rem color-get($mau, main)
+		transition: all .4s ease-in-out
+		transform: scale(0)
+		width: 300px
+		left: 0
+		transform-origin: 7.5% 0%
+		&.active
+			transform: scale(1)
+		&:before
+			content: ''
+			border-left: 8px solid transparent
+			border-right: 8px solid transparent
+			border-bottom: 8px solid color-get($mau, extra)
+			position: absolute
+			bottom: 100%
+			left: .8rem
+		+media-breakpoint-up(lg)
+			top: calc(100% + 1rem)
+			width: 320px
+			right: -2rem
+			left: initial
+			transform-origin: 82.5% 0%
+			&:before
+				border-bottom: 8px solid darken(color-get($mau,main),5%)
+				left: initial
+				right: 3rem
+		.cart-header
+			+mainGrad
+			color: white
+			display: flex
+			align-items: center
+			padding: 0 0 0 .75rem
+			height: 35px
+			font-size: 1.2rem
+			+media-breakpoint-up(md)
+				height: 2.35rem
+				font-size: r(15px)
+			.fas
+				margin-left: auto
+				color: white
+				cursor: pointer
+				width: 2.25rem
+				height: 2.25rem
+				display: flex
+				justify-content: center
+				align-items: center
+			a
+				color: white
+				margin-left: .25rem
+				text-decoration: underline
+		.cart-body
+			padding: 0 .75rem
+			overflow-y: auto
+			max-height: 295px
+			+media-breakpoint-up(md)
+				max-height: 317px
+			+media-breakpoint-up(xl)
+				max-height: 347px
+			&::-webkit-scrollbar
+				background: color-rgba(color-get($mau, main),.15 )
+				width: r(8px)
+				border-radius: 2.5px
+			&::-webkit-scrollbar-thumb
+				width: r(8px)
+				border-radius: 2.5px
+				background: darken(color-get($mau, main), 5%)
+			&::-webkit-scrollbar-track
+				box-shadow: 0 0 .15rem color-get($mau,main) inset
+			.cart-list-item
+				padding-left: 0
+				margin-bottom: 0
+				list-style-type: none
+				.item
+					display: flex
+					align-items: flex-start
+					border-bottom: 1px dashed rgba(0,0,0,.1)
+					padding: .65rem 0
+					.product-img
+						width: 60px
+						flex: 0 0 60px
+						img
+							width: 100%
+					.product-info
+						flex-basis: 0
+						flex-grow: 1
+						max-width: 100%
+						padding-right: .35rem
+						h6
+							color: color-get($mau,main)
+							margin-bottom: 0
+							font-weight: 500
+							margin-bottom: .25rem
+							+line(2)
+							min-height: 36px
+							font-size: 1rem
+							+media-breakpoint-up(lg)
+								font-size: r(14px)
+							+media-breakpoint-up(xl)
+								min-height: 40px
+						p
+							margin-bottom: 0
+							font-size: r(14px)
+							b
+								font-weight: 600
+					.remove-product
+						width: 20px
+						display: flex
+						justify-content: center
+						align-items: center
+						align-self: center
+						color: color-get($mau, main)
+						cursor: pointer
+		.cart-total
+			padding: 0 .75rem
+			background: color-rgba(color-get($mau, main),.1 )
+			height: 35px
+			display: flex
+			justify-content: flex-start
+			align-items: center
+			p
+				margin-bottom: 0
+				font-size: r(15px)
+				.total-price
+					color: color-get($mau,main)
+					font-size: r(16px)
+		.cart-footer
+			+mainGrad
+			height: 2.35rem
+			display: flex
+			align-items: center
+			padding: 0 .75rem
+			height: 35px
+			+media-breakpoint-up(md)
+				height: 2.35rem
+			a
+				color: white
+				display: block
+				width: 100%
+				border: 0
+				font-size: 1.2rem
+				+media-breakpoint-up(md)
+					font-size: r(15px)
+				.fas
+					margin-right: .4rem
+	.cart-toggle
+		.product-count
+			width: 16px
+			height: 16px
+			position: absolute
+			border-radius: 50%
+			background: color-get($mau, main)
+			color: white
+			font-size: 10px
+			display: flex
+			justify-content: center
+			align-items: center
+			top: 0
+			right: 5px
+	+media-breakpoint-down(md)
+		position: relative
+		flex: 0 0 35px
+		max-width: 35px
+		.cart-toggle
+			padding-left: .4rem
+			padding-bottom: .7rem
+			height: 100%
+			display: flex
+			justify-content: flex-start
+			align-items: flex-end
+			background: white
+			border-radius: 5px

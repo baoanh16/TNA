@@ -16,5 +16,8 @@ $(window).on('scroll', function () {
 
 // Documen on ready
 $(document).ready(function () {
-
+	header.toggleCart();
+	header.closeCart();
+	header.moveSearch();
+	header.moveCart();
 })

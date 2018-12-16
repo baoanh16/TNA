@@ -1,0 +1,212 @@
+.cc-header
+	background: white
+	position: relative
+	&:after
+		position: absolute
+		width: 100%
+		height: 5px
+		top: 100%
+		left: 0
+		content: ''
+		+mainGrad
+		z-index: 100
+	.desktop
+		+media-breakpoint-down(sm)
+			display: none
+	.mobile
+		+media-breakpoint-up(md)
+			display: none
+	.menu-wrap
+		.main-navbar
+			.toolbar
+				.language
+					margin-left: auto
+					display: flex
+					border: 1px solid #d7d7d7
+					border-radius: 4px
+					padding: 6px
+					align-items: center
+					cursor: pointer
+					position: relative
+					box-sizing: border-box
+					.current-lang
+						margin-right: 7px
+						.img
+							display: flex
+							align-items: cener
+					ul
+						list-style-type: none
+						display: none
+						position: absolute
+						padding-left: 0
+						width: 100%
+						top: 100%
+						left: 0
+						background: white
+						border: 1px solid #d7d7d7
+						background: white
+						box-sizing: border-box
+						z-index: 11
+						li
+							display: flex
+							align-items: center
+							justify-content: center
+					span
+						font-size: r(12px)
+	+media-breakpoint-up(lg)
+		padding: 5px 0
+		.menu-wrap
+			.logo-wrap
+				display: flex
+				flex-direction: row
+				.logo
+					position: relative
+					&:after
+						content: ''
+						position: absolute
+						top: calc(100% + 4px)
+						left: 2%
+						width: 100%
+						height: 18px
+						background: url('../img/logo_bottom.png')
+						background-repeat: no-repeat
+						background-size: 100%
+						background-position: top
+						z-index: 101
+					img
+						max-height: 70px
+				.logo-text
+					display: flex
+					flex-direction: column
+					justify-content: center
+					color: darken(white,80%)
+					line-height: 1.25
+					h2
+						font-size: r(20px)
+						font-weight: 700
+						margin-bottom: 0
+						+media-breakpoint-up(xl)
+							font-size: r(24px)
+					span
+						font-weight: 500
+						font-size: r(12px)
+						+media-breakpoint-up(xl)
+							font-size: r(15px)
+			.main-navbar
+				display: flex
+				flex-direction: column
+				align-items: flex-end
+				justify-content: center
+				height: 100%
+				.toolbar
+					display: flex
+					margin-bottom: calc(.75rem)
+					.cart
+						.cart-toggle
+							+toolToggle
+					.user
+						.user-toggle
+							+toolToggle
+					.search
+						.search-toggle
+							+toolToggle
+							width: initial
+							padding-left: 1rem
+							border-right: 0
+						.search-panel
+							display: none
+					.menu-toggle
+						display: none
+				.navigation
+					width: 100%
+					padding-left: 2rem
+					+media-breakpoint-up(xl)
+						padding-left: 0
+					.navigation-list
+						list-style-type: none
+						padding-left: 0
+						margin-bottom: 0
+						display: flex
+						justify-content: space-between
+						+media-breakpoint-up(xl)
+							justify-content: flex-end
+						.nav-item
+							+media-breakpoint-up(xl)
+								padding-left: 1.8rem
+							.nav-link
+								display: block
+								font-size: r(14px)
+								font-weight: 600
+								color: darken(white,80%)
+								text-transform: uppercase
+								+media-breakpoint-up(xl)
+									font-size: r(15px)
+							&.active, &:hover
+								.nav-link
+									color: color-get($mau,main)
+	+media-breakpoint-down(md)
+		.menu-wrap
+			padding: 8px 0
+		.mobile-container
+			display: flex
+			padding: 1rem 15px
+			background: color-rgba(color-get($mau, main),.3 )
+			.search
+				flex-basis: 0
+				flex-grow: 1
+				max-width: 100%
+				.search-toggle
+					display: none
+				.search-panel
+					padding-left: 15px
+					.searchbox
+						position: relative
+						input
+							display: block
+							width: 100%
+							padding: 0.375rem 0.75rem
+							font-size: 1rem
+							height: 35px
+							border-radius: 5px
+							+tr(.2)
+							outline: 0
+							border: 1px solid color-rgba(black,.2)
+							&:focus
+								border: 1px solid color-get($mau, main)
+								box-shadow: 0 0 5px color-get($mau, main)
+						button
+							position: absolute
+							right: 0
+							top: 0
+							height: 100%
+							font-size: 0
+							background: none
+							border: 0
+							&:before
+								font-size: r(20px)
+								+fontawesome('\f002',$faf)
+		.menu-wrap
+			.logo-wrap
+				display: flex
+				.logo
+					img
+						max-height: 40px
+				.logo-text
+					+media-breakpoint-down(sm)
+						display: none
+			.main-navbar
+				height: 100%
+				.toolbar
+					display: flex
+					height: 100%
+					align-items: center
+					.menu-toggle
+						width: 30px
+						height: 30px
+						font-size: r(26px)
+						display: flex
+						justify-content: flex-end
+						align-items: center
+				.navigation
+					position: fixed
+					display: none
