@@ -1,0 +1,55 @@
+.service-list
+	padding: r(30px) 0
+	+media-breakpoint-up(lg)
+		padding: r(60px) 0
+	img
+		width: 100%
+	.item
+		.img-box
+			background: black
+			position: relative
+			.title
+				position: absolute
+				top: 0
+				left: 0
+				width: 100%
+				height: 100%
+				+flex-center
+				flex-direction: column
+				font-weight: 700
+				color: white
+				text-align: center
+				padding: 0 1rem
+				font-size: 1.25rem
+				+media-breakpoint-up(sm)
+					font-size: 1.5rem
+				+media-breakpoint-up(lg)
+					font-size: 1.75rem
+				+media-breakpoint-up(xl)
+					font-size: 2rem
+				p
+					margin-bottom: 0
+			img
+				opacity: .5
+		figcaption
+			padding: 1.25rem r(14px)
+			+media-breakpoint-up(lg)
+				padding: 2rem r(24px)
+			ul
+				padding-left: 0
+				margin-bottom: 0
+				list-style-type: none
+			li,p
+				font-size: r(16px)
+				font-weight: 400
+				color: lighten(black,20%)
+				margin-bottom: .5rem
+				display: flex
+				&:before
+					+fontawesome('\f0a9', $faf)
+					margin-right: 1rem
+					font-size: r(13px)
+					line-height: 24px
+					color: color-get($mau, main)
+					+media-breakpoint-up(lg)
+						margin-right: r(24px)

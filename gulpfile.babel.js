@@ -27,7 +27,7 @@ gulp.task('serve', function () {
 		global.emittyChangedFile = filepath;
 	});
 	gulp.watch(['./scripts/main.ts', './views/lib/**/*.ts'], gulp.series('script_dev'))
-	gulp.watch('./img', gulp.series('clean_img', 'copy_img'))
+	gulp.watch('./img/**/*', gulp.series('clean_img', 'copy_img'))
 	gulp.watch('./plugins.json', gulp.parallel('concat_css', 'concat_js'))
 	gulp.watch('./_plugins/*.js', gulp.series('concat_js'))
 	gulp.watch('./_plugins/*.css', gulp.series('concat_css'))

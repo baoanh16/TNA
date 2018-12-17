@@ -1,5 +1,8 @@
 .cc-header
-	position: relative
+	position: sticky
+	top: 0
+	background: white
+	z-index: 10
 	&:after
 		content: ''
 		height: 5px
@@ -8,6 +11,41 @@
 		top: 100%
 		left: 0
 		+mainGrad
+	.language
+		width: 50px
+		height: 24px
+		border: 1px solid darken(white,40%)
+		border-radius: 3px
+		position: relative
+		display: flex
+		justify-content: center
+		align-items: center
+		margin-left: 15px
+		margin-top: r(32px)
+		background: white
+		+media-breakpoint-up(lg)
+			margin-left: 0
+			margin-top: 0
+			background: none
+		span
+			margin-left: .5rem
+			color: darken(white,40%)
+		ul
+			position: absolute
+			top: calc(100% + 1px)
+			left: 0
+			display: none
+			list-style-type: none
+			padding-left: 0
+			margin-bottom: 0
+			width: 100%
+			border: 1px solid rgba(0,0,0,.1)
+			z-index: 10
+			background: white
+			li
+				display: flex
+				justify-content: center
+				align-items: center
 	.desktop-container
 		.user
 		.menu-wrap
@@ -215,6 +253,38 @@
 				.menu-toggle
 					display: none
 				.logo-wrap
+					.logo
+						display: inline
+						position: relative
+						&:after
+							content: ''
+							width: 100%
+							height: 18px
+							position: absolute
+							top: calc(100% + 25px)
+							left: 10px
+							background-image: url('../img/logo_bottom.png')
+							background-repeat: no-repeat
+							background-size: 100%
+							z-index: 15
+					.logo-text
+						display: inline-flex
+						flex-direction: column
+						color: lighten(black, 20%)
+						transform: translateY(-8px) translateX(-15px)
+						+media-breakpoint-up(xl)
+							transform: translateY(-10px) translateX(-15px)
+						h2
+							font-weight: 700
+							font-size: r(18px)
+							margin-bottom: 0
+							+media-breakpoint-up(xl)
+								font-size: r(24px)
+						span
+							font-weight: 500
+							font-size: r(13px)
+							+media-breakpoint-up(xl)
+								font-size: r(15px)
 				.main-navbar
 					display: flex
 					flex-direction: column
@@ -273,34 +343,6 @@
 								position: relative
 								font-family: 'Montserrat', sans-serif
 								line-height: 1.5
-						.language
-							width: 50px
-							height: 24px
-							border: 1px solid darken(white,40%)
-							border-radius: 3px
-							position: relative
-							display: flex
-							justify-content: center
-							align-items: center
-							span
-								margin-left: .5rem
-								color: darken(white,40%)
-							ul
-								position: absolute
-								top: calc(100% + 1px)
-								left: 0
-								display: none
-								list-style-type: none
-								padding-left: 0
-								margin-bottom: 0
-								width: 100%
-								border: 1px solid rgba(0,0,0,.1)
-								z-index: 10
-								background: white
-								li
-									display: flex
-									justify-content: center
-									align-items: center
 
 					.nav
 						all: initial
@@ -316,10 +358,13 @@
 									+tr(.4)
 									color: lighten(black,20%)
 									text-transform: uppercase
-									font-size: r(15px)
 									padding: 8px 0
-									margin-left: 2rem
 									font-weight: 600
+									font-size: r(14px)
+									margin-left: 1.3rem
+									+media-breakpoint-up(xl)
+										font-size: r(15px)
+										margin-left: 2rem
 								&.active, &:hover
 									.nav-link
 										color: color-get($mau, main)

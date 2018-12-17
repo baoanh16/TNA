@@ -24,3 +24,8 @@ $(document).ready(function () {
 	// Trang nào đây?? :V
 	menunews.toggleNews();
 });
+
+$(window).on('resize', function () {
+	$('.backdrop').fadeOut()
+	$('.cc-header .nav').removeClass('active')
+})
