@@ -1,11 +1,13 @@
 extends _layout/_layout.pug
 
 block var
-	- title = 'Home'
-	- bodyClass = 'index'
+	- title = 'News'
+	- bodyClass = 'news'
 
 block header
 	//- include ../lib/header/index.pug
 block main
+	include ../lib/breadcrumb/b-1/index.pug
+	include ../lib/nav/n-1/index.pug
 block footer
 	include ../lib/footer/index.pug
