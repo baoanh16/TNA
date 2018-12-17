@@ -1,0 +1,18 @@
+html, body
+	line-height: 1.5
+	font-weight: normal
+	font-family: 'Montserrat', sans-serif
+	font-size: 12px
+	+media-breakpoint-up(md)
+		font-size: 14px
+	+media-breakpoint-up(xl)
+		font-size: 16px
+
+
++media-breakpoint-down(sm)
+	.container
+		max-width: 100%
+
+a
+	&:hover
+		text-decoration: none

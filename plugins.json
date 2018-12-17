@@ -1,23 +1,12 @@
 {
-	"styles": [
-		"node_modules/font-awesome/css/font-awesome.min.css",
-		"bower_components/font-awesome/css/all.min.css",
-		"bower_components/linearicons/dist/web-font/style.css",
-		"bower_components/mdi/css/materialdesignicons.min.css",
-		"bower_components/swiper/dist/css/swiper.min.css",
-		"bower_components/remodal/dist/remodal.css",
-		"bower_components/remodal/dist/remodal-default-theme.css",
-		"bower_components/lightgallery/dist/css/lightgallery.min.css",
-		"bower_components/lightgallery/dist/css/lg-transitions.min.css"
-	],
 	"scripts": [
 		"bower_components/jquery/dist/jquery.min.js",
 		"bower_components/bootstrap/dist/js/bootstrap.bundle.min.js",
-		"bower_components/swiper/dist/js/swiper.min.js",
-		"bower_components/remodal/dist/remodal.min.js",
-		"bower_components/lightgallery/dist/js/lightgallery-all.min.js",
-		"plugins/bgimg.js",
-		"plugins/mapping.js",
-		"plugins/mapping-listener.js"
+		"_plugins/bgimg.js",
+		"_plugins/mapping-listener.js",
+		"_plugins/mapping.js"
+	],
+	"styles": [
+		"bower_components/bootstrap/dist/css/bootstrap.min.css"
 	]
 }

@@ -17,10 +17,10 @@
 	@return ($size/16px)*1rem
 
 =line($line)
+	overflow: hidden
 	display: -webkit-box
 	text-overflow: ellipsis
 	-webkit-line-clamp: $line
-	overflow: hidden
 	-webkit-box-orient: vertical
 
 =material($content)
@@ -62,21 +62,21 @@ $fab: 'Font Awesome 5 Brands'
 =tr($time)
 	transition: all $time+s ease-in-out
 
-=toolToggle
-	border-right: 1px solid darken(white, 8%)
-	width: 50px
-	display: flex
-	justify-content: center
-	align-items: center
-	position: relative
-	height: 100%
-	cursor: pointer
-	font-size: r(14px)
-	.fas
-		color: darken(white,60%)
-	&:hover
-		.fas
-			color: color-get($mau, main)
+// =toolToggle
+// 	border-right: 1px solid darken(white, 8%)
+// 	width: 50px
+// 	display: flex
+// 	justify-content: center
+// 	align-items: center
+// 	position: relative
+// 	height: 100%
+// 	cursor: pointer
+// 	font-size: r(14px)
+// 	.fas
+// 		color: darken(white,60%)
+// 	&:hover
+// 		.fas
+// 			color: color-get($mau, main)
 
 =mainGrad
 	background: linear-gradient(90deg, #1189c3 0%, #2673b5 25%, #044181 55%, #1d5895 100%)
