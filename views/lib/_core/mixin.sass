@@ -62,21 +62,24 @@ $fab: 'Font Awesome 5 Brands'
 =tr($time)
 	transition: all $time+s ease-in-out
 
-// =toolToggle
-// 	border-right: 1px solid darken(white, 8%)
-// 	width: 50px
-// 	display: flex
-// 	justify-content: center
-// 	align-items: center
-// 	position: relative
-// 	height: 100%
-// 	cursor: pointer
-// 	font-size: r(14px)
-// 	.fas
-// 		color: darken(white,60%)
-// 	&:hover
-// 		.fas
-// 			color: color-get($mau, main)
+=toolToggle
+	border-right: 1px solid darken(white, 8%)
+	width: 50px
+	display: flex
+	justify-content: center
+	align-items: center
+	position: relative
+	height: 100%
+	cursor: pointer
+	font-size: r(14px)
+	.fas
+		color: darken(white,60%)
+	&:hover
+		.fas
+			color: color-get($mau, main)
 
 =mainGrad
 	background: linear-gradient(90deg, #1189c3 0%, #2673b5 25%, #044181 55%, #1d5895 100%)
+
+=mainGradRev
+	background: linear-gradient(135deg, #1d5895 0%, #044181 55%, #2673b5 85%, #1189c3 100%)
