@@ -1,5 +1,3 @@
-//======================================//
-// Import plugins
 import fs from 'graceful-fs';
 import gulp from 'gulp'
 import concat from 'gulp-concat'
@@ -8,10 +6,7 @@ import uglifyes from 'gulp-uglify-es'
 
 
 
-//======================================//
-// Define Task
-//// Task nối file css
-function concat_css(cb) {
+gulp.task('concat_css', () => {
 	let plugins = JSON.parse(fs.readFileSync('./plugins.json'));
 	if (plugins.styles != []) {
 		return gulp.src(plugins.styles)
@@ -21,9 +16,8 @@ function concat_css(cb) {
 	} else {
 		cb()
 	}
-}
-//// Task nối file js
-export function concat_js(cb) {
+})
+gulp.task('concat_js', () => {
 	let plugins = JSON.parse(fs.readFileSync('./plugins.json'));
 	if (plugins.scripts != []) {
 		return gulp.src(plugins.scripts)
@@ -33,8 +27,4 @@ export function concat_js(cb) {
 	} else {
 		cb()
 	}
-}
-
-//======================================//
-gulp.task(concat_css)
-gulp.task(concat_js)
+})

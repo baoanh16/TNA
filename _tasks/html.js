@@ -1,14 +1,10 @@
-//======================================//
-// Import plugins
 import gulp from 'gulp';
 import gulpif from 'gulp-if';
 import pug from 'gulp-pug';
 
 
 
-//======================================//
-// Define Task
-function html() {
+gulp.task('html', () => {
 	return new Promise((resolve, reject) => {
 		let emitty = require('emitty').setup('./views', 'pug');
 		emitty.scan(global.emittyChangedFile)
@@ -21,7 +17,4 @@ function html() {
 					.on('error', reject);
 			})
 	})
-}
-//======================================//
-
-gulp.task(html);
+});
