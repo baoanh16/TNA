@@ -1,0 +1,70 @@
+.canhcam-breadcrumb-2
+	.breadcrumb-list
+		.swiper-slide
+			min-height: r(200px)
+			img
+				width: 100%
+				min-height: 200px
+				object-fit: cover
+	.main-breadcrumb
+		display: none
+	+media-breakpoint-up(sm)
+		.banners-list
+			.swiper-slide
+				min-height: r(280px)
+	+media-breakpoint-up(md)
+		position: relative
+		.banners-list
+			.swiper-slide
+				min-height: r(480px)
+		.main-breadcrumb
+			display: block
+			position: absolute
+			bottom: 0
+			left: 0
+			width: 100%
+			background: rgba(0,0,0,.5)
+			z-index: 1
+			.breadcrumb
+				display: flex
+				padding-left: 0
+				margin-bottom: 0
+				list-style-type: none
+				background: none
+				li
+					a
+						font-size: 1rem
+						color: #ffffff
+						font-weight: 400
+						text-decoration: none
+						display: inline-block
+						padding: .5rem 0
+					+ li
+						&:before
+							content: '\e876'
+							font-family: 'Linearicons-Free'
+							color: #ffffff
+							display: inline-block
+							font-size: r(11px)
+							padding: 0 .3rem
+					// &:first-child
+					// 	a
+					// 		+fz(0)
+					// 		&:before
+					// 			content: '\f2dc'
+					// 			font-family: 'Material Design Icons'
+					// 			+fz(rem(18px))
+					// 			+lh(rem(18px))
+					// 			color: color-get($mau,trang)
+					// 			display: inline-block
+	+media-breakpoint-up(lg)
+		.banners-list
+			.item
+				min-height: r(550px)
+		.main-breadcrumb
+			.breadcrumb
+				li
+					a
+						transition: all .3s ease-in-out
+						&:hover
+							color: color-get($mau,main)
