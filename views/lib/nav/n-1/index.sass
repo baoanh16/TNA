@@ -1,0 +1,85 @@
+.canhcam-nav-1
+	padding-top: r(30px)
+	padding-bottom: 1.5rem
+	.nav__toogle
+		display: none
+		padding: 1rem
+		background: color-get($mau,main)
+		color: #ffffff
+		font-size: 1.3rem
+		position: relative
+		&:after
+			content: '\e874'
+			font-family: 'Linearicons-Free'
+			color: #ffffff
+			position: absolute
+			top: 0
+			right: 1rem
+			line-height: 55px
+	nav
+		background: #ffffff
+		ul
+			padding-left: 1rem
+			margin-bottom: 0
+			list-style-type: none
+			display: flex
+			// justify-content: center
+			// align-items: center
+			flex-direction: column
+			li
+				a
+					color: #666666
+					font-weight: 500
+					font-size: r(15px)
+					display: block
+					&:active , &:focus , &.active
+						color: color-get($mau,main)
+	@media screen and (max-width: 420px)
+		.nav__toogle
+			display: block
+		nav
+			display: none
+			ul
+				li
+					a
+						padding-bottom: 1rem
+					&:first-child
+						a
+							padding-top: 1.2rem
+					&:last-child
+						a
+							padding-bottom: 0
+	@media screen and (min-width: 420px)
+		h1
+			line-height: r(30px)
+			margin-bottom: 1rem
+		nav
+			ul
+				+flex-center()
+				flex-direction: row
+				padding-left: 0
+				li
+					margin-right: r(10px)
+					a
+						padding: .5rem 2.5rem
+						box-shadow: inset 0 0 0 1px #e1e1e1
+						width: r(180px)
+						text-align: center
+						&.active
+							color: #ffffff
+							background: color-get($mau,extra-3)
+							box-shadow: none
+					&:last-child
+						margin-right: 0
+	@media screen and (min-width: 992px)
+		padding-top: r(60px)
+		padding-bottom: r(30px)
+		nav
+			ul
+				li
+					a
+						transition: all .3s ease-in-out
+						&:hover
+							color: #ffffff
+							background: color-get($mau,extra-3)
+							box-shadow: none

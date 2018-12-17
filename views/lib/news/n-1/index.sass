@@ -1,0 +1,104 @@
+.canhcam-new-1
+	padding-bottom: r(30px)
+	img
+		width: 100%
+	.new-list
+		figure
+			margin-bottom: 0
+			figcaption
+				padding-top: 1rem
+				time
+					color: #999999
+					font-size: 1rem
+					line-height: 1rem
+					font-weight: 400
+					display: block
+					margin-bottom: r(13px)
+				h2
+					margin-bottom: 0
+					a
+						text-decoration: none
+						color: color-get($mau,extra-2)
+						margin-bottom: 0
+						display: block
+	.other-list
+		padding-top: r(30px)
+		.item
+			figure
+				margin-bottom: r(20px)
+				figcaption
+					h2
+						a
+							font-size: r(15px)
+							font-weight: 500
+							+line(2)
+							max-height: 2.5rem
+			&:last-child
+				figure
+					margin-bottom: 0
+			@media screen and (min-width: 768px)
+				&:nth-last-child(-n+2)
+					figure
+						margin-bottom: 0
+	.top-news
+		margin-bottom: r(30px)
+		figure
+			figcaption
+				h2
+					a
+						font-weight: 700
+						font-size: r(18px)
+						margin-bottom: r(15px)
+						+line(2)
+						max-height: 3rem
+				p
+					color: #333333
+					margin-bottom: 0
+					font-weight: 400
+					font-size: r(15px)
+					text-align: justify
+					+line(3)
+					max-height: 5rem
+	.part-news
+		figure
+			margin-bottom: r(20px)
+			background: #f4f4f4
+			&:last-child
+				margin-bottom: 0
+			figcaption
+				padding: 1rem
+				h2
+					a
+						font-weight: 500
+						font-size: r(15px)
+						+line(3)
+						max-height: 4rem
+	@media screen and (min-width: 550px)
+		.part-news
+			figure
+				display: flex
+				align-items: center
+				.boxzoom
+					flex: 0 0 50%
+					img
+						object-fit: cover
+				figcaption
+					padding: r(20px)
+					flex: 0 0 50%
+	@media screen and (min-width: 992px)
+		padding-bottom: 2.5rem
+		.new-list
+			.other-list
+				padding-top: r(30px)
+				.item
+					figure
+						margin-bottom: 0
+			figure
+				.boxzoom
+					overflow: hidden
+					img
+						transition: all .3s ease-in-out
+				&:hover
+					.boxzoom
+						img
+							transform: scale(1.2)

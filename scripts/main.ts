@@ -1,9 +1,12 @@
 import { Header } from '../views/lib/header/index';
+import { MenuNews } from '../views/lib/nav/n-1/index';
 
 
 let header = new Header();
+let menunews = new MenuNews();
 
 $(document).ready(function () {
+	// Header
 	header.moveLanguage();
 	header.moveCart();
 	header.moveUser();
@@ -18,4 +21,6 @@ $(document).ready(function () {
 	breakpoint.addListener(header.addBackdrop);
 	header.closeMainNav();
 	header.toggleLang();
+	// Trang nào đây?? :V
+	menunews.toggleNews();
 });
