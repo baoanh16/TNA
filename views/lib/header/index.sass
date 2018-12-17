@@ -233,27 +233,49 @@
 							.search-toggle
 								display: block
 								position: initial
+								span
+									color: darken(white,40%)
 							.search-panel
-								display: none
+								position: absolute
+								left: initial
+								right: 0
+								top: 74px
+								display: flex
+								height: initial
+								padding: 10px
+								background: color-rgba(color-get($mau, main), .2)
+								transform: translateY(10px)
+								opacity: 0
+								visibility: hidden
+								&.active
+									transform: translateY(0)
+									opacity: 1
+									visibility: visible
+									
+								button
+									top: 0
 						.user
 							+borderHeader
 							padding: 0 10px
 							.user-toggle
+								span
+									color: darken(white,40%)
 							.user-panel
 								display: none
 						.cart
 							padding: 0 14px 0 10px
 							.cart-panel
 							.cart-toggle
+								span.fas
+									width: 20px
+									color: darken(white,40%)
 								all: initial
 								position: relative
 								font-family: 'Montserrat', sans-serif
 								line-height: 1.5
-								span.fas
-									width: 20px
 						.language
 							width: 50px
-							height: 21px
+							height: 24px
 							border: 1px solid darken(white,40%)
 							border-radius: 3px
 							position: relative
@@ -262,6 +284,7 @@
 							align-items: center
 							span
 								margin-left: .5rem
+								color: darken(white,40%)
 							ul
 								position: absolute
 								top: calc(100% + 1px)
