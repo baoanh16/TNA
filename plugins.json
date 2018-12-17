@@ -8,6 +8,9 @@
 		"_plugins/mapping.js"
 	],
 	"styles": [
+		"bower_components/font-awesome/css/all.min.css",
+		"bower_components/linearicons/dist/web-font/style.css",
+		"bower_components/mdi/css/materialdesignicons.min.css",
 		"bower_components/swiper/dist/css/swiper.min.css"
 	]
 }

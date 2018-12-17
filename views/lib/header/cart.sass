@@ -1,5 +1,6 @@
 .cart
-	position: relative
+	+media-breakpoint-up(sm)
+		position: relative
 	.cart-panel
 		z-index: 110
 		position: absolute
@@ -10,18 +11,18 @@
 		transition: all .4s ease-in-out
 		transform: scale(0)
 		width: 300px
-		left: 0
-		transform-origin: 7.5% 0%
+		right: 0
+		transform-origin: 82.5% 0%
 		&.active
 			transform: scale(1)
 		&:before
 			content: ''
 			border-left: 8px solid transparent
 			border-right: 8px solid transparent
-			border-bottom: 8px solid color-get($mau, extra)
+			border-bottom: 8px solid #14508e
 			position: absolute
 			bottom: 100%
-			left: .8rem
+			right: 2.8rem
 		+media-breakpoint-up(lg)
 			top: calc(100% + 1rem)
 			width: 320px
@@ -39,7 +40,9 @@
 			align-items: center
 			padding: 0 0 0 .75rem
 			height: 35px
-			font-size: 1.2rem
+			font-size: 1rem
+			border-top-left-radius: 5px
+			border-top-right-radius: 5px
 			+media-breakpoint-up(md)
 				height: 2.35rem
 				font-size: r(15px)
@@ -99,7 +102,7 @@
 							font-weight: 500
 							margin-bottom: .25rem
 							+line(2)
-							min-height: 36px
+							min-height: 1px
 							font-size: 1rem
 							+media-breakpoint-up(lg)
 								font-size: r(14px)
@@ -138,6 +141,8 @@
 			align-items: center
 			padding: 0 .75rem
 			height: 35px
+			border-bottom-left-radius: 5px
+			border-bottom-right-radius: 5px
 			+media-breakpoint-up(md)
 				height: 2.35rem
 			a
@@ -145,35 +150,20 @@
 				display: block
 				width: 100%
 				border: 0
-				font-size: 1.2rem
+				font-size: 1.1rem
 				+media-breakpoint-up(md)
 					font-size: r(15px)
 				.fas
 					margin-right: .4rem
-	.cart-toggle
-		.product-count
-			width: 16px
-			height: 16px
-			position: absolute
-			border-radius: 50%
-			background: color-get($mau, main)
-			color: white
-			font-size: 10px
-			display: flex
-			justify-content: center
-			align-items: center
-			top: 0
-			right: 5px
+
+.backdrop
 	+media-breakpoint-down(md)
-		position: relative
-		flex: 0 0 35px
-		max-width: 35px
-		.cart-toggle
-			padding-left: .4rem
-			padding-bottom: .7rem
-			height: 100%
-			display: flex
-			justify-content: flex-start
-			align-items: flex-end
-			background: white
-			border-radius: 5px
+		position: fixed
+		width: 100%
+		height: calc(100vh - 65px)
+		top: 65px
+		left: 0
+		background: color-rgba(black, .85)
+		display: none
+		z-index: 19
+		cursor: pointer

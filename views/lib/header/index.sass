@@ -1,29 +1,119 @@
 .cc-header
+	position: relative
+	&:after
+		content: ''
+		height: 5px
+		width: 100%
+		position: absolute
+		top: 100%
+		left: 0
+		+mainGrad
 	.desktop-container
 		.user
 		.menu-wrap
 			position: relative
+			.cart
+				.cart-toggle
+					position: absolute
+					top: 19.5px
+					right: 40px
+					width: 20px
+					span
+						line-height: 20px
+						width: 30px
+						font-size: 18px
+						&.product-count
+							position: absolute
+							top: -8px
+							width: 16px
+							height: 16px
+							background: color-get($mau, main)
+							border-radius: 50%
+							color: white
+							display: flex
+							justify-content: center
+							line-height: 16px
+							font-size: 12px
+							right: -9px
 			.search
 				flex-basis: 0
 				flex-grow: 1
 				max-width: 100%
 				flex: 0
+				+media-breakpoint-up(sm)
+					margin-left: auto
+					margin-right: 75px
 				.search-toggle
-					// display: none
+					position: absolute
+					top: 15px
+					right: 80px
+					font-size: 18px
+					line-height: 30px
+					+media-breakpoint-up(sm)
+						display: none
 				.search-panel
-					position: relative
-					input
-						height: 30px
-					button
+					position: fixed
+					top: 0
+					left: 0
+					width: 100%
+					height: 60px
+					background: white
+					z-index: 10
+					+tr(.4)
+					+media-breakpoint-up(sm)
+						max-width: 360px
+						position: initial
+						width: 360px
+					+media-breakpoint-down(xs)
+						transform: translateX(-100%)
+						&.active
+							transform: translateX(0)
+					.search-turn-off
 						position: absolute
 						top: 0
 						right: 0
-						height: 30px
-						width: 30px
-						font-size: 0
-						&:before
-							+fontawesome('\f002', $faf)
-							font-size: r(16px)
+						width: 10%
+						height: 100%
+						+mainGradRev
+						display: flex
+						justify-content: center
+						align-items: center
+						color: white
+						font-size: r(18px)
+						+media-breakpoint-up(sm)
+							display: none
+					.searchbox
+						width: 100%
+						height: 100%
+						display: flex
+						justify-content: center
+						align-items: center
+						+media-breakpoint-up(sm)
+							position: relative
+						input
+							height: 30px
+							width: 80%
+							+formcontrol
+							margin-right: 10%
+							+formfocus
+							+media-breakpoint-up(sm)
+								margin-right: 0
+								width: 100%
+						button
+							position: absolute
+							top: 15px
+							right: 15%
+							height: 30px
+							width: 30px
+							font-size: 0
+							background: none
+							border: 0
+							outline: none
+							+media-breakpoint-up(sm)
+								right: 0
+							&:before
+								+fontawesome('\f002', $faf)
+								font-size: r(16px)
 			.menu-toggle
 				position: absolute
 				top: 20px
@@ -54,9 +144,15 @@
 				width: 100%
 				max-width: 100%
 				height: calc(100vh - 60px)
-				top: 61px
+				top: 65px
 				left: 0
+				transform: translateX(-100%)
+				z-index: 20
 				+mainGradRev
+				+media-breakpoint-down(md)
+					+tr(.4)
+					&.active
+						transform: translateX(0)
 				+media-breakpoint-up(sm)
 					max-width: 360px
 				.user
@@ -111,3 +207,96 @@
 						&.active
 							.nav-link
 								font-weight: 700
+
+	+media-breakpoint-up(lg)
+		padding: 10px 0 0 0
+		.desktop-container
+			.menu-wrap
+				.menu-toggle
+					display: none
+				.logo-wrap
+				.main-navbar
+					display: flex
+					flex-direction: column
+					justify-content: center
+					flex-basis: 0
+					flex-grow: 1
+					max-width: 100%
+					.toolbar
+						display: flex
+						justify-content: flex-end
+						align-items: center
+						.search
+							margin: 0
+							padding-left: 10px
+							+borderHeader
+							.search-toggle
+								display: block
+								position: initial
+							.search-panel
+								display: none
+						.user
+							+borderHeader
+							padding: 0 10px
+							.user-toggle
+							.user-panel
+								display: none
+						.cart
+							padding: 0 14px 0 10px
+							.cart-panel
+							.cart-toggle
+								all: initial
+								position: relative
+								font-family: 'Montserrat', sans-serif
+								line-height: 1.5
+								span.fas
+									width: 20px
+						.language
+							width: 50px
+							height: 21px
+							border: 1px solid darken(white,40%)
+							border-radius: 3px
+							position: relative
+							display: flex
+							justify-content: center
+							align-items: center
+							span
+								margin-left: .5rem
+							ul
+								position: absolute
+								top: calc(100% + 1px)
+								left: 0
+								display: none
+								list-style-type: none
+								padding-left: 0
+								margin-bottom: 0
+								width: 100%
+								border: 1px solid rgba(0,0,0,.1)
+								z-index: 10
+								background: white
+								li
+									display: flex
+									justify-content: center
+									align-items: center
+
+					.nav
+						all: initial
+						font-family: 'Montserrat', sans-serif
+						line-height: 1.5
+						font-weight: normal
+						.nav-list
+							list-style-type: none
+							display: flex
+							justify-content: flex-end
+							.nav-item
+								.nav-link
+									+tr(.4)
+									color: lighten(black,20%)
+									text-transform: uppercase
+									font-size: r(15px)
+									padding: 8px 0
+									margin-left: 2rem
+									font-weight: 600
+								&.active, &:hover
+									.nav-link
+										color: color-get($mau, main)
