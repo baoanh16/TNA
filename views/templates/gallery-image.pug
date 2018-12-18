@@ -1,0 +1,14 @@
+extends _layout/_layout.pug
+
+block var
+	- title = 'Gallery'
+	- bodyClass = 'gallery'
+
+block header
+	include ../lib/header/index.pug
+block main
+	include ../lib/breadcrumb/b-1/index.pug
+	include ../lib/nav/n-1/index.pug
+	include ../lib/gallery/g-1/index.pug
+block footer
+	include ../lib/footer/index.pug

@@ -1,0 +1,56 @@
+.canhcam-gallery-1
+	padding-top: 2rem
+	.gallery-list
+		.item
+			cursor: pointer
+			figure
+				position: relative
+				overflow: hidden
+				margin-bottom: 2rem
+				.boxzoom
+					position: relative
+					img
+						width: 100%
+					&:before
+						content: '\f302'
+						font-family: 'Font Awesome 5 Free'
+						font-size: 2.2rem
+						display: flex
+						justify-content: center
+						align-items: center
+						color: #ffff
+						width: 100%
+						height: 100%
+						background: rgba(0,0,0,.3)
+						transition: all .4s ease-in-out
+						position: absolute
+						bottom: 0
+						left: 0
+				.hidden
+					display: none
+				figcaption
+					position: absolute
+					bottom: 0
+					left: 0
+					width: 100%
+					background: rgba(0, 91, 166, .7)
+					padding: 1rem
+					text-align: center
+					transition: all .4s ease-in-out
+					h3
+						font-size: 1rem
+						font-weight: 700
+						color: #ffff
+						margin-bottom: 0
+			+media-breakpoint-up(lg)
+				figcaption
+					transform: translateY(100%)
+				&:hover
+					figure
+						.boxzoom
+							&:before
+								background: rgba(0,0,0,.5)
+						figcaption
+							transform: translateY(0)
+	+media-breakpoint-up(lg)
+		padding-top: 4rem
