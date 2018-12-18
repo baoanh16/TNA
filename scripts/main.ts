@@ -1,9 +1,11 @@
 import { Header } from '../views/lib/header/index';
 import { MenuNews } from '../views/lib/nav/n-1/index';
+import { Solution } from '../views/lib/solution/index';
 
 
 let header = new Header();
 let menunews = new MenuNews();
+let solution = new Solution();
 
 $(document).ready(function () {
 	// Header
