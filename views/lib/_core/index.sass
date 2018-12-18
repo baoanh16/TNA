@@ -39,11 +39,116 @@ ul, p
 	display: inline-flex
 	align-items: center
 	&.btn-grad
-		background-image: -moz-linear-gradient( 0deg, rgb(35,140,190) 0%, rgb(83,174,220) 100%)
-		background-image: -webkit-linear-gradient( 0deg, rgb(35,140,190) 0%, rgb(83,174,220) 100%)
-		background-image: -ms-linear-gradient( 0deg, rgb(35,140,190) 0%, rgb(83,174,220) 100%)
+		+grad1
 		color: white
 		text-transform: uppercase
 		&:after
 			+linearicons('\e87a')
 			margin-left: 1.75rem
+
+
+.modulepager
+	margin-top: 20px
+	+media-breakpoint-up(lg)
+		margin-top: 40px
+	.pagination
+		list-style-type: none
+		+flex-center
+		li
+			width: 35px
+			height: 35px
+			&.active
+				+grad2
+				span,a
+					color: white
+			span,a
+				+flex-center
+				width: 100%
+				height: 100%
+				font-size: r(16px)
+				font-weight: 500
+				color: color-get($mau, extra-4)
+
+
+.search-page
+	padding: 2rem 0
+	input
+		border: 1px solid darken(white,12%)
+		border-radius: 4px
+		height: 40px
+		font-size: r(14px)
+		&:focus
+			border-color: color-get($mau, main)
+			box-shadow: 0 0 .25rem color-get($mau,main)
+	.search-page-top
+		.searchcontrols
+			margin-bottom: 1rem
+			.form-inline
+				+media-breakpoint-up(sm)
+					max-width: 510px
+				.form-group
+					margin-bottom: 0
+					&:last-child
+						padding-left: .5rem
+						input
+							width: 100px
+							color: white
+							background: color-get($mau, main)
+					&:first-child
+						flex-grow: 1
+						width: auto
+						flex-basis: 0
+						input
+							width: 100%
+							color: color-get($mau, main)
+	.btn-reindex
+		margin-top: .5rem
+		margin-bottom: 1rem
+		+media-breakpoint-up(sm)
+			max-width: 402.5px
+		input
+			width: 100%
+			color: white
+			background: color-get($mau, main)
+	.searchresults
+		.modulepager
+			&:first-child
+				display: none
+			&:last-child
+				.pagination
+					display: flex
+					justify-content: center
+					list-style-type: none
+					li
+						width: r(40px)
+						height: r(40px)
+						border: 1px solid transparent
+						a,span
+							display: flex
+							font-size: r(15px)
+							display: flex
+							justify-content: center
+							align-items: center
+							text-decoration: none
+							height: 100%
+							width: 100%
+							color: darken(white,40%)
+						&.active, &:hover
+							border-color: color-get($mau, main)
+							a,span
+								color: color-get($mau, main)
+		.searchresultlist
+			.searchresult
+				+tr(.4)
+				&:nth-child(odd)
+					background: lighten(color-rgba(color-get($mau, main),.1 ),5%)
+				&:nth-child(even)
+					background: darken(color-rgba(color-get($mau, main),.2 ),5%)
+				&:hover
+					transform: translateY(-5px)
+					box-shadow: 0 0 .5px color-get($mau, main)
+				.NeatHtml
+					padding: .5rem .75rem 0 .75rem!important
+					h3
+						a
+							color: darken(color-get($mau,main), 30%)

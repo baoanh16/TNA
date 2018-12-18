@@ -1,0 +1,94 @@
+.download-list
+	padding: r(30px) 0
+	+media-breakpoint-up(lg)
+		padding: r(60px) 0
+	.container
+		+media-breakpoint-up(lg)
+			position: relative
+		.form-search
+			position: absolute
+			left: 50%
+			transform: translateX(-50%)
+			width: 290px
+			+media-breakpoint-up(lg)
+				width: 250px
+				right: 15px
+				top: 0
+				transform: translateX(0)
+				left: initial
+			input
+				+formcontrol
+				width: 100%
+				height: 35px
+				border-radius: 18px
+				border-color: darken(white,60%)
+				&:focus
+					outline: 0
+					box-shadow: 0 0 .25rem color-get($mau, main)
+					border-color: color-get($mau, main)
+			button
+				font-size: 0
+				outline: none
+				background: none
+				border: 0
+				position: absolute
+				right: 0
+				top: 0
+				height: 100%
+				width: 35px
+				&:before
+					+fontawesome('\f002', $faf)
+					font-size: r(14px)
+					color: darken(white,60%)
+		.table-responsive
+			margin-top: 80px
+			border-top-left-radius: 7px
+			border-top-right-radius: 7px
+			+media-breakpoint-up(lg)
+				margin-top: 0
+			table
+				width: 100%
+				border-collapse: collapse
+				thead
+					+grad1
+					tr
+						border-collapse: collapse
+						th
+							span
+								font-weight: 400
+								color: white
+								text-transform: uppercase
+								white-space: nowrap
+								font-size: r(13px)
+								+media-breakpoint-up(lg)
+									font-size: r(16px)
+							&:last-child, &:nth-child(2)
+								padding: r(13.5px) 1rem
+								text-align: 
+				tbody
+					tr
+						td
+							span
+								font-size: r(12px)
+								+media-breakpoint-up(lg)
+									font-size: r(14px)
+								&.fas
+									margin-right: 1.25rem
+									+media-breakpoint-up(lg)
+										margin-right: 2rem
+							a, span
+								color: darken(white,60%)
+							&:first-child
+								padding: 1rem
+							&:nth-child(2), &:last-child
+								text-align: center
+								padding: 1rem 0
+								vertical-align: top
+						&:nth-child(odd)
+							background: darken(white,4%)
+						&:nth-child(even)
+							background: white
+						&:hover
+							td
+								span
+									color: color-get($mau, extra-3)
