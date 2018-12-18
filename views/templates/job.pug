@@ -1,0 +1,13 @@
+extends _layout/_layout.pug
+
+block var
+	- title = 'Job'
+	- bodyClass = 'job'
+
+block header
+	include ../lib/header/index.pug
+block main
+	include ../lib/breadcrumb/b-1/index.pug
+	include ../lib/job/j-1/index.pug
+block footer
+	include ../lib/footer/index.pug

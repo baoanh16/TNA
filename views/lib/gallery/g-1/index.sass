@@ -1,5 +1,4 @@
 .canhcam-gallery-1
-	padding-top: 2rem
 	.gallery-list
 		.item
 			cursor: pointer
@@ -9,48 +8,62 @@
 				margin-bottom: 2rem
 				.boxzoom
 					position: relative
-					img
-						width: 100%
+					box-shadow: 0px 3px 15px 0px rgba(0, 0, 0, 0.3)
 					&:before
 						content: '\f302'
 						font-family: 'Font Awesome 5 Free'
-						font-size: 2.2rem
-						display: flex
-						justify-content: center
-						align-items: center
-						color: #ffff
-						width: 100%
-						height: 100%
-						background: rgba(0,0,0,.3)
-						transition: all .4s ease-in-out
+						font-size: r(32.2px)
+						color: rgba(255,255,255,.7)
 						position: absolute
-						bottom: 0
-						left: 0
-				.hidden
-					display: none
+						top: 50%
+						left: 50%
+						transform: translate(-50%,-50%)
+					img
+						width: 100%
+					a
+						display: none
+						&:first-child
+							display: block
 				figcaption
 					position: absolute
 					bottom: 0
 					left: 0
 					width: 100%
-					background: rgba(0, 91, 166, .7)
+					background: color-get($mau,main)
 					padding: 1rem
 					text-align: center
-					transition: all .4s ease-in-out
 					h3
 						font-size: 1rem
 						font-weight: 700
 						color: #ffff
 						margin-bottom: 0
 			+media-breakpoint-up(lg)
-				figcaption
-					transform: translateY(100%)
+				figure
+					.boxzoom
+						&:before
+							+flex-center()
+							width: 100%
+							height: 100%
+							background: rgba(0,0,0,.3)
+							transition: all .4s ease-in-out
+							bottom: 0
+							left: 0
+							transform: initial
+							top: auto
+					figcaption
+						transform: translateY(100%)
+						transition: all .3s ease-in-out
 				&:hover
 					figure
 						.boxzoom
 							&:before
-								background: rgba(0,0,0,.5)
+								opacity: 0
+								visibility: hidden
 						figcaption
 							transform: translateY(0)
-	+media-breakpoint-up(lg)
-		padding-top: 4rem
+				&.item-big
+					figure
+						.boxzoom
+							&:before
+								font-size: r(53.67px)
+	

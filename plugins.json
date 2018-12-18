@@ -5,12 +5,16 @@
 		"bower_components/swiper/dist/js/swiper.min.js",
 		"_plugins/bgimg.js",
 		"_plugins/mapping-listener.js",
-		"_plugins/mapping.js"
+		"_plugins/mapping.js",
+		"bower_components/lightgallery/dist/js/lightgallery-all.min.js"
 	],
 	"styles": [
 		"bower_components/font-awesome/css/all.min.css",
 		"bower_components/linearicons/dist/web-font/style.css",
 		"bower_components/mdi/css/materialdesignicons.min.css",
-		"bower_components/swiper/dist/css/swiper.min.css"
+		"bower_components/swiper/dist/css/swiper.min.css",
+		"bower_components/lightgallery/dist/css/lg-transitions.min.css",
+		"bower_components/lightgallery/dist/css/lightgallery.min.css"
+		
 	]
 }

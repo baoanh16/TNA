@@ -1,9 +1,13 @@
 import { Header } from '../views/lib/header/index';
 import { MenuNews } from '../views/lib/nav/n-1/index';
+import { galleryImages } from '../views/lib/gallery/g-1/index';
+import { videoImages } from '../views/lib/video/v-1/index';
 
 
 let header = new Header();
 let menunews = new MenuNews();
+let galleryimages = new galleryImages();
+let videoimages = new videoImages();
 
 $(document).ready(function () {
 	// Header
@@ -21,8 +25,12 @@ $(document).ready(function () {
 	breakpoint.addListener(header.addBackdrop);
 	header.closeMainNav();
 	header.toggleLang();
-	// Trang nào đây?? :V
+	// News
 	menunews.toggleNews();
+	// Gallery
+	galleryimages.thumImages();
+	// Video
+	videoimages.videoPopup();
 });
 
 $(window).on('resize', function () {
