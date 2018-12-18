@@ -1,0 +1,131 @@
+.service-detail
+	padding: r(30px) 0
+	background-image: url('../img/service/bg_1.png')
+	background-repeat: no-repeat
+	background-size: cover
+	background-position: center
+	+media-breakpoint-up(lg)
+		padding: r(60px) 0
+	img
+		width: 100%
+	.content
+		font-size: r(13px)
+		font-weight: 400
+		color: lighten(black,20%)
+		+media-breakpoint-up(lg)
+			font-size: r(16px)
+		h4
+			font-weight: 800
+			color: lighten(black,20%)
+			font-size: r(16px)
+			margin-bottom: 1rem
+			+media-breakpoint-up(lg)
+				font-size: r(20px)
+				margin-bottom: 2rem
+		ul
+			li
+				display: flex
+				margin-bottom: .75rem
+				&:before
+					line-height: 21px
+					content: ''
+					flex: 0 0 12px
+					height: 12px
+					border-radius: 50%
+					background-color: color-get($mau, main)
+					margin-right: r(20px)
+					margin-top: 4px
+	.briefContent
+		margin-bottom: 2rem
+		box-shadow: 0px 3px 20px 0px rgba(0,0,0,.1)
+		background-color: white
+		padding: 2rem 0
+		+media-breakpoint-up(lg)
+			padding: 0
+		.img
+			overflow: hidden
+			max-width: 400px
+			margin: auto
+			border-radius: 18px
+			+media-breakpoint-up(lg)
+				max-width: initial
+				border-top-left-radius: 180px
+				border-bottom-left-radius: 180px
+				border-top-right-radius: 0
+				border-bottom-right-radius: 0
+
+				overflow: hidden
+				margin: 0 0 0 auto
+		.content
+			height: 100%
+			display: flex
+			flex-direction: column
+			justify-content: center
+			padding-left: 2rem
+	.fullContent
+		box-shadow: 0px 3px 20px 0px rgba(0,0,0,.1)
+		background-color: white
+		padding: 2rem
+		+media-breakpoint-up(lg)
+			padding: 3rem 2rem
+		.img
+			overflow: hidden
+			max-width: 400px
+			margin: auto
+			border-radius: 18px
+			+media-breakpoint-up(lg)
+				max-width: initial
+				overflow: hidden
+				margin: 0 0 0 auto
+				margin-right: 30px
+		.col-12
+			.content
+				margin-bottom: r(16px)
+				+media-breakpoint-up(lg)
+					margin-bottom: r(32px)
+				ul
+					display: flex
+					flex-wrap: wrap
+					li
+						max-width: 50%
+						flex: 0 0 50%
+						margin-bottom: .75rem
+						&:nth-child(odd)
+							padding-right: .75rem
+							+media-breakpoint-up(lg)
+								padding-right: 1.5rem
+						&:nth-child(even)
+							padding-left: .75rem
+							+media-breakpoint-up(lg)
+								padding-left: 1.5rem
+		.col-lg-6
+			.content
+				margin-top: r(16px)
+				padding-left: 0
+				+media-breakpoint-up(lg)
+					margin-top: 0
+					padding-left: 1.5rem
+				h4
+					font-weight: 600
+					color: color-get($mau, main)
+					text-transform: uppercase
+					margin-bottom: .85rem
+					font-size: r(13px)
+					+media-breakpoint-up(lg)
+						font-size: r(16px)
+				ul
+					margin-bottom: r(21px)
+					li
+						margin-bottom: .35rem
+						font-size: r(12px)
+						+media-breakpoint-up(lg)
+							font-size: r(15px)
+						&:before
+							flex: 0 0 0
+							width: 0
+							height: 0
+							background-color: transparent
+							border-radius: 0
+							border-top: 6px solid transparent
+							border-bottom: 6px solid transparent
+							border-left: 6px solid color-get($mau, main)

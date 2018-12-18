@@ -1,0 +1,13 @@
+extends _layout/_layout.pug
+
+block var
+	- title = 'Service Detail'
+	- bodyClass = 'service-detail-page'
+
+block header
+	include ../lib/header/index.pug
+block main
+	include ../lib/breadcrumb/b-1/index.pug
+	include ../lib/service/detail/index.pug
+block footer
+	include ../lib/footer/index.pug

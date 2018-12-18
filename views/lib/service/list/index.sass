@@ -1,55 +1,91 @@
 .service-list
 	padding: r(30px) 0
+	background-image: url('../img/service/bg_1.png')
+	background-repeat: no-repeat
+	background-size: cover
+	background-position: center
 	+media-breakpoint-up(lg)
 		padding: r(60px) 0
 	img
 		width: 100%
 	.item
-		.img-box
-			background: black
-			position: relative
-			.title
-				position: absolute
-				top: 0
-				left: 0
-				width: 100%
-				height: 100%
-				+flex-center
+		margin-bottom: 2rem
+		figure
+			box-shadow: 0px 3px 20px 0px rgba(0, 0, 0, 0.1)
+			background-color: white
+			overflow: hidden
+			border-top-left-radius: 14px
+			border-top-right-radius: 14px
+			margin-bottom: 0
+			height: 100%
+			display: flex
+			flex-direction: column
+			.img-box
+				background: black
+				position: relative
+				.title
+					position: absolute
+					top: 0
+					left: 0
+					width: 100%
+					height: 100%
+					+flex-center
+					flex-direction: column
+					font-weight: 700
+					color: white
+					text-align: center
+					padding: 0 1rem
+					font-size: 1.25rem
+					+media-breakpoint-up(lg)
+						font-size: 1.75rem
+					+media-breakpoint-up(xl)
+						font-size: 2rem
+					p
+						margin-bottom: 0
+				img
+					opacity: .5
+			figcaption
+				display: flex
 				flex-direction: column
-				font-weight: 700
-				color: white
-				text-align: center
-				padding: 0 1rem
-				font-size: 1.25rem
-				+media-breakpoint-up(sm)
-					font-size: 1.5rem
-				+media-breakpoint-up(lg)
-					font-size: 1.75rem
-				+media-breakpoint-up(xl)
-					font-size: 2rem
-				p
-					margin-bottom: 0
-			img
-				opacity: .5
-		figcaption
-			padding: 1.25rem r(14px)
-			+media-breakpoint-up(lg)
-				padding: 2rem r(24px)
-			ul
-				padding-left: 0
-				margin-bottom: 0
-				list-style-type: none
-			li,p
-				font-size: r(16px)
+				padding: 1.25rem r(14px)
+				height: 100%
 				font-weight: 400
 				color: lighten(black,20%)
-				margin-bottom: .5rem
-				display: flex
-				&:before
-					+fontawesome('\f0a9', $faf)
-					margin-right: 1rem
-					font-size: r(13px)
-					line-height: 24px
-					color: color-get($mau, main)
-					+media-breakpoint-up(lg)
-						margin-right: r(24px)
+				font-size: r(13px)
+				+media-breakpoint-up(lg)
+					font-size: r(16px)
+					padding: 2rem r(24px)
+				a
+					height: 40px
+					font-size: r(15px)
+					margin-top: auto
+					align-self: center
+				ul
+					margin-bottom: 18px
+					align-self: flex-start
+				p
+					align-self: flex-start
+					margin-bottom: r(28px)
+				li
+					margin-bottom: .5rem
+					display: flex
+					&:before
+						+fontawesome('\f0a9', $faf)
+						margin-right: 1rem
+						font-size: r(13px)
+						line-height: 24px
+						color: color-get($mau, main)
+						+media-breakpoint-up(lg)
+							margin-right: r(24px)
+				p,li
+					&:last-child
+						margin-bottom: 0
+			+media-breakpoint-up(lg)
+				figcaption
+					a
+						+tr(.4)
+						opacity: 0
+				&:hover
+					figcaption
+						a
+							opacity: 1

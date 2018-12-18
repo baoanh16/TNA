@@ -19,9 +19,31 @@ a
 	margin-bottom: r(20px)
 	text-align: center
 	text-transform: uppercase
+	line-height: 1.5
 	&--white
 		color: #ffffff
 	&--extra-2
 		color: color-get($mau,extra-2)
 	&--extra-3
 		color: color-get($mau,extra-3)
+	&--main
+		color: color-get($mau, main)
+
+ul, p
+	padding-left: 0
+	margin-bottom: 0
+	list-style-type: none
+.btn
+	min-width: 1px
+	padding: 0 r(24px)
+	display: inline-flex
+	align-items: center
+	&.btn-grad
+		background-image: -moz-linear-gradient( 0deg, rgb(35,140,190) 0%, rgb(83,174,220) 100%)
+		background-image: -webkit-linear-gradient( 0deg, rgb(35,140,190) 0%, rgb(83,174,220) 100%)
+		background-image: -ms-linear-gradient( 0deg, rgb(35,140,190) 0%, rgb(83,174,220) 100%)
+		color: white
+		text-transform: uppercase
+		&:after
+			+linearicons('\e87a')
+			margin-left: 1.75rem
