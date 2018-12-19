@@ -36,10 +36,12 @@
 		"gulp-sourcemaps": "^2.6.4",
 		"gulp-uglify-es": "^1.0.4",
 		"gulp-util": "^3.0.8",
+		"node-sass": "^4.11.0",
 		"tsify": "^4.0.1",
 		"typescript": "^3.2.2",
 		"vinyl-buffer": "^1.0.1",
 		"vinyl-source-stream": "^2.0.0",
 		"watchify": "^3.11.0"
-	}
+	},
+	"devDependencies": {}
 }
