@@ -1,0 +1,14 @@
+extends _layout/_layout.pug
+
+block var
+	- title = 'Contact'
+	- bodyClass = 'contact'
+
+block header
+	include ../lib/header/index.pug
+block main
+	include ../lib/breadcrumb/b-1/index.pug
+	include ../lib/contact/c-1/index.pug
+	include ../lib/contact/c-2/index.pug
+block footer
+	include ../lib/footer/index.pug

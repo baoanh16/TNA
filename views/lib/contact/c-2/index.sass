@@ -1,0 +1,53 @@
+.canhcam-contact-2
+	background: url('./../img/contact/bg_1.jpg') no-repeat
+	background-size: cover
+	padding: r(30px) 0
+	.contact-list
+		.wrap-form
+			p
+				color: #ffffff
+				font-size: r(18px)
+				font-weight: 400
+				text-align: center
+				margin-bottom: r(27px)
+			input , textarea
+				display: block
+				width: 100%
+				padding: 0.375rem 0.75rem
+				font-size: 1rem
+				color: #495057
+				background-color: #fff
+				background-clip: padding-box
+				border: 0
+				transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out
+				border-radius: 3px
+				&:focus
+					outline: none
+			input
+				height: r(46px)
+			textarea
+				height: r(180px)
+			.frm-btnwrap
+				float: right
+				label
+					display: none
+				.frm-btn
+					input[type="reset"]
+						display: none
+					input[type="submit"]
+						width: r(111px)
+						height: r(45px)
+						line-height: r(45px)
+						background: #2366a6
+						text-transform: uppercase
+						color: #ffffff
+						font-size: r(16px)
+						font-weight: 400
+						border: none
+						display: inline-block
+						padding: 0
+						border-radius: 0
+						+media-breakpoint-up(lg)
+							cursor: pointer
+	+media-breakpoint-up(lg)
+		padding: r(40px) 0

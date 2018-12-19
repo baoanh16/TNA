@@ -4,6 +4,7 @@ import { Solution } from '../views/lib/solution/index';
 import { galleryImages } from '../views/lib/gallery/g-1/index';
 import { videoImages } from '../views/lib/video/v-1/index';
 import { collapseFaq } from '../views/lib/faq/f-1/index'
+import {ProductNav} from '../views/lib/nav/n-3/index'
 
 
 let header = new Header();
@@ -12,6 +13,7 @@ let solution = new Solution();
 let galleryimages = new galleryImages();
 let videoimages = new videoImages();
 let collapsefaq = new collapseFaq();
+let productnav = new ProductNav();
 
 $(document).ready(function () {
 	// Header
@@ -38,6 +40,9 @@ $(document).ready(function () {
 	videoimages.videoPopup();
 	// FAQ
 	collapsefaq.collapseToogle();
+	// Product
+	productnav.toggleNavFather(breakpoint);
+	productnav.	toggleNavChild();
 });
 
 $(window).on('resize', function () {
