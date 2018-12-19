@@ -1,10 +1,110 @@
 .canhcam-product-1
 	padding: r(30px) 0
 	background: url('./../img/stroke.jpg') repeat
+	.product-list-inner
+		padding: r(15px) r(10px)
+		margin-top: 1.5rem
+		background: #ffffff
+		border-radius: 5px
+		box-shadow: 0 0 16px 0 rgba(0, 0, 0, 0.1)
+		h1
+			text-transform: inherit
+			color: color-get($mau,extra-2)
+		.product-head
+			display: flex
+			flex-direction: column
+			justify-content: center
+			align-items: center
+			.product-search
+				width: 100%
+				height: r(36px)
+				border-radius: 18px
+				box-shadow: 0 0 0 1px #afafaf
+				overflow: hidden
+				display: flex
+				input
+					border: 0
+					background: none
+					width: 87%
+					height: 100%
+					padding: .5rem
+					&:focus
+						outline: none
+				button
+					background: none
+					border: none
+					font-size: r(15px)
+					color: #666666
+					&:focus
+						outline: none
+		.product-sort
+			margin-top: 1rem
+			background: #f5f5f5
+			border-radius: 18px
+			display: flex
+			align-items: center
+			justify-content: center
+			padding: r(3px)
+			height: r(36px)
+			label
+				font-size: r(13px)
+				color: #000000
+				font-weight: 300
+				margin-bottom: 0
+				margin-right: r(15px)
+				display: none
+			.sort-select
+				width: 100%
+				border-radius: 18px
+				overflow: hidden
+				position: relative
+				&:after
+					content: '\f078'
+					font-family: 'Font Awesome 5 Free'
+					font-weight: 600
+					font-size: 1rem
+					color: #666666
+					position: absolute
+					top: 0
+					right: 12px
+					line-height: r(30px)
+				select
+					width: 100%
+					border: none
+					height: r(30px)
+					background: #ffffff
+					-webkit-appearance: none
+					-moz-appearance: none
+					appearance: none
+					&:focus
+						outline: none
+	+media-breakpoint-up(md)
+		.product-list-inner
+			.product-head
+				flex-direction: row
+				justify-content: space-between
+				h1
+					margin-bottom: 0
+				.product-search
+					width: r(250px)
+			.product-sort
+				justify-content: flex-end
+				label
+					display: block
+				.sort-select
+					width: r(250px)
+					select
+						padding-left: r(30px)
 	+media-breakpoint-up(lg)
 		padding: r(50px) 0
-		.custom_container
-			> .row
-				margin: 0 -5px
-				.col-lg-3 , .col-lg-9
-					padding: 0 5px
+		.custom-row
+			margin: 0 -5px
+			.custom-col-3 , .custom-col-9
+				padding: 0 5px
+		.product-list-inner
+			margin-top: 0
+			padding-top: r(28px)
+			padding-bottom: r(28px)
+			.product-search
+				button
+					cursor: pointer
