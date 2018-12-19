@@ -1,0 +1,41 @@
+.canhcam-contact-1
+	padding: r(30px) 0
+	.contact-list
+		.row
+			box-shadow: 0 0 20px 0px rgba(0,0,0,.1)
+		h1
+			margin-bottom: r(30px)
+		.info-wrap
+			background: rgb(227,227,227)
+			background: -moz-linear-gradient(218deg, rgba(227,227,227,1) 0%, rgba(255,255,255,1) 100%)
+			background: -webkit-linear-gradient(218deg, rgba(227,227,227,1) 0%, rgba(255,255,255,1) 100%)
+			background: linear-gradient(218deg, rgba(227,227,227,1) 0%, rgba(255,255,255,1) 100%)
+			filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#e3e3e3",endColorstr="#ffffff",GradientType=1)
+			display: flex
+			align-items: center
+			padding: r(20px)
+			img
+				margin-bottom: r(40px)
+			h4
+				color: #000000
+				font-weight: 600
+				font-size: r(16px)
+				text-transform: uppercase
+				margin-bottom: r(30px)
+			p
+				color: #464646
+				font-weight: 400
+				font-size: 1rem
+				margin-bottom: .5rem
+				&:last-child
+					margin-bottom: 0
+		.map
+			height: r(540px)
+			iframe
+				height: 100%
+				width: 100%
+	+media-breakpoint-up(lg)
+		padding: r(60px) 0
+		.contact-list
+			.info-wrap
+				padding: r(37px)
