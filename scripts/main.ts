@@ -1,11 +1,17 @@
 import { Header } from '../views/lib/header/index';
 import { MenuNews } from '../views/lib/nav/n-1/index';
 import { Solution } from '../views/lib/solution/index';
+import { galleryImages } from '../views/lib/gallery/g-1/index';
+import { videoImages } from '../views/lib/video/v-1/index';
+import { collapseFaq } from '../views/lib/faq/f-1/index'
 
 
 let header = new Header();
 let menunews = new MenuNews();
 let solution = new Solution();
+let galleryimages = new galleryImages();
+let videoimages = new videoImages();
+let collapsefaq = new collapseFaq();
 
 $(document).ready(function () {
 	// Header
@@ -23,9 +29,15 @@ $(document).ready(function () {
 	breakpoint.addListener(header.addBackdrop);
 	header.closeMainNav();
 	header.toggleLang();
-	// Trang nào đây?? :V
+	// News
 	menunews.toggleNews();
 	solution.SolutionNav();
+	// Gallery
+	galleryimages.thumImages();
+	// Video
+	videoimages.videoPopup();
+	// FAQ
+	collapsefaq.collapseToogle();
 });
 
 $(window).on('resize', function () {

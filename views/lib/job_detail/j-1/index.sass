@@ -1,0 +1,117 @@
+.canhcam-job-detail-1
+	padding: r(30px) 0
+	.jobs-list
+		h1
+			font-size: r(20px)
+			font-weight: 600
+			color: color-get($mau,extra-3)
+			margin-bottom: r(17px)
+		time
+			display: block
+			color: #999999
+			font-weight: 400
+			margin-bottom: .5rem
+			font-size: r(12px)
+			em
+				margin-right: .3rem
+		.job-read
+			h3
+				font-size: r(16px)
+				color: color-get($mau,extra-3)
+				font-weight: 500
+				margin-bottom: 1rem
+			p , li
+				font-size: 1rem
+				font-weight: 400
+				color: #666666
+				margin-bottom: .5rem
+			ul
+				list-style-type: none
+				padding-left: 0
+				li
+					&:before
+						content: '\f111'
+						font-family: 'Font Awesome 5 Free'
+						font-weight: 600
+						font-size: r(8px)
+						color: #999999
+						margin-right: 1rem
+			table
+				max-width: 25rem
+				tr
+					th , td
+						border: none
+						padding: .3rem
+					th
+						color: color-get($mau,extra-3)
+						font-size: r(16px)
+						font-weight: 400
+					td
+						color: #666666
+						font-weight: 400
+						font-size: 1rem
+						&.red
+							color: #ff0101
+			.btnGroup
+				a
+					display: block
+					&.download
+						color: #ed232a
+						font-size: r(18px)
+						margin-bottom: 1.5rem
+						&:before
+							content: '\f019'
+							font-family: 'Font Awesome 5 Free'
+							font-weight: 600
+							font-size: r(24px)
+							margin-right: .5rem
+						&:focus , &:active
+							text-decoration: underline
+						+media-breakpoint-up(lg)
+							&:hover
+								text-decoration: underline
+					&.apply
+						text-transform: uppercase
+						font-size: r(13px)
+						color: #ffffff
+						width: r(161px)
+						height: r(40px)
+						line-height: r(40px)
+						text-align: center
+						background: rgb(38,116,179)
+						background: -moz-linear-gradient(left, rgba(38,116,179,1) 0%, rgba(41,137,216,1) 50%, rgba(125,185,232,1) 100%)
+						background: -webkit-linear-gradient(left, rgba(38,116,179,1) 0%,rgba(41,137,216,1) 50%,rgba(125,185,232,1) 100%)
+						background: linear-gradient(to right, rgba(38,116,179,1) 0%,rgba(41,137,216,1) 50%,rgba(125,185,232,1) 100%)
+						filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2674b3', endColorstr='#7db9e8',GradientType=1 )
+		.otherjob
+			margin-top: 2rem
+			h2
+				color: #1d5184
+				font-weight: 600
+				font-size: r(20px)
+				margin-bottom: r(15px)
+				text-transform: uppercase
+			.lists
+				.item
+					padding: 1rem 0
+					box-shadow: 0 1px 0 0 #dddddd
+					h4
+						margin-bottom: 0
+						a
+							color: #666666
+							font-size: 1rem
+					&:first-child
+						padding-top: 0
+	+media-breakpoint-up(lg)
+		padding: r(60px) 0
+		.jobs-list
+			.otherjob
+				margin-top: 0
+				.lists
+					.item
+						h4
+							a
+								transition: all .3s ease-in-out
+						&:hover
+							a
+								color: color-get($mau,main)

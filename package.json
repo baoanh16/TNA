@@ -12,6 +12,7 @@
 	"author": "sonvh2510",
 	"license": "MIT",
 	"dependencies": {
+		"@angular/cli": "^7.1.3",
 		"@babel/core": "^7.2.2",
 		"@babel/preset-env": "^7.2.0",
 		"@babel/register": "^7.0.0",

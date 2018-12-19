@@ -1,0 +1,145 @@
+.canhcam-faq-1
+	padding: r(30px) 0
+	h1
+		margin-bottom: r(35px)
+	.faq-block
+		.faq-question
+			padding: r(15px) 0
+			box-shadow: 0 1px 0 0 #efefef
+			h3
+				color: #666666
+				font-weight: 400
+				font-size: r(16px)
+				margin-bottom: 0
+				position: relative
+				&:after
+					content: '\e881'
+					font-family: 'Linearicons-Free'
+					font-size: r(18px)
+					color: #666666
+					position: absolute
+					top: 0
+					right: 0
+			&.active
+				h3
+					color: color-get($mau,extra-3)
+					&:after
+						content: '\e882'
+						color: color-get($mau,main)
+		.faq-answer
+			background: #f3f3f3
+			padding: 1rem
+			ol
+				margin-bottom: 0
+				padding-left: 1.5rem
+				li
+					color: #666666
+					font-size: r(15px)
+					font-weight: 400
+			ul
+				list-style-type: none
+				padding-left: r(25px)
+		&:first-child
+			.faq-question
+				padding-top: 0
+	.wrap-form
+		margin-top: 2rem
+		padding: 1rem
+		border-radius: 10px
+		box-shadow: 0 0 20px 0px rgba(0,0,0,.1)
+		> div
+			h5
+				color: #666666
+				font-size: r(24px)
+				font-weight: 400
+				margin-bottom: r(20px)
+				text-align: center
+			.form-group
+				text-align: center
+				label
+					text-transform: uppercase
+					color: #999999
+					font-weight: 400
+					font-size: r(13px)
+				input , textarea
+					display: block
+					width: 100%
+					padding: 0.375rem 0.75rem
+					font-size: 1rem
+					line-height: 1.5
+					color: #495057
+					background-clip: padding-box
+					border-radius: 0
+					transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out
+					transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out
+					background: #f3f3f3
+					border: none
+					&:focus
+						outline: none
+				input
+					height: r(40px)
+				textarea
+					height: r(100px)
+		.frm-btnwrap
+			display: flex
+			justify-content: center
+			margin-top: 2rem
+			margin-bottom: 0
+			label
+				display: none
+			.frm-btn
+				width: r(180px)
+				height: r(40px)
+				line-height: r(40px)
+				text-align: center
+				box-shadow: inset 0 0 0 1px #1f5d9d
+				border-radius: 5px
+				position: relative
+				&:after
+					content: '\e87a'
+					font-family: 'Linearicons-Free'
+					font-size: r(17px)
+					color: #1f5d9d
+					display: block
+					position: absolute
+					top: 0
+					right: r(30px)
+					line-height: r(40px)
+				input[type="reset"]
+					display: none
+				input[type="submit"]
+					display: inline-block
+					width: 100%
+					color: #1f5d9d
+					font-size: r(15px)
+					text-transform: uppercase
+					font-weight: 600
+					background: none
+					border: 0
+					&:focus
+						outline: none
+	+media-breakpoint-up(lg)
+		padding: r(60px) 0
+		.faq-block
+			.faq-question
+				cursor: pointer
+				h3
+					&:after
+						right: r(11px)
+			.faq-answer
+				padding: r(28px)
+		.wrap-form
+			margin-top: 0
+			padding: r(40px)
+			> div
+				h5
+					margin-bottom: r(30px)
+			.frm-btnwrap
+				.frm-btn
+					&:after
+						transition: all .3s ease-in-out
+					input[type="submit"]
+						cursor: pointer
+					&:hover
+						&:after
+							right: 20px
