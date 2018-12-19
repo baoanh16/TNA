@@ -26,3 +26,81 @@ a
 		color: color-get($mau,extra-2)
 	&--extra-3
 		color: color-get($mau,extra-3)
+
+.tna-product-item
+	figure
+		margin-bottom: 0
+		text-align: center
+		box-shadow:  0 0 0 1px #e1e1e1
+		.boxzoom
+			background: #ffffff
+			display: flex
+			justify-content: center
+			position: relative
+			img
+				max-width: 100%
+			.product-btn
+				position: absolute
+				bottom: 0
+				left: 50%
+				transform: translateX(-50%)
+				display: none
+				opacity: 0
+				visibility: hidden
+				a
+					display: block
+					width: 13rem
+					color: #ffffff
+					height: r(40px)
+					line-height: r(40px)
+					text-align: center
+					background: color-get($mau,main)
+					border-radius: 20px
+					&.addcart
+						margin-bottom: 1rem
+		figcaption
+			padding-top: 1rem
+			padding-bottom: r(30px)
+			h4
+				margin-bottom: .5rem
+				a
+					color: #666666
+					text-transform: uppercase
+					font-size: r(13px)
+					font-weight: 400
+			.code
+				font-size: r(15px)
+				color: #333333
+				font-weight: 700
+				margin-bottom: .5rem
+			.price
+				font-size: r(15px)
+				color: color-get($mau,extra-2)
+				font-weight: 700
+		// &:focus , &:active
+		// 	.boxzoom
+		// 		.product-btn
+		// 			opacity: 1
+		// 			visibility: visible
+	+media-breakpoint-up(md)
+		figure
+			padding: 1rem
+			figcaption
+				padding-bottom: 0
+	+media-breakpoint-up(lg)
+		figure
+			padding: r(20px)
+			transition: all .3s ease-in-out
+			.boxzoom
+				img
+					max-width: inherit
+				.product-btn
+					display: flex
+					flex-direction: column
+					transition: all .3s ease-in-out
+			&:hover
+				box-shadow:  0 0 0 1px #1f5d9d , 0 0 20px 0 rgba(0,0,0,.3)
+				.boxzoom
+					.product-btn
+						opacity: 1
+						visibility: visible
