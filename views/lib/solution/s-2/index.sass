@@ -1,0 +1,129 @@
+.solution-list
+	padding: r(30px) 0
+	+media-breakpoint-up(lg)
+		padding: r(60px) 0
+	img
+		width: 100%
+	.solution-navigation
+		h3
+			line-height: 45px
+			vertical-align: bottom
+			display: flex
+			align-items: flex-end
+			+media-breakpoint-down(md)
+				position: relative
+				&:after
+					+fontawesome('\f0c9', $faf)
+					position: absolute
+					right: 0
+					top: 1rem
+					color: color-get($mau, main)
+					font-size: 1.25rem
+		ul
+			display: none
+			+media-breakpoint-up(lg)
+				display: block!important
+			li
+				margin-bottom: 1rem
+				position: relative
+				a
+					font-size: r(13px)
+					display: block
+					color: lighten(black, 20%)
+					+media-breakpoint-up(lg)
+						font-size: r(14px)
+					+media-breakpoint-up(xl)
+						font-size: r(15px)
+				&:after
+					+linearicons('\e876')
+					position: absolute
+					right: 0
+					top: 4px
+				&.active
+					a
+						color: black
+						font-weight: 600
+				+media-breakpoint-up(lg)
+					&:hover
+						&:after
+							animation: solutionNav
+							animation-duration: .4s
+						a
+							color: color-get($mau, main)
+	.solution-title
+		
+		.form-search
+			position: absolute
+			left: 50%
+			transform: translateX(-50%)
+			width: 290px
+			+media-breakpoint-up(lg)
+				width: 250px
+				right: 15px
+				top: 0
+				transform: translateX(0)
+				left: initial
+			input
+				+formcontrol
+				width: 100%
+				height: 35px
+				border-radius: 18px
+				border-color: darken(white,60%)
+				&:focus
+					outline: 0
+					box-shadow: 0 0 .25rem color-get($mau, main)
+					border-color: color-get($mau, main)
+			button
+				font-size: 0
+				outline: none
+				background: none
+				border: 0
+				position: absolute
+				right: 0
+				top: 0
+				height: 100%
+				width: 35px
+				&:before
+					+fontawesome('\f002', $faf)
+					font-size: r(14px)
+					color: darken(white,60%)
+		.tna__title
+			+media-breakpoint-up(lg)
+				text-align: left
+	.item-list
+		margin-top: 80px
+		+media-breakpoint-up(lg)
+			margin-top: 0
+		.item
+			margin-bottom: 30px
+			figure
+				.img-box
+					overflow: hidden
+					img
+						+tr(.4)
+				figcaption
+					padding-top: 1rem
+					font-size: r(13px)
+					h4
+						font-size: inherit
+						font-weight: 500
+						color: color-get($mau, extra-3)
+						margin-bottom: .75rem
+					p
+						font-size: inherit
+						color: darken(white,60%)
+						+line(5)
+			+media-breakpoint-up(lg)
+				&:hover
+					figure
+						.img-box
+							img
+								transform: scale(1.1)
+
+
+@keyframes solutionNav
+	0%
+		opacity: 0
+		right: 15px
+	100%
+		right: 0

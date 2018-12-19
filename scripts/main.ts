@@ -25,6 +25,7 @@ $(document).ready(function () {
 	header.toggleLang();
 	// Trang nào đây?? :V
 	menunews.toggleNews();
+	solution.SolutionNav();
 });
 
 $(window).on('resize', function () {
