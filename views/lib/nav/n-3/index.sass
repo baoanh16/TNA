@@ -1,0 +1,81 @@
+.canhcam-nav-3
+	padding: r(15px) r(10px)
+	background: #ffffff
+	border-radius: 5px
+	box-shadow: 0 0 16px 0 rgba(0, 0, 0, 0.1)
+	h2
+		color: color-get($mau,extra-3)
+		font-size: r(18px)
+		font-weight: 700
+		text-transform: uppercase
+		margin-bottom: 0
+		// margin-bottom: r(18px)
+		position: relative
+		&:after
+			content: '\e874'
+			font-family: 'Linearicons-Free'
+			font-size: 1.1rem
+			position: absolute
+			right: 0
+			top: 0
+			transition: transform .3s ease-in-out
+		&.active
+			&:after
+				transform: rotate(180deg)
+	nav
+		padding-top: r(18px)
+		ul
+			list-style-type: none
+			padding-left: 0
+			margin-bottom: 0
+			li
+				position: relative
+				a
+					color: #333333
+					font-weight: 400
+					font-size: r(15px)
+					padding-bottom: r(13px)
+					display: block
+					&.active
+						font-weight: 600
+						color: #000000
+						padding-bottom: r(13px)!important
+				.collapse-btn
+					position: absolute
+					top: 0
+					right: 0
+					font-size: 1.1rem
+					transition: transform .3s ease-in-out
+					&.active
+						color: #1f5d9d
+						transform: rotate(180deg)
+				.nav-sub
+					// display: none
+					padding-bottom: r(15px)
+					padding-left: 1.3rem
+					li
+						a
+							padding-bottom: r(10px)
+						&:last-child
+							a
+								padding-bottom: 0
+				&:last-child
+					a
+						padding-bottom: 0
+					.nav-sub
+						padding-bottom: 0
+	+media-breakpoint-up(lg)
+		padding-top: r(28px)
+		padding-bottom: r(28px)
+		h2
+			&:after
+				content: none
+		nav
+			ul
+				li
+					a
+						transition: color .3s ease-in-out
+						&:hover
+							color: color-get($mau,main)
+					.collapse-btn
+						cursor: pointer
