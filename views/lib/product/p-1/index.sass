@@ -78,6 +78,22 @@
 					appearance: none
 					&:focus
 						outline: none
+		.product-body
+			margin-top: r(27px)
+			.tna-product-item
+				figure
+					margin-bottom: r(30px)
+				&:last-child
+					figure
+						margin-bottom: 0
+				+media-breakpoint-up(md)
+					&:nth-last-child(-n+2)
+						figure
+							margin-bottom: 0
+				+media-breakpoint-up(lg)
+					&:nth-last-child(-n+3)
+						figure
+							margin-bottom: 0
 	+media-breakpoint-up(md)
 		.product-list-inner
 			.product-head
