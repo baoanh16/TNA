@@ -2,12 +2,14 @@ import { Header } from '../views/lib/header/index';
 import { MenuNews } from '../views/lib/nav/n-1/index';
 import { galleryImages } from '../views/lib/gallery/g-1/index';
 import { videoImages } from '../views/lib/video/v-1/index';
+import { collapseFaq } from '../views/lib/faq/f-1/index'
 
 
 let header = new Header();
 let menunews = new MenuNews();
 let galleryimages = new galleryImages();
 let videoimages = new videoImages();
+let collapsefaq = new collapseFaq();
 
 $(document).ready(function () {
 	// Header
@@ -31,6 +33,8 @@ $(document).ready(function () {
 	galleryimages.thumImages();
 	// Video
 	videoimages.videoPopup();
+	// FAQ
+	collapsefaq.collapseToogle();
 });
 
 $(window).on('resize', function () {
