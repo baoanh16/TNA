@@ -47,6 +47,11 @@ $(document).ready(function () {
 	// Checkout
 	checkout.minusQuantity();
 	checkout.plusQuantity();
+	checkout.viewedProductSlide();
+	checkout.toggleOtherAddress();
+	checkout.toggleExportBill();
+	checkout.sameInfo();
+	checkout.choosePaymentMethod();
 });
 
 $(window).on('resize', function () {

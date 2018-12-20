@@ -1,5 +1,5 @@
 section.checkout
-	.container
+	.container.checkout-cart
 		.row.cart-title
 			.col
 				h3
@@ -49,13 +49,90 @@ section.checkout
 			.col
 				p
 					span Tạm tính: 
-					span.temp 2.101.000 đ
+					span.price-temp 2.101.000 đ
+				p
+					span Phí vận chuyển:
+					span.price-shipping 0 đ
 				p Giá chưa bao gồm VAT
-		.row.cart-button-checkout
+		.cart-button-checkout
 			a.btn.btn-prev(href="#")
 				span.mdi.mdi-chevron-left
 				span Tiếp tục mua hàng
 			a.btn.btn-next(href="#")
 				span Tiến hành thanh toán
 				span.mdi.mdi-chevron-right
-section.viewed-product
+	.container.viewed-product
+		.row.cart-title
+			.col
+				h3
+					span.far.fa-clock
+					span Giỏ hàng của bạn 
+		.swiper-container
+			.swiper-button-prev
+				span.lnr.lnr-chevron-left
+			.swiper-button-next
+				span.lnr.lnr-chevron-right
+			.swiper-wrapper
+				.swiper-slide
+					.tna-product-item
+						figure
+							.boxzoom
+								a.detail(href="")
+									img(src="./img/product/1.png", alt="alt")
+							figcaption
+								h4
+									a(href="#") Camera VANTECH
+								.code VP-314TVI
+								.price 633.000 đ
+								a.addcart(href="#") Thêm vào giỏ hàng
+				.swiper-slide
+					.tna-product-item
+						figure
+							.boxzoom
+								a.detail(href="")
+									img(src="./img/product/1.png", alt="alt")
+							figcaption
+								h4
+									a(href="#") Camera VANTECH
+								.code VP-314TVI
+								.price 633.000 đ
+								a.addcart(href="#") Thêm vào giỏ hàng
+		
+				.swiper-slide
+					.tna-product-item
+						figure
+							.boxzoom
+								a.detail(href="")
+									img(src="./img/product/1.png", alt="alt")
+							figcaption
+								h4
+									a(href="#") Camera VANTECH
+								.code VP-314TVI
+								.price 633.000 đ
+								a.addcart(href="#") Thêm vào giỏ hàng
+		
+				//- .swiper-slide
+				//- 	.tna-product-item
+				//- 		figure
+				//- 			.boxzoom
+				//- 				a.detail(href="")
+				//- 					img(src="./img/product/1.png", alt="alt")
+				//- 			figcaption
+				//- 				h4
+				//- 					a(href="#") Camera VANTECH
+				//- 				.code VP-314TVI
+				//- 				.price 633.000 đ
+				//- 				a.addcart(href="#") Thêm vào giỏ hàng
+		
+				//- .swiper-slide
+				//- 	.tna-product-item
+				//- 		figure
+				//- 			.boxzoom
+				//- 				a.detail(href="")
+				//- 					img(src="./img/product/1.png", alt="alt")
+				//- 			figcaption
+				//- 				h4
+				//- 					a(href="#") Camera VANTECH
+				//- 				.code VP-314TVI
+				//- 				.price 633.000 đ
+				//- 				a.addcart(href="#") Thêm vào giỏ hàng

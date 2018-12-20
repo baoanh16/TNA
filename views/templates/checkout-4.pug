@@ -1,0 +1,13 @@
+extends _layout/_layout.pug
+
+block var
+	- title = 'payment-method'
+	- bodyClass = 'payment-method-page'
+
+block header
+	include ../lib/header/index.pug
+block main
+	include ../lib/checkout/step/index.pug
+	include ../lib/checkout/c-4/index.pug
+block footer
+	include ../lib/footer/index.pug
