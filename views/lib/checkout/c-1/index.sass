@@ -1,23 +1,149 @@
 .checkout
 	.cart-title
-		padding-top: r(21px)
+		margin-top: r(21px)
+		margin-bottom: .5rem
 		h3
 			font-size: r(15px)
 			font-weight: 700
 			color: lighten(black, 20%)
 			text-transform: uppercase
 	.cart-table-list
+		.quantity
+			display: flex
+			background-color: darken(white,4%)
+			border-radius: 15px
+			max-width: 90px
+			margin: auto
+			span
+				flex: 0 0 30px
+				height: 30px
+				+flex-center
+				cursor: pointer
+				&::selection
+					background: none
+			input
+				flex: 0 0 30px
+				max-width: 30px
+				height: 30px
+				border: 0
+				background: none
+				text-align: center
+				&::selection
+					background: none
+				&:focus
+					outline: 0
 		table
+			width: 100%
+			border: 3px solid darken(white,3%)
+			thead
+				+media-breakpoint-down(sm)
+					display: none
+				tr
+					background-color: darken(white,5%)
+					height: 3rem
+					border-bottom: 1px solid darken(white,15%)
+					th
+						vertical-align: middle
+						font-size: r(15px)
+						font-weight: 400
+						&:first-child
+							width: calc(100% / 3)
+							text-align: left
+							padding-left: 1rem
+						&:nth-child(2)
+							width: calc(100% / 4)
+							text-align: center
+						&:nth-child(3)
+							width: calc(100% / 6)
+							text-align: center
+						&:last-child
+							text-align: right
+							padding-right: 21px
 			tbody
 				tr
+					height: 100px
+					td
+						vertical-align: middle
+						font-size: r(15px)
+						font-weight: 400
+						&:first-child
+							text-align: left
+							padding-left: 1rem
+						&:nth-child(2)
+							text-align: center
+						&:nth-child(3)
+							text-align: center
+						&:last-child
+							text-align: right
+							padding-right: 21px
+							color: #f30a0a
+					+ tr
+						border-top: 1px solid darken(white,15%)
+					+media-breakpoint-down(sm)
+						padding-top: 20px
+						td
+							&:first-child
+								margin-top: 1rem
+								padding-left: 0
+								width: 100%
+								vertical-align: middle
+								padding-right: 1rem
+							&:nth-child(2), &:nth-child(3), &:last-child
+								float: right
+								width: 100px
+								text-align: right
+								padding-right: 15px
+								margin-top: .5rem
+							&:nth-child(2)
+								margin-top: 1rem
 					figure
 						display: flex
 						align-items: center
+						margin-bottom: 0
 						img
 							max-width: 60px
 						figcaption
-							h4
+							h4, p
 								font-size: r(13px)
 								font-weight: 400
 								color: lighten(black,20%)
-								
+	.cart-total-price
+		margin-top: 1rem
+		text-align: right
+		p
+			font-size: r(15px)
+			font-weight: 400
+			span.temp
+				font-size: r(20px)
+				font-weight: 700
+				color: #ff0000
+	.cart-button-checkout
+		margin-top: 1rem
+		padding: 0 15px
+		flex-direction: column
+		align-items: center
+		@media (min-width: 480px)
+			flex-direction: row
+			justify-content: space-between
+		.btn
+			+flex-center
+			height: 35px
+			max-width: 200px
+			line-height: 1
+			span
+				font-size: r(13.5px)
+				&:first-child
+					margin-right: .5rem
+				&.mdi
+					font-size: r(22px)
+			&.btn-prev
+				margin-bottom: 20px
+				background: darken(white, 7%)
+				@media (min-width: 480px)
+					margin-bottom: 0
+				span
+					color: lighten(black,20%)
+			&.btn-next
+				+grad1
+				span
+					color: white

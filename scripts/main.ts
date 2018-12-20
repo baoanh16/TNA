@@ -4,8 +4,8 @@ import { Solution } from '../views/lib/solution/index';
 import { galleryImages } from '../views/lib/gallery/g-1/index';
 import { videoImages } from '../views/lib/video/v-1/index';
 import { collapseFaq } from '../views/lib/faq/f-1/index'
-import {ProductNav} from '../views/lib/nav/n-3/index'
-
+import { ProductNav } from '../views/lib/nav/n-3/index'
+import { Checkout } from '../views/lib/checkout/index';
 
 let header = new Header();
 let menunews = new MenuNews();
@@ -14,6 +14,7 @@ let galleryimages = new galleryImages();
 let videoimages = new videoImages();
 let collapsefaq = new collapseFaq();
 let productnav = new ProductNav();
+let checkout = new Checkout();
 
 $(document).ready(function () {
 	// Header
@@ -42,7 +43,10 @@ $(document).ready(function () {
 	collapsefaq.collapseToogle();
 	// Product
 	productnav.toggleNavFather(breakpoint);
-	productnav.	toggleNavChild();
+	productnav.toggleNavChild();
+	// Checkout
+	checkout.minusQuantity();
+	checkout.plusQuantity();
 });
 
 $(window).on('resize', function () {
