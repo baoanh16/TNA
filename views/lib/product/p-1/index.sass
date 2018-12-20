@@ -76,6 +76,7 @@
 					-webkit-appearance: none
 					-moz-appearance: none
 					appearance: none
+					padding-left: 1rem
 					&:focus
 						outline: none
 		.product-body
@@ -124,3 +125,9 @@
 			.product-search
 				button
 					cursor: pointer
+	@media screen and (min-width: 560px) and (max-width: 575px)
+		.product-list-inner
+			.product-body
+				.tna-product-item
+					flex: 0 0 50%
+					max-width: 50%

@@ -1,0 +1,55 @@
+.canhcam-carousel-1
+	padding-bottom: r(30px)
+	.carousel-list
+		.carousel-head
+			display: flex
+			justify-content: space-between
+			align-items: center
+			margin-bottom: r(30px)
+			h2
+				font-size: r(30px)
+				font-weight: 700
+				color: color-get($mau,extra-2)
+				margin-bottom: 0
+			.controls
+				display: flex
+				align-items: center
+				list-style-type: none
+				padding-left: 0
+				li
+					width: r(37px)
+					height: r(37px)
+					line-height: r(37px)
+					text-align: center
+					box-shadow: 0 0 0 1px #e6e6e6
+					font-size: 1rem
+					color: #e6e6e6
+					margin-right: r(20px)
+					&:last-child
+						margin-right: 0
+					&:focus , &:active
+						box-shadow: 0 0 0 1px color-get($mau,extra-2)
+						color: color-get($mau,extra-2)
+		.carousel-body
+			.c-item
+				.tna-product-item
+					figure
+						box-shadow: none
+						border: 1px solid #e1e1e1
+	+media-breakpoint-up(lg)
+		padding-bottom: r(60px)
+		.carousel-list
+			.carousel-head
+				.controls
+					li
+						transition: all .3s ease-in-out
+						cursor: pointer
+						&:hover
+							box-shadow: 0 0 0 1px color-get($mau,extra-2)
+							color: color-get($mau,extra-2)
+			.carousel-body
+				.c-item
+					.tna-product-item
+						figure
+							&:hover
+								border-color: #1f5d9d

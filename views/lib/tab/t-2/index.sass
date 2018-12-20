@@ -1,0 +1,50 @@
+.canhcam-tab-2
+	background: #f9f9f9
+	.tabs-list
+		.tab-head
+			padding: 1rem
+			p
+				margin-bottom: 0
+				color: #333333
+				font-size: r(16px)
+				font-weight: 400
+		.tab-body
+			.tab-content
+				.tab-title
+					padding: 1rem r(30px)
+					background: #ebebeb
+					h4
+						color: #333333
+						font-weight: 400
+						text-transform: uppercase
+						font-size: 1rem
+						margin-bottom: 0
+						position: relative
+						&:after
+							content: '\e874'
+							font-family: '\Linearicons-Free'
+							font-size: r(16px)
+							color: #666666
+							position: absolute
+							top: 0
+							right: 0
+				.tab-table
+					table
+						margin-bottom: 0
+						tr
+							th , td
+								color: #666666
+								font-size: 1rem
+								font-weight: 400
+							th
+								padding-left: 2rem
+	+media-breakpoint-up(md)
+		.tabs-list
+			.tab-head
+				padding: r(35px) r(30px)
+	+media-breakpoint-up(lg)
+		.tabs-list
+			.tab-body
+				.tab-content
+					.tab-title
+						cursor: pointer
