@@ -7,6 +7,7 @@ import {ProductNav} from '../views/lib/nav/n-3/index';
 import {CCBanner2} from '../views/lib/breadcrumb/b-2/index';
 import {ProductDeatil} from '../views/lib/product_detail/p-1/index'
 import {ProductDetailTab} from '../views/lib/product_detail/p-2/index'
+import {Carousel1} from '../views/lib/carousel/c-1/index'
 
 
 let header = new Header();
@@ -18,6 +19,7 @@ let productnav = new ProductNav();
 let ccbanner2 = new CCBanner2();
 let productdeatil = new ProductDeatil();
 let productdetailTab = new ProductDetailTab();
+let carousel1 = new Carousel1();
 
 $(document).ready(function () {
 	// Header
@@ -48,11 +50,13 @@ $(document).ready(function () {
 	productnav.	toggleNavChild();
 
 	// Banner 2 slide
-	ccbanner2.bannerslide2()
+	ccbanner2.bannerslide2();
 
 	// Product detail
-	productdeatil.listsImages()
-	productdetailTab.tabToggle()
+	productdeatil.listsImages();
+	productdetailTab.tabToggle();
+	productdetailTab.tabCollapse();
+	carousel1.slideCarousel();
 });
 
 $(window).on('resize', function () {

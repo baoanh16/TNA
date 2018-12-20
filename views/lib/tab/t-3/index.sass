@@ -1,0 +1,50 @@
+.canhcam-tab-3
+	background: #f9f9f9
+	.tabs-list
+		.tab-head
+			padding: 1rem
+			p
+				margin-bottom: 0
+				color: #333333
+				font-size: r(16px)
+				font-weight: 400
+		.tab-body
+			.tab-table
+				tr
+					th , td
+						border: none
+						color: #333333
+					span
+						font-size: r(16px)
+					td
+						padding-right: r(30px)
+						text-align: right
+					th
+						padding-left: r(30px)
+						a
+							color: #333333
+							font-size: 1rem
+							font-weight: 400
+							&:before
+								content: '\f15c'
+								font-family: 'Font Awesome 5 Free'
+								font-weight: 600
+								font-size: r(16px)
+								margin-right: r(35px)
+								display: inline-block
+					&:nth-child(odd)
+						background: #f2f2f2
+	+media-breakpoint-up(md)
+		.tabs-list
+			.tab-head
+				padding: r(35px) r(30px)
+	+media-breakpoint-up(lg)
+		.tabs-list
+			.tab-body
+				.tab-table
+					tr
+						td , a
+							transition: all .3s ease-in-out
+						&:hover
+							a, td
+								color: #015198
