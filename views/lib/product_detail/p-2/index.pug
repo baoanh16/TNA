@@ -1,0 +1,20 @@
+section.canhcam-product-detail-2
+	article.product-list
+		.container
+			.row
+				.col-12
+					nav.nav-control
+						ul
+							li
+								a.active(href="javascrip:void(0)" data-tab="tab-1") Mô tả
+							li
+								a(href="javascrip:void(0)" data-tab="tab-2") Thông số kỹ thuật
+							li
+								a(href="javascrip:void(0)" data-tab="tab-3") Download
+					.tab-control
+						.tab-panel#tab-1
+							include ../../tab/t-1/index
+						.tab-panel#tab-2
+							include ../../tab/t-2/index
+						.tab-panel#tab-3
+							include ../../tab/t-3/index

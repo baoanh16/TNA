@@ -1,0 +1,157 @@
+.canhcam-product-detail-1
+	padding: r(30px) 0
+	.product-list
+		.product-images
+			#tns1-ow
+				box-shadow: 0 0 0 1px #1f5d9d
+				display: flex
+				align-items: center
+				img
+					width: 100%
+			#tns2-ow
+				margin-top: 1rem
+				max-width: 33rem
+				margin-right: auto
+				margin-left: auto
+				.list-thumb
+					img
+						width: 100%
+				.tns-item
+					.item
+						box-shadow: inset 0 0 0 1px #e1e1e1
+						img
+							position: relative
+							z-index: -1
+					&.tns-nav-active
+						.item
+							box-shadow: inset 0 0 0 1px #1f5d9d
+			.list-control
+				position: relative
+			.controls
+				list-style-type: none
+				padding-left: 0
+				margin-bottom: 0
+				.prev , .next
+					position: absolute
+					top: 50%
+					font-size: r(30px)
+					color: #1f5d9d
+					transform: translateY(-50%)
+				.prev
+					left: 0
+				.next
+					right: 0
+		.product-info
+			margin-top: 2rem
+			h1
+				font-size: r(30px)
+				color: #333333
+				font-weight: 700
+				text-transform: uppercase
+				margin-bottom: 1rem
+			.content
+				display: flex
+				flex-wrap: wrap
+				padding-bottom: .5rem
+				.content-title
+					flex: 0 0 50%
+					font-size: 1rem
+					color: #666666
+					font-weight: 300
+					font-style: italic
+					&.price-new
+						color: #1f5d9d
+						font-weight: 700
+						font-size: r(16px)
+						span
+							display: block
+							color: #666666
+							font-size: r(12px)
+							font-weight: 300
+							font-style: italic
+						small
+							font-weight: 700
+				.content-des
+					flex: 0 0 50%
+					font-size: 1rem
+					color: #666666
+					font-weight: 500
+					span
+						margin-right: r(20px)
+					&.price-old
+						font-size: r(16px)
+						font-weight: 400
+						color: #666666
+						text-decoration: line-through
+						small
+							font-weight: 400
+					&.blue
+						color: #1f5d9d
+				.content-des-long
+					margin-top: 1rem
+					p
+						margin-bottom: .3rem
+						font-size: 1rem
+						font-weight: 500
+						color: #666666
+						&:last-child
+							margin-bottom: 0
+				&.price
+					padding-bottom: 1rem
+				&:last-child
+					padding-bottom: 0
+	+media-breakpoint-up(md)
+		.product-list
+			.product-images
+				#tns1-ow
+					height: r(420px)
+					img
+						width: auto
+					.tns-item
+						.item
+							display: flex
+							justify-content: center
+							align-items: center
+				#tns2-ow
+					margin-top: r(30px)
+			.product-info
+				.content
+					.content-title
+						flex: 0 0 33%
+						&.price-new
+							font-size: r(20px)
+					.content-des
+						&.price-old
+							font-size: r(20px)
+						span
+							margin-right: r(30px)
+	+media-breakpoint-up(lg)
+		padding: r(60px) 0 r(50px) 0
+		.product-list
+			.product-images
+				padding-right: r(30px)
+				.controls
+					.prev , .next
+						cursor: pointer
+			.product-info
+				margin-top: 0
+				h1
+					margin-bottom: r(16px)
+				.content
+					.content-title
+						&.price-new
+							font-size: r(30px)
+					.content-des
+						&.price-old
+							font-size: r(30px)
+	@media screen and (min-width: 560px) and (max-width: 767px)
+		.product-list
+			.product-images
+				#tns1-ow
+					img
+						width: auto
+					.tns-item
+						.item
+							display: flex
+							justify-content: center
+							align-items: center

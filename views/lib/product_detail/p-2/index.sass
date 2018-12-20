@@ -1,0 +1,59 @@
+.canhcam-product-detail-2
+	padding-bottom: r(30px)
+	.product-list
+		.nav-control
+			ul
+				display: flex
+				justify-content: center
+				align-items: center
+				flex-direction: column
+				list-style: none
+				padding-left: 0
+				margin-bottom: 0
+				li
+					a
+						padding: .93rem 2rem
+						background: #ebebeb
+						color: #333333
+						font-weight: 500
+						font-size: r(16px)
+						display: block
+						margin-bottom: .5rem
+						&.active
+							background: #1f5d9d
+							color: #ffffff
+						+media-breakpoint-down(md)
+							&:active , &:focus
+								background: #1f5d9d
+								color: #ffffff
+					&:last-child
+						a
+							margin-bottom: 0
+		.tab-control
+			margin-top: 1.5rem
+			box-shadow: 0 0 0 1px #e1e1e1
+	@media screen and (min-width: 500px)
+		.product-list
+			.nav-control
+				ul
+					flex-direction: row
+					justify-content: flex-start
+					li
+						a
+							margin-bottom: 0
+						+ li
+							a
+								box-shadow: inset 1px 0 0 0 #ffffff
+			.tab-control
+				margin-top: 0
+	+media-breakpoint-up(lg)
+		padding-bottom: r(50px)
+		.product-list
+			.nav-control
+				ul
+					li
+						a
+							transition: all .3s ease-in-out
+							&:hover
+								background: #1f5d9d
+								color: #ffffff
