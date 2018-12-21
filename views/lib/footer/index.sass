@@ -107,6 +107,17 @@
 					+media-breakpoint-up(lg)
 						+ li
 							margin-left: 1.25rem
+							position: relative
+							&:before
+								content: ''
+								position: absolute
+								height: 10px
+								width: 1px
+								background: lighten(black,40%)
+								left: -0.725rem
+								top: 50%
+								transform: translateY(-50%)
+								
 		.copyright
 			margin-top: 1rem
 			text-align: center
