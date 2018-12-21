@@ -166,6 +166,7 @@ ul, p
 			position: relative
 			img
 				max-width: 100%
+				object-fit: contain
 			.product-btn
 				position: absolute
 				bottom: 0
@@ -224,7 +225,7 @@ ul, p
 			transition: all .3s ease-in-out
 			.boxzoom
 				img
-					max-width: inherit
+					// max-width: inherit
 				.product-btn
 					display: flex
 					flex-direction: column
@@ -235,3 +236,29 @@ ul, p
 					.product-btn
 						opacity: 1
 						visibility: visible
+
+.canhcam-home-3-4
+	background: url('.././img/stroke.jpg') repeat
+	padding: r(30px) 0
+	+media-breakpoint-up(lg)
+		padding: r(60px) 0
+.seemore
+	a
+		display: inline-block
+		padding: .5rem r(37px)
+		border-radius: 5px
+		box-shadow: 0 0 0 1px #1f5d9d
+		color: #1f5d9d
+		font-size: r(15px)
+		font-weight: 400
+		&:after
+			content: '\e87a'
+			font-family: 'Linearicons-Free'
+			font-size: r(17px)
+			margin-left: 1rem
+	+media-breakpoint-up(lg)
+		a
+			transition: all .3s ease-in-out
+			&:hover
+				background: #1f5d9d
+				color: #ffffff
