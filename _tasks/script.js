@@ -32,6 +32,7 @@ gulp.task('script_dev', () => {
 		.pipe(sourcemaps.init({
 			loadMaps: true
 		}))
+		.pipe(uglifyes())
 		.pipe(sourcemaps.write('./'))
 		.pipe(gulp.dest('./dist/js'))
 })
