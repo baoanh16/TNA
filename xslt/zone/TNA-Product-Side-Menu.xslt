@@ -23,7 +23,7 @@
 	<xsl:template match="Zone">
 		<li>
 			<a>
-				<xsl:if test="position()=1">
+				<xsl:if test="IsActive='true'">
 					<xsl:attribute name="class">
 						<xsl:text>active</xsl:text>
 					</xsl:attribute>
@@ -37,7 +37,7 @@
 				<xsl:value-of select="Title"></xsl:value-of>
 			</a>
 			<div class="collapse-btn">
-				<xsl:if test="position()=1">
+				<xsl:if test="IsActive='true'">
 					<xsl:attribute name="class">
 						<xsl:text>collapse-btn active</xsl:text>
 					</xsl:attribute>

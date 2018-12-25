@@ -38,7 +38,8 @@
 							<xsl:attribute name="href">
 								<xsl:value-of select="/ShoppingCart/CartPageUrl"></xsl:value-of>
 							</xsl:attribute>
-							<xsl:value-of select="/ShoppingCart/CheckoutProcessText"></xsl:value-of>
+							<!-- <xsl:value-of select="/ShoppingCart/CheckoutProcessText"></xsl:value-of> -->
+							Giỏ Hàng
 						</a>
 					</div>
 				</div>
