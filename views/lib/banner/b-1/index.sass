@@ -1,0 +1,38 @@
+.canhcam-banner-1
+	.banners-list
+		.swiper-container
+			.swiper-slide
+				.slide-inner
+					position: relative
+					.slide-img
+						img
+							min-height: r(300px)
+							object-fit: cover
+					.slide-title
+						position: absolute
+						top: 50%
+						left: 0
+						width: 100%
+						transform: translateY(-50%)
+						h2
+							font-size: r(16px)
+							font-weight: 500
+							color: #1f5d9d
+							margin-bottom: 0
+							+media-breakpoint-up(md)
+								font-size: r(30px)
+							+media-breakpoint-up(lg)
+								font-size: r(48px)
+			.swiper-pagination-bullets
+				+media-breakpoint-up(md)
+					bottom: r(30px)
+				.swiper-pagination-bullet
+					width: r(12px)
+					height: r(12px)
+					margin: 0 9px
+					background: none
+					box-shadow: 0 0 0 2px #1f5d9d
+					&.swiper-pagination-bullet-active
+						background: #ffffff
+					&:focus
+						outline: none

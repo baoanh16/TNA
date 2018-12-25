@@ -24,7 +24,7 @@
 	<xsl:template match="Zone" mode="Nav">
 		<li>
 			<a>
-				<xsl:if test="IsActive='true'">
+				<xsl:if test="position()=1">
 					<xsl:attribute name="class">
 						<xsl:text>active</xsl:text>
 					</xsl:attribute>
@@ -37,12 +37,7 @@
 				</xsl:attribute>
 				<xsl:value-of select="Title"></xsl:value-of>
 			</a>
-			<div class="collapse-btn">
-				<xsl:if test="IsActive='true'">
-					<xsl:attribute name="class">
-						<xsl:text>collapse-btn active</xsl:text>
-					</xsl:attribute>
-				</xsl:if>
+			<div class="collapse-btn active">
 				<em class="lnr lnr-chevron-down"></em>
 			</div>
 			<xsl:if test="count(Zone)>0">

@@ -52,7 +52,7 @@
 		</div>
 	</xsl:template>
 
-	<xsl:template match="Shipping">
+	<!-- <xsl:template match="Shipping">
 		<div class="form-group">
 			<input type="radio" name="ShippingMethod" onchange="AjaxCheckout.getshippingtotal(this)">
 			<xsl:if test="position()=1">
@@ -73,7 +73,7 @@
 				</div>
 			</xsl:if>
 		</div>
-	</xsl:template>
+	</xsl:template> -->
 
 	<xsl:template match="Payment">
 		<div class="method">

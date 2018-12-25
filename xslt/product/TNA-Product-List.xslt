@@ -6,7 +6,6 @@
 	<xsl:template match="/">
 
 		<div class="product-list-inner ajaxresponse">
-		
 			<div class="product-head">
 				<h2 class="tna__title tna__title--extra-3">
 					<xsl:value-of select="/ProductList/ModuleTitle"></xsl:value-of>

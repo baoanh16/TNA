@@ -79,19 +79,21 @@ $fab: 'Font Awesome 5 Brands'
 			color: color-get($mau, main)
 
 =mainGrad
-	background: linear-gradient(90deg, #1189c3 0%, #2673b5 25%, #044181 55%, #1d5895 100%)
+	background-image: linear-gradient(90deg, #1189c3 0%, #2673b5 25%, #044181 55%, #1d5895 100%)
 
 =mainGradRev
-	background: linear-gradient(135deg, #1d5895 0%, #044181 55%, #2673b5 85%, #1189c3 100%)
+	background-image: linear-gradient(135deg, #1d5895 0%, #044181 55%, #2673b5 85%, #1189c3 100%)
 =grad1
 	background-image: -moz-linear-gradient( 0deg, rgb(35,140,190) 0%, rgb(83,174,220) 100%)
 	background-image: -webkit-linear-gradient( 0deg, rgb(35,140,190) 0%, rgb(83,174,220) 100%)
 	background-image: -ms-linear-gradient( 0deg, rgb(35,140,190) 0%, rgb(83,174,220) 100%)
+	background-image: linear-gradient( 0deg, rgb(35,140,190) 0%, rgb(83,174,220) 100%)
 
 =grad2
 	background-image: -moz-linear-gradient( 0deg, rgb(34,110,172) 0%, rgb(66,155,227) 100%)
 	background-image: -webkit-linear-gradient( 0deg, rgb(34,110,172) 0%, rgb(66,155,227) 100%)
 	background-image: -ms-linear-gradient( 0deg, rgb(34,110,172) 0%, rgb(66,155,227) 100%)
+	background-image: linear-gradient( 0deg, rgb(34,110,172) 0%, rgb(66,155,227) 100%)
 
 =formcontrol
 	display: block
@@ -123,3 +125,18 @@ $fab: 'Font Awesome 5 Brands'
 	display: flex
 	justify-content: center
 	align-items: center
+
+=shadowimg()
+	&:after
+		content: ''
+		position: absolute
+		// z-index: -1
+		bottom: 0
+		left: 0
+		width: 100%
+		height: 100%
+		background: rgba(0,0,0,.5)
+		background: -moz-linear-gradient(top, rgba(0,0,0,0) 50%, rgba(0,0,0,0.65) 100%)
+		background: -webkit-linear-gradient(top, rgba(0,0,0,0) 50%,rgba(0,0,0,0.65) 100%)
+		background: linear-gradient(to bottom, rgba(0,0,0,0) 50%,rgba(0,0,0,0.65) 100%)
+		filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#a6000000',GradientType=0)
