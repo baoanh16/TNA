@@ -48,7 +48,7 @@
 				<xsl:value-of select="BriefContent" disable-output-escaping="yes"></xsl:value-of>
 			</td>
 			<td>
-				<xsl:value-of select="CreatedDate"></xsl:value-of>
+				<xsl:value-of select="EndDate"></xsl:value-of>
 			</td>
 		</tr>
 	</xsl:template>
