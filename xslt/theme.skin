@@ -7,14 +7,14 @@
 
 <portal:ZonesDisplaySettings runat="server" 
 	ShowDescription="true"
-    DescriptionControlType="editor"
+    DescriptionControlType="textarea"
     ShowPrimaryImage="true"
-    ShowSecondImage="true"
+    ShowSecondImage="false"
 	/>
 <portal:BannerDisplaySettings runat="server" 
 	ShowDescription="true"
     DescriptionControlType="editor"
-    ShowThumbnail="true"
+    ShowThumbnail="false"
     ThumbnailWidth="100"
     ImageWidth="150"
 	/>

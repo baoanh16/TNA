@@ -733,31 +733,21 @@ function flyToCart(flyer, flyingTo, callBack) {
 			var gotoX = $(flyingTo).offset().left + ($(flyingTo).width() / 2) - ($(flyer).width() / divider) / 2;
 			var gotoY = $(flyingTo).offset().top + ($(flyingTo).height() / 2) - ($(flyer).height() / divider) / 2;
 			$(flyerClone).animate({
-				opacity: 0.4,
-				left: gotoX - 10,
-				top: gotoY + 10,
-				width: 33,
-				height: 24
-			}, 700,
-				// function () {
-				// 	$(flyingTo).fadeOut(400, function () {
-				// 		$(flyingTo).fadeIn(400, function () {
-				// 			$(flyerClone).fadeOut(400, function () {
-				// 				$(flyerClone).remove();
-				// 				if (callBack != null) {
-				// 					callBack.apply($jqfunc);
-				// 				}
-				// 			});
-				// 		});
-				// 	});
-				// });
+				opacity: 0.7,
+				left: gotoX,
+				top: gotoY,
+				width: 135,
+				height: 135
+			}, 1000,
 				function () {
-					$(flyingTo).fadeIn(200, function () {
-						$(flyerClone).fadeOut(200, function () {
-							$(flyerClone).remove();
-							if (callBack != null) {
-								callBack.apply($jqfunc);
-							}
+					$(flyingTo).fadeOut('slowly', function () {
+						$(flyingTo).fadeIn('slowly', function () {
+							$(flyerClone).fadeOut('slowly', function () {
+								$(flyerClone).remove();
+								if (callBack != null) {
+									callBack.apply($jqfunc);
+								}
+							});
 						});
 					});
 				});

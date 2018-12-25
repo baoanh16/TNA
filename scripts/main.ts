@@ -4,6 +4,7 @@ import { Solution } from '../views/lib/solution/index';
 import { galleryImages } from '../views/lib/gallery/g-1/index';
 import { videoImages } from '../views/lib/video/v-1/index';
 import { collapseFaq } from '../views/lib/faq/f-1/index'
+<<<<<<< HEAD
 import { ProductNav } from '../views/lib/nav/n-3/index'
 import { Checkout } from '../views/lib/checkout/index';
 import { CCBanner2 } from '../views/lib/breadcrumb/b-2/index';
@@ -15,6 +16,19 @@ import { Home3 } from '../views/lib/home/h-3/index'
 import { Home4 } from '../views/lib/home/h-4/index'
 import { TabNav4 } from '../views/lib/nav/n-4/index'
 import { Home6 } from '../views/lib/home/h-6/index'
+=======
+import {ProductNav} from '../views/lib/nav/n-3/index';
+import {CCBanner2} from '../views/lib/breadcrumb/b-2/index';
+import {ProductDeatil} from '../views/lib/product_detail/p-1/index'
+import {ProductDetailTab} from '../views/lib/product_detail/p-2/index'
+import {Carousel1} from '../views/lib/carousel/c-1/index'
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> parent of fae6f4f... done home
+=======
+>>>>>>> parent of fae6f4f... done home
+=======
+>>>>>>> parent of fae6f4f... done home
 
 
 let header = new Header();
@@ -29,11 +43,6 @@ let ccbanner2 = new CCBanner2();
 let productdeatil = new ProductDeatil();
 let productdetailTab = new ProductDetailTab();
 let carousel1 = new Carousel1();
-let banner1 = new Banner1();
-let home3 = new Home3();
-let home4 = new Home4();
-let tabnav4 = new TabNav4();
-let home6 = new Home6();
 
 $(document).ready(function () {
 	// Header
@@ -81,13 +90,6 @@ $(document).ready(function () {
 	productdetailTab.tabToggle();
 	productdetailTab.tabCollapse();
 	carousel1.slideCarousel();
-
-	// Index
-	banner1.sliderBanner1()
-	home3.slideHome3()
-	home4.slideHome4()
-	tabnav4.tabNav4()
-	home6.slideHome6()
 });
 
 $(window).on('resize', function () {

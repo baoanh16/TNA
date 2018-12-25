@@ -1,122 +1,159 @@
 .cart
-	.cartpanel
+	+media-breakpoint-up(sm)
+		position: relative
+	.cart-panel
+		z-index: 110
 		position: absolute
-		top: 50px
+		top: calc(100% + .9rem)
+		background: white
+		border-radius: 5px
+		box-shadow: 0 0 .25rem color-get($mau, main)
+		transition: all .4s ease-in-out
+		transform: scale(0)
+		width: 300px
 		right: 0
-		box-shadow: 0 0 5px grey
-		width: 290px
-		display: none
-		z-index: 3000
-		transition: all .3s ease-in-out
-		+media-breakpoint-up(sm)
-			width: 360px
-		&.open
-			display: block
+		transform-origin: 82.5% 0%
+		&.active
+			transform: scale(1)
 		&:before
 			content: ''
+			border-left: 8px solid transparent
+			border-right: 8px solid transparent
+			border-bottom: 8px solid #14508e
 			position: absolute
-			border-left: 7px solid transparent
-			border-right: 7px solid transparent
-			border-bottom: 10px solid #298ac4
 			bottom: 100%
-			right: 42px
-		.title
-			+grad1
-			color: color-get($mau, trang)
-			padding: 0 10px
-			font-size: .9rem
-			line-height: 40px
+			right: 2.8rem
+		+media-breakpoint-up(lg)
+			top: calc(100% + 1rem)
+			width: 320px
+			right: -2rem
+			left: initial
+			transform-origin: 82.5% 0%
+			&:before
+				border-bottom: 8px solid darken(color-get($mau,main),5%)
+				left: initial
+				right: 3rem
+		.cart-header
+			+mainGrad
+			color: white
+			display: flex
+			align-items: center
+			padding: 0 0 0 .75rem
+			height: 35px
+			font-size: 1rem
+			border-top-left-radius: 5px
+			border-top-right-radius: 5px
+			+media-breakpoint-up(md)
+				height: 2.35rem
+				font-size: r(15px)
+			.fas
+				margin-left: auto
+				color: white
+				cursor: pointer
+				width: 2.25rem
+				height: 2.25rem
+				display: flex
+				justify-content: center
+				align-items: center
 			a
-				color: color-get($mau, trang)
-				line-height: 40px
-				&:hover
-					text-decoration: underline
-					color: color-get($mau, trang)
-		.btn-closecart
-			position: absolute
-			font-size: r(20px)
-			color: color-get($mau,trang)
-			line-height: 1
-			top: 9px
-			right: 10px
-			cursor: pointer
-			span
-				background: transparent
-				border-radius: 50%
-		.cart-list
-			padding: 0 10px
-			background: white
-			max-height: 300px
+				color: white
+				margin-left: .25rem
+				text-decoration: underline
+		.cart-body
+			padding: 0 .75rem
 			overflow-y: auto
-			ul
-				list-style-type: none
+			max-height: 295px
+			+media-breakpoint-up(md)
+				max-height: 317px
+			+media-breakpoint-up(xl)
+				max-height: 347px
+			&::-webkit-scrollbar
+				background: color-rgba(color-get($mau, main),.15 )
+				width: r(8px)
+				border-radius: 2.5px
+			&::-webkit-scrollbar-thumb
+				width: r(8px)
+				border-radius: 2.5px
+				background: darken(color-get($mau, main), 5%)
+			&::-webkit-scrollbar-track
+				box-shadow: 0 0 .15rem color-get($mau,main) inset
+			.cart-list-item
 				padding-left: 0
 				margin-bottom: 0
-				li
-					padding: 10px 0 15px 0
-					border-bottom: 1px dashed rgba(0,0,0,.1)
+				list-style-type: none
+				.item
 					display: flex
+					align-items: flex-start
+					border-bottom: 1px dashed rgba(0,0,0,.1)
+					padding: .65rem 0
 					.product-img
-						max-width: 60px
+						width: 60px
+						flex: 0 0 60px
 						img
-							max-width: 100%
-							height: auto
+							width: 100%
 					.product-info
-						margin-left: 10px
-						color: #333
-						.product-name
-							font-size: r(13px)
-							a
-								color: color-get($mau, main)
+						flex-basis: 0
+						flex-grow: 1
+						max-width: 100%
+						padding-right: .35rem
+						h6
+							color: color-get($mau,main)
+							margin-bottom: 0
+							font-weight: 500
+							margin-bottom: .25rem
+							+line(2)
+							min-height: 1px
+							font-size: 1rem
+							+media-breakpoint-up(lg)
+								font-size: r(14px)
+						p
+							margin-bottom: 0
+							font-size: r(14px)
+							b
+								font-weight: 600
 					.remove-product
-						cursor: pointer
-						margin-left: auto
+						width: 20px
+						display: flex
+						justify-content: center
+						align-items: center
 						align-self: center
-						i
-							&:before
-								content: "\f2ed"!important
-								color: darken(color-get($mau, main), 10%)
-		.checkout-panel
-			.total
-				background: white
-				padding: 5px 10px
-				font-size: r(14px)
-				color: #333
-				strong
+						color: color-get($mau, main)
+						cursor: pointer
+		.cart-total
+			padding: 0 .75rem
+			background: color-rgba(color-get($mau, main),.1 )
+			height: 35px
+			display: flex
+			justify-content: flex-start
+			align-items: center
+			p
+				margin-bottom: 0
+				font-size: r(15px)
+				.total-price
 					color: color-get($mau,main)
-			.button
-				+grad1
-				padding: 10px
-				.btn-checkout
-					display: none
-				a
-					display: block
+					font-size: r(16px)
+		.cart-footer
+			+mainGrad
+			height: 2.35rem
+			display: flex
+			align-items: center
+			padding: 0 .75rem
+			height: 35px
+			border-bottom-left-radius: 5px
+			border-bottom-right-radius: 5px
+			+media-breakpoint-up(md)
+				height: 2.35rem
+			a
+				color: white
+				display: block
+				width: 100%
+				border: 0
+				font-size: 1.1rem
+				+media-breakpoint-up(md)
 					font-size: r(15px)
-					text-align: center
-					color: white
-					&:before
-						content: '\f07a'
-						font-family: 'Font Awesome 5 Free'
-						margin-right: 5px
-						color: white
-						font-weight: 900
-	+media-breakpoint-up(lg)
-		.cartpanel
-			right: -59px
-			+media-breakpoint-down(xs)
-				max-width: 100%
-			&:before
-				right: 42px
-			.title
-				font-size: 1rem
-			.cart-list
-				ul
-					li
-						.product-img
-							width: 100px
-			.checkout-panel
-				.total
-					font-size: r(15px)
+				.fas
+					margin-right: .4rem
+
 .backdrop
 	+media-breakpoint-down(md)
 		position: fixed
