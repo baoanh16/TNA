@@ -23,6 +23,9 @@ import {ProductDeatil} from '../views/lib/product_detail/p-1/index'
 import {ProductDetailTab} from '../views/lib/product_detail/p-2/index'
 import {Carousel1} from '../views/lib/carousel/c-1/index'
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> parent of fae6f4f... done home
+=======
 >>>>>>> parent of fae6f4f... done home
 =======
 >>>>>>> parent of fae6f4f... done home
