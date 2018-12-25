@@ -22,6 +22,9 @@ import {CCBanner2} from '../views/lib/breadcrumb/b-2/index';
 import {ProductDeatil} from '../views/lib/product_detail/p-1/index'
 import {ProductDetailTab} from '../views/lib/product_detail/p-2/index'
 import {Carousel1} from '../views/lib/carousel/c-1/index'
+<<<<<<< HEAD
+>>>>>>> parent of fae6f4f... done home
+=======
 >>>>>>> parent of fae6f4f... done home
 
 
