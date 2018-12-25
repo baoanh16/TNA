@@ -6,6 +6,7 @@
 		.form-group
 			display: flex
 			flex-wrap: wrap
+			position: relative
 			span
 				font-size: r(11px)
 				font-weight: 400
@@ -15,6 +16,9 @@
 				font-size: r(12px)
 				font-weight: 400
 				color: lighten(black,20%)
+				&.error
+					text-align: right
+					color: red
 			input,select,textarea
 				background-color: #fff
 				background-clip: padding-box
@@ -37,6 +41,10 @@
 			+media-breakpoint-up(sm)
 				label
 					flex: 0 0 180px
+					&.error
+						padding-left: 190px
+						flex: 0 0 100%
+						text-align: left
 				input, select, textarea
 					flex: 0 0 calc(100% - 180px)
 				span

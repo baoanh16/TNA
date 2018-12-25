@@ -61,11 +61,11 @@
 						<div class="price">
 							<xsl:value-of select="Price"></xsl:value-of>
 						</div>
-						<a class="addcart" onclick="AjaxCart.addproducttocart_catalog(this);return false;">
-							<xsl:attribute name="data-productid">
-								<xsl:value-of select="ProductId"></xsl:value-of>
-							</xsl:attribute>
-							<xsl:value-of select="/ProductList/BuyText"></xsl:value-of>
+						<a class="addcart"  onclick="AjaxCart.addproducttocart_catalog(this);return false;">
+										<xsl:attribute name="data-productid">
+											<xsl:value-of select="ProductId"></xsl:value-of>
+										</xsl:attribute>
+							<!-- <xsl:value-of select="/ProductList/BuyText"></xsl:value-of> -->
 							Thêm vào giỏ hàng
 						</a>
 					</figcaption>

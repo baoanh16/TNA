@@ -359,7 +359,7 @@ var AjaxCart = {
 		this.setLoadWaiting(true);
 
 		if (this.effecttocart == true && this.topcartselector) {
-			var img = $(button).parents('.boxzoom').find('img');
+			var img = $(button).parents('.tna-product-item').find('img');
 			flyToCart($(img), this.topcartselector);
 		}
 
@@ -464,6 +464,7 @@ var AjaxCart = {
 			url: urladd,
 			data: data,
 			type: 'post',
+			// success: function () { location.reload(); },
 			success: this.success_desktop,
 			complete: this.resetLoadWaiting,
 			error: this.ajaxFailure

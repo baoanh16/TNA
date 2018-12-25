@@ -12,8 +12,7 @@
 					</h2>
 					<nav>
 						<ul>
-							<xsl:apply-templates select="/ZoneList/Zone" mode="Nav"></xsl:apply-templates>
-
+							<xsl:apply-templates select="/ZoneList/Zone"></xsl:apply-templates>
 						</ul>
 					</nav>
 				</article>
@@ -21,7 +20,7 @@
 		</div>
 	</xsl:template>
 
-	<xsl:template match="Zone" mode="Nav">
+	<xsl:template match="Zone">
 		<li>
 			<a>
 				<xsl:if test="position()=1">
@@ -37,11 +36,15 @@
 				</xsl:attribute>
 				<xsl:value-of select="Title"></xsl:value-of>
 			</a>
-			<div class="collapse-btn active">
+			<div class="collapse-btn">
+				<xsl:if test="position()=1">
+					<xsl:attribute name="class">
+						<xsl:text>collapse-btn active</xsl:text>
+					</xsl:attribute>
+				</xsl:if>
 				<em class="lnr lnr-chevron-down"></em>
 			</div>
 			<xsl:if test="count(Zone)>0">
-
 				<div class="nav-sub">
 					<ul>
 						<xsl:apply-templates select="Zone" mode="Child"></xsl:apply-templates>
