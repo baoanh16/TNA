@@ -117,7 +117,7 @@
 					<label>
 						<xsl:value-of select="/CheckoutAddress/FullNameText"></xsl:value-of>
 					</label>
-					<input type="text" name="ShippingAddress_FirstName" placeholder="Nhập họ tên" required="true" aria-required="true">
+					<input type="text" name="ShippingAddress_FirstName" placeholder="Nhập họ tên">
 					<xsl:attribute name="placeholder">
 						<xsl:value-of select="/CheckoutAddress/plFullText"></xsl:value-of>
 					</xsl:attribute>
@@ -130,7 +130,7 @@
 					<label>
 						<xsl:value-of select="/CheckoutAddress/PhoneText"></xsl:value-of>
 					</label>
-					<input type="text" name="ShippingAddress_Phone" placeholder="Nhập Số điện thoại" required="true" aria-required="true">
+					<input type="text" name="ShippingAddress_Phone" placeholder="Nhập Số điện thoại">
 					<xsl:attribute name="placeholder">
 						<xsl:value-of select="/CheckoutAddress/plPhone"></xsl:value-of>
 					</xsl:attribute>
@@ -147,7 +147,7 @@
 					<label>
 						<xsl:value-of select="/CheckoutAddress/EmailText"></xsl:value-of>
 					</label>
-					<input type="text" name="ShippingAddress_Email" placeholder="Nhập email" required="true" aria-required="true">
+					<input type="text" name="ShippingAddress_Email" placeholder="Nhập email">
 					<xsl:attribute name="placeholder">
 						<xsl:value-of select="/CheckoutAddress/plEmail"></xsl:value-of>
 					</xsl:attribute>
@@ -161,7 +161,7 @@
 					<label>
 						<xsl:value-of select="/CheckoutAddress/ProvinceText"></xsl:value-of>
 					</label>
-					<select name="ShippingAddress_Province" onchange="AjaxCheckout.getdistrictsbyprovinceguid(this, 'ShippingAddress_District')" required="true" aria-required="true">
+					<select name="ShippingAddress_Province" onchange="AjaxCheckout.getdistrictsbyprovinceguid(this, 'ShippingAddress_District')">
 						<option value="">
 							<xsl:value-of select="/CheckoutAddress/SelectProvinceText"></xsl:value-of>
 						</option>
@@ -172,7 +172,7 @@
 					<label>
 						<xsl:value-of select="/CheckoutAddress/DistrictText"></xsl:value-of>
 					</label>
-					<select name="ShippingAddress_District" required="true" aria-required="true">
+					<select name="ShippingAddress_District">
 						<option value="">
 							<xsl:value-of select="/CheckoutAddress/SelectDistrictText"></xsl:value-of>
 						</option>
@@ -183,7 +183,7 @@
 					<label>
 						<xsl:value-of select="/CheckoutAddress/AddressText"></xsl:value-of>
 					</label>
-					<input type="text" name="ShippingAddress_Address" placeholder="Vd: 64 đường Hiệp Bình" required="true" aria-required="true">
+					<input type="text" name="ShippingAddress_Address" placeholder="Vd: 64 đường Hiệp Bình">
 					<xsl:attribute name="placeholder">
 						<xsl:value-of select="/CheckoutAddress/plAddress"></xsl:value-of>
 					</xsl:attribute>

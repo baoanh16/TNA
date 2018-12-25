@@ -49,46 +49,10 @@
 								<div class="product-button">
 									<a class="btn addcart" onclick="AjaxCart.addproducttocart_catalog(this);return false;">
 										<xsl:attribute name="data-productid">
-											<xsl:value-of select="/ProductDetail/ProductId"></xsl:value-of>
+											<xsl:value-of select="ProductId"></xsl:value-of>
 										</xsl:attribute>
 										Mua ngay
 									</a>
-								</div>
-								<div class="product-hotline">
-									<p>
-										Hotline : (+84) 977 212 455
-									</p>
-								</div>
-								<div class="share" style="display:flex; align-items: center; max-width: 130px;
-								justify-content: space-between">
-									<!-- <div class="label">Share:</div> -->
-									<div class="fb-share-button" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button"
-									 data-size="small" data-mobile-iframe="true">
-										<a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse"
-										 class="fb-xfbml-parse-ignore">Chia sẻ</a>
-									</div>
-
-									<!-- <a target="_blank">
-										<xsl:attribute name="href">
-											<xsl:text>https://www.facebook.com/sharer/sharer.php?u=</xsl:text>
-											<xsl:value-of select="/ProductDetail/FullUrl"></xsl:value-of>
-										</xsl:attribute>
-										<span class="fab fa-facebook-f" aria-hidden="true"></span>
-									</a> -->
-									<a class="twitter-share-button" style="margin-left: 1rem">
-										<xsl:attribute name="href">
-											<xsl:text>https://twitter.com/home?status=</xsl:text>
-											<xsl:value-of select="/ProductDetail/FullUrl"></xsl:value-of>
-										</xsl:attribute>
-										Tweet
-									</a>
-									<!-- <a class="linkedin-share-button" style="margin-left: 1rem">
-										<xsl:attribute name="href">
-											<xsl:text>https://plus.google.com/share?url=</xsl:text>
-											<xsl:value-of select="/ProductDetail/FullUrl"></xsl:value-of>
-										</xsl:attribute>
-										<span class="fab fa-google-plus" aria-hidden="true"></span>
-									</a> -->
 								</div>
 							</div>
 						</div>
@@ -116,29 +80,45 @@
 										</article>
 									</div>
 								</div>
-
-
 								<div class="tab-panel" id="tab-2">
 									<div class="canhcam-tab-2">
 										<article class="tabs-list">
-											<div class="tab-head">
-												<p>Bảng mô tả chi tiết các đặc tính kỹ thuật của thiết bị</p>
-											</div>
-											<div class="tab-body">
-												<xsl:apply-templates select="/ProductDetail/ProductAttributes"></xsl:apply-templates>
-											</div>
+											<xsl:apply-templates select="/ProductDetail/ProductAttributes"></xsl:apply-templates>
+											<!-- <xsl:value-of  disable-output-escaping="yes"></xsl:value-of> -->
 										</article>
 									</div>
 								</div>
-
-
 								<div class="tab-panel" id="tab-3">
 									<div class="canhcam-tab-3">
 										<article class="tabs-list">
 											<div class="tab-head">
 												<p>Tải driver, hướng dẫn sử dụng cho thiết bị</p>
 											</div>
-											<xsl:apply-templates select="/ProductDetail/ProductAttributes" mode="Download"></xsl:apply-templates>
+											<div class="tab-body">
+												<div class="tab-table">
+													<table class="table">
+														<tbody>
+
+															<tr>
+																<th scope="row"><a href="">Hướng dẫn sử dụng thiết bị</a></th>
+																<td><span class="fas fa-download"></span></td>
+															</tr>
+															<tr>
+																<th scope="row"><a href="">Hướng dẫn sử dụng thiết bị</a></th>
+																<td><span class="fas fa-download"></span></td>
+															</tr>
+															<tr>
+																<th scope="row"><a href="">Hướng dẫn sử dụng thiết bị</a></th>
+																<td><span class="fas fa-download"></span></td>
+															</tr>
+															<tr>
+																<th scope="row"><a href="">Hướng dẫn sử dụng thiết bị</a></th>
+																<td><span class="fas fa-download"></span></td>
+															</tr>
+														</tbody>
+													</table>
+												</div>
+											</div>
 										</article>
 									</div>
 								</div>
@@ -174,31 +154,11 @@
 
 
 	<xsl:template match="ProductAttributes">
-		<xsl:if test="position()>1">
-			<div class="tab-content">
-				<div class="tab-title">
-					<h4>
-						<xsl:value-of select="Title"></xsl:value-of>
-					</h4>
-				</div>
-				<div class="tab-table">
-					<xsl:value-of select="Content" disable-output-escaping="yes"></xsl:value-of>
-				</div>
-			</div>
+		<xsl:if test="position()=1">
+			<xsl:value-of select="Description" disable-output-escaping="yes"></xsl:value-of>
 		</xsl:if>
 	</xsl:template>
 
-
-
-	<xsl:template match="ProductAttributes" mode="Download">
-		<div class="tab-body">
-			<div class="tab-table">
-				<xsl:if test="position()=1">
-					<xsl:value-of select="Content" disable-output-escaping="yes"></xsl:value-of>
-				</xsl:if>
-			</div>
-		</div>
-	</xsl:template>
 
 	<xsl:template match="ProductImages" mode="Image">
 		<div class="tns-item">
@@ -235,22 +195,22 @@
 			<div class="tna-product-item">
 				<figure>
 					<div class="boxzoom">
-						<a>
-							<xsl:attribute name="href">
-								<xsl:value-of select="Url"></xsl:value-of>
-							</xsl:attribute>
-							<xsl:attribute name="target">
-								<xsl:value-of select="target"></xsl:value-of>
-							</xsl:attribute>
-							<img>
-							<xsl:attribute name="src">
-								<xsl:value-of select="ThumbnailUrl"></xsl:value-of>
-							</xsl:attribute>
-							<xsl:attribute name="alt">
-								<xsl:value-of select="Title"></xsl:value-of>
-							</xsl:attribute>
-							</img>
-						</a>
+					<a>
+					<xsl:attribute name="href">
+						<xsl:value-of select="Url"></xsl:value-of>
+					</xsl:attribute>
+					<xsl:attribute name="target">
+						<xsl:value-of select="target"></xsl:value-of>
+					</xsl:attribute>
+						<img>
+						<xsl:attribute name="src">
+							<xsl:value-of select="ThumbnailUrl"></xsl:value-of>
+						</xsl:attribute>
+						<xsl:attribute name="alt">
+							<xsl:value-of select="Title"></xsl:value-of>
+						</xsl:attribute>
+						</img>
+					</a>
 					</div>
 					<figcaption>
 						<h4>

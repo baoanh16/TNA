@@ -1,22 +1,24 @@
 export class Checkout {
 	minusQuantity() {
-		$('.minus').on('click', function () {
-			let quantity: number = parseInt($(this).siblings('.quantity-number').attr('value'))
-			if ($(this).siblings('.quantity-number').val() <= 0) {
-				quantity = 0;
-			} else {
-				quantity = quantity - 1;
-			}
-			$(this).siblings('.quantity-number').attr('value', quantity)
-			$(this).siblings('.quantity-number').trigger('change')
+		$('.minus').each(function () {
+			$(this).on('click', function () {
+				let quantity: number = parseInt($(this).siblings('.quantity-number').attr('value'))
+				if ($(this).siblings('.quantity-number').val() <= 0) {
+					quantity = 0;
+				} else {
+					quantity = quantity - 1;
+				}
+				$(this).siblings('.quantity-number').attr('value', quantity)
+			})
 		})
 	}
 	plusQuantity() {
-		$('.plus').on('click', function () {
-			let quantity: number = parseInt($(this).siblings('.quantity-number').attr('value'))
-			quantity = quantity + 1;
-			$(this).siblings('.quantity-number').attr('value', quantity)
-			$(this).siblings('.quantity-number').trigger('change')
+		$('.plus').each(function () {
+			$(this).on('click', function () {
+				let quantity: number = parseInt($(this).siblings('.quantity-number').attr('value'))
+				quantity = quantity + 1;
+				$(this).siblings('.quantity-number').attr('value', quantity)
+			})
 		})
 	}
 	viewedProductSlide() {
@@ -69,23 +71,6 @@ export class Checkout {
 		$('.cart-payment-method .method label').click(function () {
 			$(this).addClass('active')
 			$(this).parent().siblings('.method').find('label').removeClass('active')
-		})
-	}
-	checkout_wo_register() {
-		$('.login-wrap #wo-register-label').on('click', function () {
-			$(this).addClass('active')
-			$('.checkout-wo-register').slideDown();
-			$('#register-label').removeClass('active')
-			$('.checkout-w-register').slideUp();
-		})
-	}
-
-	checkout_w_register() {
-		$('.login-wrap #register-label').on('click', function () {
-			$(this).addClass('active')
-			$('.checkout-w-register').slideDown();
-			$('#wo-register-label').removeClass('active')
-			$('.checkout-wo-register').slideUp();
 		})
 	}
 }

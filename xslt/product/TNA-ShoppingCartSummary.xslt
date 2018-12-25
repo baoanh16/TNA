@@ -9,12 +9,12 @@
 				<h3 class="title">
 					<xsl:value-of select="/ShoppingCart/AddressText"></xsl:value-of>
 				</h3>
-				<!-- <a class="btn-edit">
+				<a class="btn-edit">
 					<xsl:attribute name="href">
 						<xsl:text>/checkoutaddress</xsl:text>
 					</xsl:attribute>
 					<xsl:value-of select="/ShoppingCart/ChangeText"></xsl:value-of>
-				</a> -->
+				</a>
 			</div>
 			<div class="cart-order-summary">
 				<table class="table">
@@ -63,12 +63,12 @@
 			</h3>
 		</div>
 		<div class="cart-order-summary">
-			<!-- <a class="btn-edit">
+			<a class="btn-edit">
 				<xsl:attribute name="href">
 					<xsl:value-of select="/ShoppingCart/CartPageUrl"></xsl:value-of>
 				</xsl:attribute>
 				<xsl:value-of select="/ShoppingCart/ChangeText"></xsl:value-of>
-			</a> -->
+			</a>
 			<table>
 				<tbody>
 					<xsl:apply-templates select="/ShoppingCart/CartItem"></xsl:apply-templates>

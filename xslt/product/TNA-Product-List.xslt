@@ -68,7 +68,7 @@
 						</xsl:attribute>
 						</img>
 					</a>
-					<!--<div class="product-btn">
+					<div class="product-btn">
 						<a class="addcart" onclick="AjaxCart.addproducttocart_catalog(this);return false;">
 							<xsl:attribute name="data-productid">
 								<xsl:value-of select="ProductId"></xsl:value-of>
@@ -76,7 +76,7 @@
 							<xsl:value-of select="/ProductList/BuyText"></xsl:value-of>
 							Thêm vào giỏ hàng
 						</a>
-						<a class="detail">
+						<!-- <a class="detail">
 							<xsl:attribute name="href">
 								<xsl:value-of select="Url"></xsl:value-of>
 							</xsl:attribute>
@@ -84,8 +84,8 @@
 								<xsl:value-of select="target"></xsl:value-of>
 							</xsl:attribute>
 							Xem chi tiết
-						</a>
-					</div> -->
+						</a> -->
+					</div>
 				</div>
 				<figcaption>
 					<h4>

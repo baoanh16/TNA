@@ -92,15 +92,12 @@
 							<span>Tiếp tục mua hàng</span>
 						</a>
 					</xsl:if>
-					<a class="btn btn-next" onclick="setLocation('/dang-nhap');return false;">
-						<!-- <xsl:attribute name="onclick"> -->
-							<!-- <xsl:text>setLocation('</xsl:text>
+					<a class="btn btn-next">
+						<xsl:attribute name="onclick">
+							<xsl:text>setLocation('</xsl:text>
 							<xsl:value-of select="/ShoppingCart/CheckoutPageUrl"></xsl:value-of>
-							<xsl:text>')</xsl:text> -->
-							<!-- <xsl:text>setLocation('</xsl:text>
-							<xsl:value-of select="/ShoppingCart/CheckoutPageUrl"></xsl:value-of>
-							<xsl:text>')</xsl:text> -->
-						<!-- </xsl:attribute> -->
+							<xsl:text>')</xsl:text>
+						</xsl:attribute>
 						<span>
 							<xsl:value-of select="/ShoppingCart/CheckoutProcessText"></xsl:value-of>
 						</span>
@@ -184,7 +181,6 @@
 				<div class="quantity input-number">
 					<span class="minus">-</span>
 					<!-- <input class="quantity-number" type="text" value="1"> -->
-					<!-- <input type="text" maxlength="10" class="quantity-number qty-input" onchange="AjaxCart.updatecart();return false;"> -->
 					<input type="text" maxlength="10" class="quantity-number qty-input" onchange="AjaxCart.updatecart();return false;">
 					<xsl:attribute name="name">
 						<xsl:text>itemquantity</xsl:text>

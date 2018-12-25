@@ -71,8 +71,6 @@ $(document).ready(function () {
 	checkout.toggleExportBill();
 	checkout.sameInfo();
 	checkout.choosePaymentMethod();
-	checkout.checkout_wo_register();
-	checkout.checkout_w_register();
 	productnav.toggleNavChild();
 
 	// Banner 2 slide
