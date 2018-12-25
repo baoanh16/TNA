@@ -37,21 +37,14 @@
 					font-size: r(15px)
 					padding-bottom: r(13px)
 					display: block
-					&.active
-						font-weight: 600
-						color: #000000
-						padding-bottom: r(13px)!important
 				.collapse-btn
 					position: absolute
 					top: 0
 					right: 0
 					font-size: 1.1rem
 					transition: transform .3s ease-in-out
-					&.active
-						color: #1f5d9d
-						transform: rotate(180deg)
 				.nav-sub
-					// display: none
+					display: none
 					padding-bottom: r(15px)
 					padding-left: 1.3rem
 					li
@@ -60,6 +53,14 @@
 						&:last-child
 							a
 								padding-bottom: 0
+				&.active
+					.collapse-btn
+						color: #1f5d9d
+						transform: rotate(180deg)
+					>a
+						font-weight: 600
+						color: #000000
+						padding-bottom: r(13px)!important
 				&:last-child
 					a
 						padding-bottom: 0

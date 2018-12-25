@@ -6,16 +6,16 @@
 	<xsl:template match="/">
 
 		<div class="row">
-			<xsl:apply-templates select="/NewsList/News" mode="Big"></xsl:apply-templates>
-			<xsl:if test="count(News)>1">
+			<xsl:apply-templates select="/NewsList/News"></xsl:apply-templates>
+			<!-- <xsl:if test="count(News)>1">
 				<div class="col-lg-6">
-					<xsl:apply-templates select="/NewsList/News" mode="Small"></xsl:apply-templates>
+					<xsl:apply-templates select="/NewsList/News"></xsl:apply-templates>
 				</div>
-			</xsl:if>
+			</xsl:if> -->
 		</div>
 	</xsl:template>
 
-	<xsl:template match="News" mode="Big">
+	<xsl:template match="News">
 		<xsl:if test="position()=1">
 			<div class="col-lg-6">
 				<div class="top-news">
@@ -53,12 +53,9 @@
 				</div>
 			</div>
 		</xsl:if>
-	</xsl:template>
-
-	<xsl:template match="News" mode="Small">
 		<xsl:if test="position()=2">
 			<xsl:text disable-output-escaping="yes">
-				&lt;div class="part-news"&gt;
+				&lt;div class="col-lg-6"&gt;&lt;div class="part-news"&gt;
 			</xsl:text>
 			<figure>
 				<div class="boxzoom">
@@ -83,13 +80,22 @@
 					<time>
 						<xsl:value-of select="CreatedDate"></xsl:value-of>
 					</time>
+					
+						<a>
+						<xsl:attribute name="href">
+							<xsl:value-of select="Url"></xsl:value-of>
+						</xsl:attribute>
+						<xsl:attribute name="target">
+							<xsl:value-of select="target"></xsl:value-of>
+						</xsl:attribute>
 					<h2>
 						<xsl:value-of select="Title" disable-output-escaping="yes"></xsl:value-of>
 					</h2>
+						</a>
 				</figcaption>
 			</figure>
 		</xsl:if>
-		<xsl:if test="position()=4 or position() = last()">
+		<xsl:if test="position()=3">
 			<figure>
 				<div class="boxzoom">
 					<a>
@@ -113,15 +119,60 @@
 					<time>
 						<xsl:value-of select="CreatedDate"></xsl:value-of>
 					</time>
+					
+						<a>
+						<xsl:attribute name="href">
+							<xsl:value-of select="Url"></xsl:value-of>
+						</xsl:attribute>
+						<xsl:attribute name="target">
+							<xsl:value-of select="target"></xsl:value-of>
+						</xsl:attribute>
 					<h2>
 						<xsl:value-of select="Title" disable-output-escaping="yes"></xsl:value-of>
 					</h2>
+						</a>
 				</figcaption>
 			</figure>
+		</xsl:if>
 
-			<xsl:text disable-output-escaping="yes">
-				&lt;/div&gt;
-			</xsl:text>
+		<xsl:if test="position()=4">
+			<figure>
+				<div class="boxzoom">
+					<a>
+						<xsl:attribute name="href">
+							<xsl:value-of select="Url"></xsl:value-of>
+						</xsl:attribute>
+						<xsl:attribute name="target">
+							<xsl:value-of select="target"></xsl:value-of>
+						</xsl:attribute>
+						<img>
+						<xsl:attribute name="src">
+							<xsl:value-of select="ImageUrl"></xsl:value-of>
+						</xsl:attribute>
+						<xsl:attribute name="alt">
+							<xsl:value-of select="Title"></xsl:value-of>
+						</xsl:attribute>
+						</img>
+					</a>
+				</div>
+				<figcaption>
+					<time>
+						<xsl:value-of select="CreatedDate"></xsl:value-of>
+					</time>
+						<a>
+						<xsl:attribute name="href">
+							<xsl:value-of select="Url"></xsl:value-of>
+						</xsl:attribute>
+						<xsl:attribute name="target">
+							<xsl:value-of select="target"></xsl:value-of>
+						</xsl:attribute>
+					<h2>
+						<xsl:value-of select="Title" disable-output-escaping="yes"></xsl:value-of>
+					</h2>
+						</a>
+				</figcaption>
+			</figure>
+			<xsl:text disable-output-escaping="yes"> &lt;/div&gt;&lt;/div&gt; </xsl:text>
 		</xsl:if>
 	</xsl:template>
 </xsl:stylesheet>

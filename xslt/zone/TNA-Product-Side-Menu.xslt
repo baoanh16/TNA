@@ -22,12 +22,12 @@
 
 	<xsl:template match="Zone">
 		<li>
+			<xsl:if test="IsActive='true'">
+				<xsl:attribute name="class">
+					<xsl:text>active</xsl:text>
+				</xsl:attribute>
+			</xsl:if>
 			<a>
-				<xsl:if test="IsActive='true'">
-					<xsl:attribute name="class">
-						<xsl:text>active</xsl:text>
-					</xsl:attribute>
-				</xsl:if>
 				<xsl:attribute name="href">
 					<xsl:value-of select="Url"></xsl:value-of>
 				</xsl:attribute>
@@ -36,16 +36,16 @@
 				</xsl:attribute>
 				<xsl:value-of select="Title"></xsl:value-of>
 			</a>
-			<div class="collapse-btn">
-				<xsl:if test="IsActive='true'">
-					<xsl:attribute name="class">
-						<xsl:text>collapse-btn active</xsl:text>
-					</xsl:attribute>
-				</xsl:if>
+			<!-- <div class="collapse-btn">
 				<em class="lnr lnr-chevron-down"></em>
-			</div>
+			</div> -->
 			<xsl:if test="count(Zone)>0">
 				<div class="nav-sub">
+					<xsl:if test="IsActive='true'">
+						<xsl:attribute name="style">
+							<xsl:text>display: block</xsl:text>
+						</xsl:attribute>
+					</xsl:if>
 					<ul>
 						<xsl:apply-templates select="Zone" mode="Child"></xsl:apply-templates>
 					</ul>

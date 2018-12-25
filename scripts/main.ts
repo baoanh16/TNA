@@ -46,6 +46,7 @@ $(document).ready(function () {
 	header.toggleMainNav();
 	header.toggleCart();
 	header.closeCart();
+	header.toggleUser();
 	let breakpoint = window.matchMedia("(max-width: 991.98px)")
 	header.addBackdrop(breakpoint);
 	breakpoint.addListener(header.addBackdrop);
@@ -88,7 +89,141 @@ $(document).ready(function () {
 	home4.slideHome4()
 	tabnav4.tabNav4()
 	home6.slideHome6()
+
+	// Find Product
+	if (('.product-search input').length > 0) {
+		$("body").on("click", ".product-search button", function (e) {
+			e.preventDefault();
+			KeyWordSearh();
+		});
+
+		function KeyWordSearh() {
+			let linkSearch = $("#urlKeywordUrlOutParam").val();
+			let keyWord = $(".product-search input").val();
+			if (keyWord != '') {
+				if (linkSearch.indexOf("?") > 0)
+					linkSearch = linkSearch + "&keyword=" + keyWord;
+				else
+					linkSearch = linkSearch + "?keyword=" + keyWord;
+			}
+			ProcessAjax(linkSearch);
+		}
+		SetupScriptSearch();
+
+		function SetupScriptSearch() {
+			$('.product-search input').bind("enterKey", function (e) {
+				e.preventDefault();
+				KeyWordSearh();
+				return false;
+			});
+			$('.product-search input').keyup(function (e) {
+				if (e.keyCode == 13) {
+					$('.product-search button').trigger('click')
+					// $(this).trigger("enterKey");
+					e.preventDefault();
+					return false;
+				}
+			});
+			$('#aspnetForm').on('keyup keypress', function (e) {
+				let keyCode = e.keyCode || e.which;
+				if (keyCode === 13) {
+					$('.product-search button').trigger('click')
+					e.preventDefault();
+					return false;
+				}
+			});
+			$(".product-search input").val($("#txtKeyword").val());
+		}
+	}
+	if (('.solution-title .form-search input').length > 0) {
+		$("body").on("click", ".solution-title .form-search button", function (e) {
+			e.preventDefault();
+			KeyWordSearh();
+		});
+
+		function KeyWordSearh() {
+			let linkSearch = $("#urlKeywordUrlOutParam").val();
+			let keyWord = $(".solution-title .form-search input").val();
+			if (keyWord != '') {
+				if (linkSearch.indexOf("?") > 0)
+					linkSearch = linkSearch + "&keyword=" + keyWord;
+				else
+					linkSearch = linkSearch + "?keyword=" + keyWord;
+			}
+			ProcessAjax(linkSearch);
+		}
+		SetupScriptSearch();
+
+		function SetupScriptSearch() {
+			$('.solution-title .form-search input').bind("enterKey", function (e) {
+				e.preventDefault();
+				KeyWordSearh();
+				return false;
+			});
+			$('.solution-title .form-search input').keyup(function (e) {
+				if (e.keyCode == 13) {
+					$('.solution-title .form-search button').trigger('click')
+					// $(this).trigger("enterKey");
+					e.preventDefault();
+					return false;
+				}
+			});
+			$('#aspnetForm').on('keyup keypress', function (e) {
+				let keyCode = e.keyCode || e.which;
+				if (keyCode === 13) {
+					$('.solution-title .form-search button').trigger('click')
+					e.preventDefault();
+					return false;
+				}
+			});
+			$(".solution-title .form-search input").val($("#txtKeyword").val());
+		}
+	}
 });
+
+
+// Function Find Product 
+function ProcessAjax(pageurl, obj) {
+	//to get the ajax content and display in div with id 'content'
+	$.ajax({
+		url: pageurl,
+		data: { isajax: true },
+		success: function (data) {
+			var linkajaxs = $(".ajaxfilterresponse .ajaxlink");
+			var newlinkajaxs = $(data).find('.ajaxfilterresponse .ajaxlink');
+			var i;
+			for (i = 0; i < linkajaxs.length; i++) {
+				var oldlink = $(linkajaxs[i]);
+				var newlink = $(newlinkajaxs[i]);
+				if (oldlink.text() == newlink.text()) {
+					if (newlink.hasClass('active'))
+						oldlink.addClass('active');
+					else
+						oldlink.removeClass('active');
+
+					oldlink.attr("title", newlink.attr("title"));
+					oldlink.attr("href", newlink.attr("href"));
+				}
+			}
+			//$('.ajaxresponsewrap').html($(data).find('.ajaxresponsewrap').html());
+			$('.ajaxfilterresponse').html($(data).find('.ajaxfilterresponse').html());
+			//$('.ajaxbrandresponse').html($(data).find('.ajaxbrandresponse').html());
+			$('.ajaxresponse').html($(data).find(".ajaxresponse").html());
+			//$('.project-number').html($(data).find('.project-number').html());
+			$('.productpager').remove();
+			$(data).find('.productpager').insertAfter($('.ajaxresponse'));
+			//$(".filter-count").removeClass("hidden");
+			//$(".filter-count .amount").text($(data).find(".totalproduct").text());
+
+			//CanhCamResponsive();
+		}
+	});
+
+	//to change the browser URL to 'pageurl'
+	if (pageurl != window.location) {
+		window.history.pushState({ path: pageurl }, '', pageurl);
+	}
+}
 
 $(window).on('resize', function () {
 	$('.backdrop').fadeOut()

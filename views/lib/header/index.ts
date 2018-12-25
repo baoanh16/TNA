@@ -90,4 +90,9 @@ export class Header {
 			$(this).find('ul').slideToggle(400)
 		})
 	}
+	toggleUser() {
+		$('.user').click(function () {
+			$(this).find('.user-panel').fadeToggle(500)
+		})
+	}
 }
