@@ -42,11 +42,7 @@ gulp.task('css_dev', () => {
 						browsers: ['last 4 versions'],
 						cascade: false
 					}))
-					.pipe(cssnano())
 					.pipe(sourcemaps.write('.'))
-					.pipe(rename({
-						suffix: '.min'
-					}))
 					.pipe(gulp.dest('./dist/css'))
 					.on('end', resolve)
 					.on('error', reject);

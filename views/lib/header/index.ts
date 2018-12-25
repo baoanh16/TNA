@@ -67,14 +67,14 @@ export class Header {
 	}
 
 	toggleCart() {
-		$('body').on('click', '.cart-toggle', function () {
-			$('.cc-header .cartpanel').toggleClass('open')
+		$('.cc-header .cart-toggle').on('click', function () {
+			$('.cc-header .cart-panel').toggleClass('active')
 		})
 	}
 
 	closeCart() {
-		$('body').on('click', '.btn-closecart .lnr-cross', function () {
-			$('.cc-header .cartpanel').removeClass('open')
+		$('.cc-header .cart-header span.fa-times').on('click', function () {
+			$('.cc-header .cart-panel').removeClass('active')
 		})
 	}
 

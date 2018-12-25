@@ -39,7 +39,6 @@ Facebook: https://fb.com/canhcam.vn
 	<link rel="icon" type="image/png" sizes="96x96" href="favicon/favicon-96x96.png">
 	<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
 	<link rel="manifest" href="favicon/manifest.json">
-	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,400i,500,500i,600,700,800,900" rel="stylesheet">
 	<meta name="msapplication-TileColor">
 	<meta name="msapplication-TileImage" content="favicon/ms-icon-144x144.png">
 	<meta name="theme-color">
@@ -77,38 +76,97 @@ script(src='//oss.maxcdn.com/respond/1.4.2/respond.min.js')
 		<!-- ////////////// Header ////////////// -->
 		<div id="wrapper">
 			<!-- <portal:SiteLogo ID="SiteLogo1" runat="server" /> -->
+			<portal:SearchInput ID="SearchInput1" CssClass="search" runat="server" />
+			<portal:LanguageSelector ID="LanguageSelector1" XsltFileName="Language.xslt" ShowActive="true" runat="server" />
 			<header class="cc-header">
 				<div class="desktop-container container">
 					<div class="row no-gutters menu-wrap">
-						<div class="logo-wrap">
-							<a href="/">
-								<div class="logo">
-									<img class="desktop" src="/Data/Sites/1/skins/default/img/logo_1.png" alt="logo">
-									<img class="mobile" src="/Data/Sites/1/skins/default/img/logo_2.png" alt="logo">
-								</div>
+						<div class="logo-wrap"><a href="/">
+								<div class="logo"><img class="desktop" src="./img/logo_1.png" alt="logo"><img class="mobile" src="./img/logo_2.png"
+									 alt="logo"></div>
 								<div class="logo-text">
 									<h2>TNA IT SOLUTION</h2><span>Together we grow</span>
 								</div>
-							</a>
-						</div>
+							</a></div>
 						<div class="main-navbar">
 							<div class="toolbar">
 								<div class="language">
-									<portal:LanguageSelector ID="LanguageSelector1" XsltFileName="Language.xslt" ShowActive="true" runat="server" />
-
+									<div class="current-lang">
+										<div class="img"><img src="./img/uk.png"></div>
+									</div><span class="lnr lnr-chevron-down"></span>
+									<ul>
+										<li><a href="#"><img src="./img/uk.png" /></a></li>
+										<li><a href="#"><img src="./img/uk.png" /></a></li>
+									</ul>
 								</div>
 								<div class="cart">
-									<portal:ModuleWrapper ID='mdl206' runat='server' ConfigureModuleId='206' />
-
+									<div class="cart-toggle"><span class="fas fa-shopping-cart"></span><span class="product-count">3</span></div>
+									<div class="cart-panel">
+										<div class="cart-header"><span>Có 1 sản phẩm trong </span><a href="/cart">giỏ hàng</a><span class="fas fa-times"></span></div>
+										<div class="cart-body">
+											<ul class="cart-list-item">
+												<li class="item">
+													<div class="product-img"><a href="product-detail.html"><img src="./img/product/1.png" alt=""></a></div>
+													<div class="product-info"><a href="product-detail.html">
+															<h6 class="name">Switch Cisco Cisco cisco cis co Switch Cisco Cisco cisco cis co Switch Cisco Cisco
+																cisco cis co</h6>
+														</a>
+														<p><b class="price">12.549.000 đ </b>x <b class="amount">3</b></p>
+													</div>
+													<div class="remove-product"><span class="fas fa-trash"></span></div>
+												</li>
+												<li class="item">
+													<div class="product-img"><a href="product-detail.html"><img src="./img/product/1.png" alt=""></a></div>
+													<div class="product-info"><a href="product-detail.html">
+															<h6 class="name">Switch Cisco Cisco cisco cis co Switch Cisco Cisco cisco cis co Switch Cisco Cisco
+																cisco cis co</h6>
+														</a>
+														<p><b class="price">12.549.000 đ </b>x <b class="amount">3</b></p>
+													</div>
+													<div class="remove-product"><span class="fas fa-trash"></span></div>
+												</li>
+												<li class="item">
+													<div class="product-img"><a href="product-detail.html"><img src="./img/product/1.png" alt=""></a></div>
+													<div class="product-info"><a href="product-detail.html">
+															<h6 class="name">Switch Cisco Cisco </h6>
+														</a>
+														<p><b class="price">12.549.000 đ </b>x <b class="amount">3</b></p>
+													</div>
+													<div class="remove-product"><span class="fas fa-trash"></span></div>
+												</li>
+												<li class="item">
+													<div class="product-img"><a href="product-detail.html"><img src="./img/product/1.png" alt=""></a></div>
+													<div class="product-info"><a href="product-detail.html">
+															<h6 class="name">Switch Cisco Cisco </h6>
+														</a>
+														<p><b class="price">12.549.000 đ </b>x <b class="amount">3</b></p>
+													</div>
+													<div class="remove-product"><span class="fas fa-trash"></span></div>
+												</li>
+												<li class="item">
+													<div class="product-img"><a href="product-detail.html"><img src="./img/product/1.png" alt=""></a></div>
+													<div class="product-info"><a href="product-detail.html">
+															<h6 class="name">Switch Cisco Cisco </h6>
+														</a>
+														<p><b class="price">12.549.000 đ </b>x <b class="amount">3</b></p>
+													</div>
+													<div class="remove-product"><span class="fas fa-trash"></span></div>
+												</li>
+											</ul>
+										</div>
+										<div class="cart-total">
+											<p><span>Tạm tính: </span><b class="total-price">12.549.000 đ</b></p>
+										</div>
+										<div class="cart-footer"><a class="btn btn-cart-checkout" href="/checkout-1.html"><span class="fas fa-shopping-cart"></span><span>Tiến
+													hành thanh toán</span></a></div>
+									</div>
 								</div>
 								<div class="user">
 									<div class="user-toggle"><span class="fas fa-user"></span></div>
 									<div class="user-panel">
 										<ul>
-											<portal:LoginLink ID="LoginLink" runat="server" RenderAsListItem="true" />
-											<portal:welcomemessage id="WelcomeMessage" runat="server" RenderAsListItem="true" listitemcss="firstnav" />
-											<portal:RegisterLink ID="RegisterLink" runat="server" RenderAsListItem="true" />
-											<portal:LogoutLink ID="LogoutLink" runat="server" RenderAsListItem="true" />
+											<li><a href="javascript:void(0)">Đăng ký</a></li>
+											<li><a href="javascript:void(0)">Đăng nhập</a></li>
 										</ul>
 									</div>
 								</div>
@@ -116,12 +174,23 @@ script(src='//oss.maxcdn.com/respond/1.4.2/respond.min.js')
 									<div class="search-toggle"><span class="fas fa-search"></span></div>
 									<div class="search-panel">
 										<div class="search-turn-off"><span class="fas fa-times"></span></div>
-										<portal:SearchInput ID="SearchInput1" CssClass="search" runat="server" />
+										<div class="searchbox">
+											<input class="searchinput" type="text" placeholder="Tìm kiếm">
+											<button class="searchbutton">Tìm kiếm</button>
+										</div>
 									</div>
 								</div>
 							</div>
 							<div class="nav">
-								<portal:ModuleWrapper ID='mdl207' runat='server' ConfigureModuleId='207' />
+								<ul class="nav-list">
+									<li class="nav-item"><a class="nav-link" href="about-1.html">Giới thiệu</a></li>
+									<li class="nav-item"><a class="nav-link" href="service.html">Dịch vụ</a></li>
+									<li class="nav-item"><a class="nav-link" href="product.html">Sản phẩm</a></li>
+									<li class="nav-item active"><a class="nav-link" href="solution.html">Giải pháp</a></li>
+									<li class="nav-item"><a class="nav-link" href="news.html">Tin tức</a></li>
+									<li class="nav-item"><a class="nav-link" href="faq.html">Hỗ trợ</a></li>
+									<li class="nav-item"><a class="nav-link" href="contact.html">Liên hệ</a></li>
+								</ul>
 							</div>
 						</div>
 						<div class="menu-toggle"><span class="fas fa-bars"></span></div>
@@ -150,46 +219,11 @@ script(src='//oss.maxcdn.com/respond/1.4.2/respond.min.js')
 			</main>
 			<!-- ////////////// End Main ////////////// -->
 			<!-- ////////////// Footer ////////////// -->
-			<footer class="cc-footer">
-				<div class="top-footer">
-					<div class="container">
-						<portal:ModuleWrapper ID='mdl208' runat='server' ConfigureModuleId='208' />
-
-						<div class="row navigation">
-							<portal:ModuleWrapper ID='mdl209' runat='server' ConfigureModuleId='209' />
-							<portal:ModuleWrapper ID='mdl210' runat='server' ConfigureModuleId='210' />
-							<portal:ModuleWrapper ID='mdl211' runat='server' ConfigureModuleId='211' />
-							<portal:ModuleWrapper ID='mdl212' runat='server' ConfigureModuleId='212' />
-
-						</div>
-					</div>
-				</div>
-				<div class="bottom-footer">
-					<div class="container">
-						<div class="row">
-							<div class="col-lg-6">
-								<portal:ModuleWrapper ID='mdl213' runat='server' ConfigureModuleId='213' />
-
-							</div>
-							<div class="col-lg-6">
-								<portal:ModuleWrapper ID='mdl214' runat='server' ConfigureModuleId='214' />
-
-								<div class="sitemap">
-									<ul>
-										<li><a href="#">Điều khoản sử dụng</a></li>
-										<li><a href="#">Chính sách bảo mật</a></li>
-										<li><a href="/sitemap.aspx">Sitemap</a></li>
-									</ul>
-								</div>
-								<div class="copyright">
-									<p>Copyright © 2018 TNA IT Solution. All right reserved.</p>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
+			<footer>
+				<asp:Panel ID="divAltContent2" runat="server" CssClass="altcontent2">
+					<asp:ContentPlaceHolder ID="altContent2" runat="server"></asp:ContentPlaceHolder>
+				</asp:Panel>
 			</footer>
-
 		</div>
 		<!-- ////////////// End Footer ////////////// -->
 		<portal:AutoHidePanel ID="ah1" CssClass="cmsadminpanel" runat="server">
@@ -222,32 +256,8 @@ script(src='//oss.maxcdn.com/respond/1.4.2/respond.min.js')
 		<portal:Woopra ID="woopra11" runat="server" />
 	</form>
 
-	<script src="/Data/Sites/1/skins/default/js/core.min.js?v=1.0.0" type="text/javascript"></script>
-	<script src="/Data/Sites/1/skins/default/js/main.js?v=1.0.0" type="text/javascript"></script>
-	<script src="/Data/Sites/1/skins/default/js/ecommerce.js?v=1.0.0" type="text/javascript"></script>
-	<script type="text/javascript">
-		(function (d, s, id) {
-			var js, fjs = d.getElementsByTagName(s)[0];
-			if (d.getElementById(id)) return;
-			js = d.createElement(s); js.id = id;
-			js.src = 'https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v3.0&autoLogAppEvents=1';
-			fjs.parentNode.insertBefore(js, fjs);
-		}(document, 'script', 'facebook-jssdk'));
-		window.twttr = (function (d, s, id) {
-			var js, fjs = d.getElementsByTagName(s)[0],
-				t = window.twttr || {};
-			if (d.getElementById(id)) return t;
-			js = d.createElement(s);
-			js.id = id;
-			js.src = "https://platform.twitter.com/widgets.js";
-			fjs.parentNode.insertBefore(js, fjs);
-			t._e = [];
-			t.ready = function (f) {
-				t._e.push(f);
-			};
-			return t;
-		}(document, "script", "twitter-wjs"));
-	</script>
+	<script src="/Data/Sites/1/skins/default/js/core.min.js?v=1.0.0"></script>
+	<script src="/Data/Sites/1/skins/default/js/main.js?v=1.0.0"></script>
 	<script type="text/javascript">
 		function HideToolbar() { $(".cmsadminpanel").addClass("toggled"), $(".fa-chevron-circle-right").addClass("fa-rotate-180") } function ShowToolbar() { $(".cmsadminpanel").removeClass("toggled"), $(".fa-chevron-circle-right").removeClass("fa-rotate-180") } $(document).ready(function () { $("#pullmenucms").click(function (o) { o.preventDefault(), $(this).parents(".cmsadminpanel").hasClass("toggled") ? (ShowToolbar(), Set_Cookie("toolbarOpenState", "open")) : (HideToolbar(), Set_Cookie("toolbarOpenState", "closed")) }); var o = Get_Cookie("toolbarOpenState"); null != o && ("closed" == o && HideToolbar(), "open" == o && ShowToolbar()) });
 	</script>
