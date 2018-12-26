@@ -3,13 +3,15 @@
 		position: absolute
 		top: 50px
 		right: 0
-		box-shadow: 0 0 5px grey
+		box-shadow: 0 0 5px color-get($mau, main)
 		width: 290px
 		display: none
 		z-index: 3000
 		transition: all .3s ease-in-out
 		+media-breakpoint-up(sm)
 			width: 360px
+		// +media-breakpoint-down(xs)
+		// 	max-width: 100%
 		&.open
 			display: block
 		&:before
@@ -17,11 +19,11 @@
 			position: absolute
 			border-left: 7px solid transparent
 			border-right: 7px solid transparent
-			border-bottom: 10px solid #298ac4
+			border-bottom: 10px solid color-get($mau, main)
 			bottom: 100%
 			right: 42px
 		.title
-			+grad1
+			background: color-get($mau, main)
 			color: color-get($mau, trang)
 			padding: 0 10px
 			font-size: .9rem
@@ -74,7 +76,6 @@
 						align-self: center
 						i
 							&:before
-								content: "\f2ed"!important
 								color: darken(color-get($mau, main), 10%)
 		.checkout-panel
 			.total
@@ -85,7 +86,7 @@
 				strong
 					color: color-get($mau,main)
 			.button
-				+grad1
+				background: color-get($mau, main)
 				padding: 10px
 				.btn-checkout
 					display: none
@@ -103,10 +104,9 @@
 	+media-breakpoint-up(lg)
 		.cartpanel
 			right: -59px
-			+media-breakpoint-down(xs)
-				max-width: 100%
+			top: 30px
 			&:before
-				right: 42px
+				right: 73px
 			.title
 				font-size: 1rem
 			.cart-list

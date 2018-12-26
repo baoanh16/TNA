@@ -61,34 +61,19 @@
 								</div>
 								<div class="share" style="display:flex; align-items: center; max-width: 130px;
 								justify-content: space-between">
-									<!-- <div class="label">Share:</div> -->
-									<div class="fb-share-button" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button"
-									 data-size="small" data-mobile-iframe="true">
-										<a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse"
-										 class="fb-xfbml-parse-ignore">Chia sẻ</a>
+									<div class="nav-item">
+										<div class="fb-share-button" data-href="" data-layout="button" data-size="small" data-mobile-iframe="true"><a
+											 class="fb-xfbml-parse-ignore" target="_blank" href="">Chia sẻ</a></div>
 									</div>
-
-									<!-- <a target="_blank">
-										<xsl:attribute name="href">
-											<xsl:text>https://www.facebook.com/sharer/sharer.php?u=</xsl:text>
-											<xsl:value-of select="/ProductDetail/FullUrl"></xsl:value-of>
-										</xsl:attribute>
-										<span class="fab fa-facebook-f" aria-hidden="true"></span>
-									</a> -->
-									<a class="twitter-share-button" style="margin-left: 1rem">
-										<xsl:attribute name="href">
-											<xsl:text>https://twitter.com/home?status=</xsl:text>
-											<xsl:value-of select="/ProductDetail/FullUrl"></xsl:value-of>
-										</xsl:attribute>
-										Tweet
-									</a>
-									<!-- <a class="linkedin-share-button" style="margin-left: 1rem">
-										<xsl:attribute name="href">
-											<xsl:text>https://plus.google.com/share?url=</xsl:text>
-											<xsl:value-of select="/ProductDetail/FullUrl"></xsl:value-of>
-										</xsl:attribute>
-										<span class="fab fa-google-plus" aria-hidden="true"></span>
-									</a> -->
+									<div class="nav-item"><a class="twitter-share-button" href="https://twitter.com/share" data-size="medium"
+										 data-text="custom share text" data-url="" data-via="twitterdev" data-related="twitterapi,twitter"></a></div>
+									<div class="nav-item">
+										<div class="g-plus" data-action="share"></div>
+									</div>
+									<div class="nav-item">
+										<script src="//platform.linkedin.com/in.js" type="text/javascript">lang: en_US</script>
+										<script type="IN/Share"></script>
+									</div>
 								</div>
 							</div>
 						</div>

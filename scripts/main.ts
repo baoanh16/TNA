@@ -89,7 +89,9 @@ $(document).ready(function () {
 	home4.slideHome4()
 	tabnav4.tabNav4()
 	home6.slideHome6()
-
+	$('.login-panel .forget label').on('click', function(e){
+		$(this).toggleClass('active')
+	})
 	// Find Product
 	if (('.product-search input').length > 0) {
 		$("body").on("click", ".product-search button", function (e) {

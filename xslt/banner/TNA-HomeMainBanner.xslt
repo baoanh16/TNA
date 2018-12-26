@@ -19,15 +19,12 @@
 	<xsl:template match="Banner">
 		<div class="swiper-slide">
 			<a>
-				<xsl:attribute name="href">
-					<xsl:value-of select="Url"></xsl:value-of>
-				</xsl:attribute>
 				<xsl:attribute name="target">
 					<xsl:value-of select="target"></xsl:value-of>
 				</xsl:attribute>
-				<xsl:if test="string-length(href)=0">
+				<xsl:if test="Url != ''">
 					<xsl:attribute name="href">
-						<xsl:text>javascript:void(0)</xsl:text>
+						<xsl:value-of select="Url"></xsl:value-of>
 					</xsl:attribute>
 				</xsl:if>
 				<div class="slide-inner">
