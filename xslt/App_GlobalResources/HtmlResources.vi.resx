@@ -210,4 +210,10 @@
   <data name="YourCartText" xml:space="preserve">
     <value>Giỏ hàng của bạn</value>
   </data>
+  <data name="ProductLinkText" xml:space="preserve">
+    <value>/san-pham</value>
+  </data>
+  <data name="ViewAllText" xml:space="preserve">
+    <value>Xem tất cả</value>
+  </data>
 </root>

@@ -59,7 +59,6 @@ export class Header {
 	}
 	closeMainNav() {
 		$('.backdrop').on('click', function () {
-			console.log(1);
 			$('.nav').removeClass('active')
 			$('.backdrop').fadeOut(400)
 
@@ -93,6 +92,12 @@ export class Header {
 	toggleUser() {
 		$('.user').click(function () {
 			$(this).find('.user-panel').fadeToggle(500)
+		})
+	}
+	toggleChildmenu() {
+		$('.nav-item.child').click(function (e) {
+			e.stopPropagation()
+			$(this).find('.nav-child').slideToggle();
 		})
 	}
 }

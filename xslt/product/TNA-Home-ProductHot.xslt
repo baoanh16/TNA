@@ -18,7 +18,14 @@
 						<li class="prev" data-controls="prev" aria-controls="customize" tabindex="-1"><span class="lnr lnr-chevron-left"></span></li>
 						<li class="next" data-controls="next" aria-controls="customize" tabindex="-1"><span class="lnr lnr-chevron-right"></span></li>
 					</ul>
-					<div class="seemore"><a href="#">Xem tất cả</a></div>
+					<div class="seemore">
+					<a>
+						<xsl:attribute name="href">
+							<xsl:value-of select="/ProductList/ProductLinkText" disable-output-escaping="yes"></xsl:value-of>
+						</xsl:attribute>
+						<xsl:value-of select="/ProductList/ViewAllText" disable-output-escaping="yes"></xsl:value-of>
+					</a>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -36,8 +43,8 @@
 						<xsl:attribute name="target">
 							<xsl:value-of select="target"></xsl:value-of>
 						</xsl:attribute>
-						<img>
-						<xsl:attribute name="src">
+						<img class="lazyload">
+						<xsl:attribute name="data-src">
 							<xsl:value-of select="ImageUrl"></xsl:value-of>
 						</xsl:attribute>
 						<xsl:attribute name="alt">

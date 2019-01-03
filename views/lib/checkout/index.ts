@@ -73,4 +73,18 @@ export class Checkout {
 			$(this).parent().siblings('.method').find('label').removeClass('active')
 		})
 	}
+
+	refreshCart() {
+		$('.quantity.input-number .minus, .quantity.input-number .plus').click(function () {
+			$(this).siblings('input').trigger('change')
+		})
+	}
+
+	viewedProductAddCart() {
+		$('.Module-187 .tna-product-item .addcart').click(function () {
+			setTimeout(function () {
+				location.reload();
+			}, 600)
+		})
+	}
 }

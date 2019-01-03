@@ -25,24 +25,24 @@ Facebook: https://fb.com/canhcam.vn
 	<title></title>
 	<portal:MetaContent ID="MetaContent" runat="server" />
 	<!-- ////////////// Favicon ////////////// -->
-	<link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-icon-57x57.png">
-	<link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-icon-60x60.png">
-	<link rel="apple-touch-icon" sizes="72x72" href="favicon/apple-icon-72x72.png">
-	<link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-icon-76x76.png">
-	<link rel="apple-touch-icon" sizes="114x114" href="favicon/apple-icon-114x114.png">
-	<link rel="apple-touch-icon" sizes="120x120" href="favicon/apple-icon-120x120.png">
-	<link rel="apple-touch-icon" sizes="144x144" href="favicon/apple-icon-144x144.png">
-	<link rel="apple-touch-icon" sizes="152x152" href="favicon/apple-icon-152x152.png">
-	<link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-icon-180x180.png">
-	<link rel="icon" type="image/png" sizes="192x192" href="favicon/android-icon-192x192.png">
-	<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
-	<link rel="icon" type="image/png" sizes="96x96" href="favicon/favicon-96x96.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
-	<link rel="manifest" href="favicon/manifest.json">
-	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,400i,500,500i,600,700,800,900" rel="stylesheet">
+	<link rel="apple-touch-icon" sizes="57x57" href="/Data/Sites/1/skins/default/favicon/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="/Data/Sites/1/skins/default/favicon/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="/Data/Sites/1/skins/default/favicon/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="/Data/Sites/1/skins/default/favicon/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="/Data/Sites/1/skins/default/favicon/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="/Data/Sites/1/skins/default/favicon/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="/Data/Sites/1/skins/default/favicon/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="/Data/Sites/1/skins/default/favicon/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="/Data/Sites/1/skins/default/favicon/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192" href="/Data/Sites/1/skins/default/favicon/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/Data/Sites/1/skins/default/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="/Data/Sites/1/skins/default/favicon/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/Data/Sites/1/skins/default/favicon/favicon-16x16.png">
+	<link rel="manifest" href="/Data/Sites/1/skins/default/favicon/manifest.json">
 	<meta name="msapplication-TileColor">
-	<meta name="msapplication-TileImage" content="favicon/ms-icon-144x144.png">
+	<meta name="msapplication-TileImage" content="/Data/Sites/1/skins/default/favicon/ms-icon-144x144.png">
 	<meta name="theme-color">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,400i,500,500i,600,700,800,900" rel="stylesheet">
 	<!-- ////////////// Mobile title color ////////////// -->
 	<meta name="theme-color" content="#000000">
 	<meta name="msapplication-navbutton-color" content="#000000">
@@ -59,7 +59,7 @@ Facebook: https://fb.com/canhcam.vn
 script(src='//oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js')
 script(src='//oss.maxcdn.com/respond/1.4.2/respond.min.js')
 -->
-	<style>.fancybox-type-iframe{min-height:560px;z-index:9999;background:#fff;box-shadow:0 0 6px rgba(0,0,0,.5);border-radius:3px}.fancybox-type-iframe .fancybox-skin, .fancybox-outer, .fancybox-inner{min-height:560px;}.fancybox-type-iframe iframe{width:100%;min-height:560px}.cmsadminpanel .canhcamcmslistmenu{margin:0;padding:0;display:flex;align-items:center;justify-content:center;}.cmsadminpanel .canhcamcmslistmenu li{list-style-type:none}.cmsadminpanel .canhcamcmslistmenu li a{border:0;text-decoration:none}.cmsadminpanel .canhcamcmslistmenu li a:hover,.cmsadminpanel .canhcamcmslistmenu li a:focus{background:none}.cmsadminpanel .canhcamcmslistmenu .ddviewmode{margin-top:0}@media only screen and (max-width:700px) {.cmsadminpanel .canhcamcmslistmenu{flex-direction:column}}</style>
+	<!-- <style>.fancybox-type-iframe{min-height:560px;z-index:9999;background:#fff;box-shadow:0 0 6px rgba(0,0,0,.5);border-radius:3px}.fancybox-type-iframe .fancybox-skin, .fancybox-outer, .fancybox-inner{min-height:560px;}.fancybox-type-iframe iframe{width:100%;min-height:560px}.cmsadminpanel .canhcamcmslistmenu{margin:0;padding:0;display:flex;align-items:center;justify-content:center;}.cmsadminpanel .canhcamcmslistmenu li{list-style-type:none}.cmsadminpanel .canhcamcmslistmenu li a{border:0;text-decoration:none}.cmsadminpanel .canhcamcmslistmenu li a:hover,.cmsadminpanel .canhcamcmslistmenu li a:focus{background:none}.cmsadminpanel .canhcamcmslistmenu .ddviewmode{margin-top:0}@media only screen and (max-width:700px) {.cmsadminpanel .canhcamcmslistmenu{flex-direction:column}}</style> -->
 	<portal:ScriptLoader ID="ScriptLoader1" runat="server" IncludejQueryUICore="true" IncludeFancyBox="false" />
 	<portal:StyleSheetCombiner ID="StyleSheetCombiner" runat="server" IncludejQueryUI="false" JQueryUIThemeName="smoothness" />
 	<portal:GoogleAnalyticsScript ID="GoogleAnalyticsScript1" runat="server" />

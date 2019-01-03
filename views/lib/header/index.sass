@@ -88,6 +88,7 @@
 					margin-left: auto
 					margin-right: 75px
 				.search-toggle
+					cursor: pointer
 					position: absolute
 					top: 15px
 					right: 80px
@@ -246,6 +247,7 @@
 					padding-left: 0
 					width: 100%
 					.nav-item
+						position: relative
 						.nav-link
 							padding: .5rem 1rem
 							color: white
@@ -256,6 +258,56 @@
 						&.active
 							.nav-link
 								font-weight: 700
+						&.child
+							&:after
+								+material('\f140')
+								position: absolute
+								top: .4rem
+								right: 30px
+								color: white
+								font-size: r(16px)
+								@media (min-width: 992px)
+									right: -15px
+									color: darken(black, 20%)
+							.nav-child
+								// position: absolute
+								padding-left: 30px
+								top: 100%
+								left: 30px
+								width: max-content
+								display: none
+								@media (min-width: 992px)
+									position: absolute
+									left: 0
+									top: 100%
+									background: white
+									display: block!important
+									opacity: 0
+									visibility: hidden
+									transform: translateY(10px)
+									padding-left: 0
+									+tr(.2)
+									z-index: 20
+									box-shadow: 0 0 5px color-get($mau, main)
+								.nav-child-item
+									.nav-link
+										@media (min-width: 992px)
+											margin-left: 0
+											padding: 8px 1.5rem
+									&:hover
+										background: color-get($mau, main)
+										.nav-link
+											color: white
+							@media (min-width: 992px)
+								&:after
+									color: color-get($mau, main)
+								&:hover
+									.nav-child
+										opacity: 1
+										visibility: visible
+										transform: translateY(0)
+							.nav-link
+								width: max-content
 
 	+media-breakpoint-up(lg)
 		padding: 10px 0 0 0

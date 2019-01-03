@@ -9,10 +9,16 @@
 			<h3><span class="fas fa-map-marker-alt"></span><span>Địa chỉ nhận hàng</span></h3>
 		</div>
 		<div class="cart-address">
+			<div class="form-group">
+				<label style="flex: 0 0 100%">
+					<i>Các thông tin có (*) là bắt buộc</i>
+				</label>
+			</div>
 			<div class="address-edit">
 				<div class="form-group form-name">
 					<label>
 						<xsl:value-of select="/CheckoutAddress/FullNameText"></xsl:value-of>
+						<xsl:text> (*)</xsl:text>
 					</label>
 					<input type="text" name="Address_FirstName">
 					<xsl:attribute name="placeholder">
@@ -26,6 +32,7 @@
 				<div class="form-group form-phone">
 					<label>
 						<xsl:value-of select="/CheckoutAddress/PhoneText"></xsl:value-of>
+						<xsl:text> (*)</xsl:text>
 					</label>
 					<input type="text" name="Address_Phone">
 					<xsl:attribute name="placeholder">
@@ -57,6 +64,7 @@
 				<div class="form-group form-city">
 					<label>
 						<xsl:value-of select="/CheckoutAddress/ProvinceText"></xsl:value-of>
+						<xsl:text> (*)</xsl:text>
 					</label>
 					<select name="Address_Province" onchange="AjaxCheckout.getdistrictsbyprovinceguid(this, 'Address_District')">
 						<option value="">
@@ -68,6 +76,7 @@
 				<div class="form-group form-district">
 					<label>
 						<xsl:value-of select="/CheckoutAddress/DistrictText"></xsl:value-of>
+						<xsl:text> (*)</xsl:text>
 					</label>
 					<select name="Address_District">
 						<option value="">
@@ -79,6 +88,7 @@
 				<div class="form-group form-address">
 					<label>
 						<xsl:value-of select="/CheckoutAddress/AddressText"></xsl:value-of>
+						<xsl:text> (*)</xsl:text>
 					</label>
 					<input type="text" name="Address_Address" placeholder="Vd: 64 đường Hiệp Bình">
 					<xsl:attribute name="placeholder">
@@ -108,7 +118,7 @@
 					<input id="ttmh" type="checkbox" name="Address_SameBilling" checked="checked"></input>
 					<label id="btn-ttmh" for="ttmh">
 						<!-- <xsl:value-of select="/CheckoutAddress/InfoSameAbove"></xsl:value-of> -->
-						Thông tin mua hàng giống như trên
+						Thông tin người mua hàng giống như trên
 					</label>
 				</div>
 			</div>
@@ -116,6 +126,7 @@
 				<div class="form-group form-name">
 					<label>
 						<xsl:value-of select="/CheckoutAddress/FullNameText"></xsl:value-of>
+						<xsl:text> (*)</xsl:text>
 					</label>
 					<input type="text" name="ShippingAddress_FirstName" placeholder="Nhập họ tên" required="true" aria-required="true">
 					<xsl:attribute name="placeholder">
@@ -129,6 +140,7 @@
 				<div class="form-group form-phone">
 					<label>
 						<xsl:value-of select="/CheckoutAddress/PhoneText"></xsl:value-of>
+						<xsl:text> (*)</xsl:text>
 					</label>
 					<input type="text" name="ShippingAddress_Phone" placeholder="Nhập Số điện thoại" required="true" aria-required="true">
 					<xsl:attribute name="placeholder">
@@ -160,6 +172,7 @@
 				<div class="form-group form-city">
 					<label>
 						<xsl:value-of select="/CheckoutAddress/ProvinceText"></xsl:value-of>
+						<xsl:text> (*)</xsl:text>
 					</label>
 					<select name="ShippingAddress_Province" onchange="AjaxCheckout.getdistrictsbyprovinceguid(this, 'ShippingAddress_District')" required="true" aria-required="true">
 						<option value="">
@@ -171,6 +184,7 @@
 				<div class="form-group form-district">
 					<label>
 						<xsl:value-of select="/CheckoutAddress/DistrictText"></xsl:value-of>
+						<xsl:text> (*)</xsl:text>
 					</label>
 					<select name="ShippingAddress_District" required="true" aria-required="true">
 						<option value="">
@@ -182,6 +196,7 @@
 				<div class="form-group form-address">
 					<label>
 						<xsl:value-of select="/CheckoutAddress/AddressText"></xsl:value-of>
+						<xsl:text> (*)</xsl:text>
 					</label>
 					<input type="text" name="ShippingAddress_Address" placeholder="Vd: 64 đường Hiệp Bình" required="true" aria-required="true">
 					<xsl:attribute name="placeholder">
@@ -194,7 +209,7 @@
 				</div>
 				<div class="check-group">
 					<input id="cntt" type="checkbox" name="" checked="checked"></input>
-					<label for="cntt">
+					<label for="cntt" id="btn-cntt">
 						<!-- <xsl:value-of select="/CheckoutAddress/UpdateInfoToMyAddress"></xsl:value-of> -->
 						Cập nhật thông tin mua hàng giống như trên
 					</label>

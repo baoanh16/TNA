@@ -24,7 +24,6 @@
 					</thead>
 					<tbody>
 						<xsl:apply-templates select="/NewsList/News"></xsl:apply-templates>
-
 					</tbody>
 				</table>
 			</div>
@@ -32,7 +31,6 @@
 	</xsl:template>
 
 	<xsl:template match="News">
-
 		<tr>
 			<td>
 				<a>
@@ -49,7 +47,7 @@
 				</a>
 			</td>
 			<td><span>
-					<xsl:value-of select="EndDate"></xsl:value-of>
+					<xsl:value-of select="CreatedDate"></xsl:value-of>
 				</span></td>
 			<td>
 				<a>

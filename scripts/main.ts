@@ -35,7 +35,29 @@ let home4 = new Home4();
 let tabnav4 = new TabNav4();
 let home6 = new Home6();
 
+const setSrcImage = (el) => {
+	let src = el.getAttribute('data-src')
+	el.setAttribute('src', src)
+}
+
+var findImage = () => {
+	let imgList = document.querySelectorAll('.lazyload')
+	for (var i = 0; i < imgList.length; i++) {
+		let offsetTop = imgList[i].getBoundingClientRect().top + window.scrollY
+		if (window.scrollY + window.innerHeight * 1.05 >= offsetTop) {
+			var i = i;
+			setSrcImage(imgList[i])
+		}
+	}
+}
+
+document.addEventListener('scroll', () => {
+	findImage();
+})
+
 $(document).ready(function () {
+	AOS.init();
+	findImage();
 	// Header
 	header.moveLanguage();
 	header.moveCart();
@@ -47,6 +69,7 @@ $(document).ready(function () {
 	header.toggleCart();
 	header.closeCart();
 	header.toggleUser();
+	header.toggleChildmenu();
 	let breakpoint = window.matchMedia("(max-width: 991.98px)")
 	header.addBackdrop(breakpoint);
 	breakpoint.addListener(header.addBackdrop);
@@ -72,8 +95,8 @@ $(document).ready(function () {
 	checkout.toggleExportBill();
 	checkout.sameInfo();
 	checkout.choosePaymentMethod();
-	productnav.toggleNavChild();
-
+	checkout.refreshCart();
+	checkout.viewedProductAddCart();
 	// Banner 2 slide
 	ccbanner2.bannerslide2();
 
@@ -89,7 +112,18 @@ $(document).ready(function () {
 	home4.slideHome4()
 	tabnav4.tabNav4()
 	home6.slideHome6()
-	$('.login-panel .forget label').on('click', function(e){
+
+
+	$('.searchinput').on('keydown', function (e) {
+		if (e.keyCode === 13) {
+			$(this).siblings('button').trigger('click')
+		}
+	})
+	$('.jobs-list .apply').click(function () {
+		$('.job-apply-form').slideToggle();
+	})
+
+	$('.login-panel .forget label').on('click', function (e) {
 		$(this).toggleClass('active')
 	})
 	// Find Product

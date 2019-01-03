@@ -8,10 +8,10 @@
 			<h2 class="tna__title tna__title--main">
 				<xsl:value-of select="/ZoneList/Title"></xsl:value-of>
 			</h2>
-			<div class="form-search">
+			<!-- <div class="form-search">
 				<input type="text" />
 				<button>Submit</button>
-			</div>
+			</div> -->
 			<div class="row page-list">
 				<xsl:apply-templates select="/ZoneList/Zone"></xsl:apply-templates>
 

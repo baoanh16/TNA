@@ -1,0 +1,86 @@
+.apply-frm
+	padding-top: 20px
+	overflow-x: hidden
+	>div
+		width: 100%
+	#ctl00_phMain_jobApply_pnlNewComment
+		position: relative
+		+media-breakpoint-up(sm)
+			display: flex
+			flex-wrap: wrap
+			margin: 0 -15px
+			.col-left,.col-right
+				flex: 0 0 50%
+				padding: 0 15px
+				max-width: 50%
+			>.form-group
+				width: 50%
+				padding: 0 15px
+				width: 50%
+				padding: 0 15px
+				position: absolute
+				right: 0
+				bottom: 0px
+
+	h4
+		font-size: r(16px)
+		font-weight: 600
+		color: color-get($mau, main)
+		text-transform: uppercase
+		+media-breakpoint-up(lg)
+			width: 100%
+	label
+		font-size: r(13px)
+		font-weight: 400
+		color: lighten(black,20%)
+	input
+		width: 100%
+		border: 1px solid darken(white,15%)
+		border-radius: 4px
+		color: darken(white,25%)
+		font-size: r(13px)
+		padding: 0 1rem
+		&:focus
+			border-color: color-get($mau, main)
+			box-shadow: 0 0 .25rem color-get($mau, main)
+	textarea
+		&:focus
+			border-color: color-get($mau, main)
+			box-shadow: 0 0 .25rem color-get($mau, main)
+	.RadAsyncUpload 
+		span.ruFileWrap
+			width: 120px
+			height: 35px
+			input
+				width: 100%
+				height: 100%
+				display: flex
+				justify-content: center
+				align-items: center
+				background: color-get($mau, main)
+				font-size: r(13px)
+	.frm-btn
+		margin-top: 20px
+		text-align: center
+		input
+			height: 35px
+			width: 100%
+			display: inline-flex
+			justify-content: center
+			align-items: center
+			border-radius: 0
+			background: color-get($mau, main)
+			color: white
+	.form-group
+		position: relative
+		.fa-exclamation-triangle
+			top: 50%
+			transform: translateY(-50%)
+			right: 15px
+			color: red
+		
+
+.frame
+	height: 740px!important
+	@media (min-width: 623px)
+		height: 420px!important

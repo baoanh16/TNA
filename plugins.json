@@ -7,7 +7,8 @@
 		"_plugins/mapping-listener.js",
 		"_plugins/mapping.js",
 		"bower_components/lightgallery/dist/js/lightgallery-all.min.js",
-		"bower_components/tiny-slider/dist/min/tiny-slider.js"
+		"bower_components/tiny-slider/dist/min/tiny-slider.js",
+		"bower_components/aos/dist/aos.js"
 	],
 	"styles": [
 		"bower_components/font-awesome/css/all.min.css",
@@ -16,7 +17,7 @@
 		"bower_components/swiper/dist/css/swiper.min.css",
 		"bower_components/lightgallery/dist/css/lg-transitions.min.css",
 		"bower_components/lightgallery/dist/css/lightgallery.min.css",
-		"bower_components/tiny-slider/dist/tiny-slider.css"
-		
+		"bower_components/tiny-slider/dist/tiny-slider.css",
+		"bower_components/aos/dist/aos.css"
 	]
 }

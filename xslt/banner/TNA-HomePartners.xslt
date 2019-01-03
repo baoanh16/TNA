@@ -24,17 +24,22 @@
 	</xsl:template>
 
 	<xsl:template match="Banner">
-		<div class="partner-item">
+		<div class="partner-item" data-aos="zoom-in-up" data-aos-offset="-400" data-aos-delay="300" data-aos-duration="1000">
 			<a>
-			<xsl:attribute name="href">
-				<xsl:value-of select="Url"></xsl:value-of>
-			</xsl:attribute>
+				<xsl:attribute name="href">
+					<xsl:value-of select="Url"></xsl:value-of>
+				</xsl:attribute>
+				<xsl:if test="Url=''">
+					<xsl:attribute name="href">
+						<xsl:text>javascript:void(0)</xsl:text>
+					</xsl:attribute>
+				</xsl:if>
 			<xsl:attribute name="target">
 				<xsl:value-of select="target"></xsl:value-of>
 			</xsl:attribute>
 			<div class="item">
-				<img>
-				<xsl:attribute name="src">
+				<img class="lazyload">
+				<xsl:attribute name="data-src">
 					<xsl:value-of select="ImageUrl"></xsl:value-of>
 				</xsl:attribute>
 				<xsl:attribute name="alt">

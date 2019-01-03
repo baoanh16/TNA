@@ -1,0 +1,141 @@
+.checkout .login-wrap{
+	width:100%
+}
+.checkout .login-wrap label{
+	padding-left:2rem;
+	position:relative;
+	font-size:.92857rem;
+	font-weight:300;
+	color:#333
+}
+.checkout .login-wrap label:before{
+	content:"";
+	width:15px;
+	height:15px;
+	border:1px solid gray;
+	position:absolute;
+	left:0;
+	top:2px;
+	border-radius:50%
+}
+.checkout .login-wrap label.active:before{
+	border:5px solid #2366a6
+}
+.checkout .login-wrap input[type=radio]{
+	display:none
+}
+/* .checkout .login-wrap .type-new-user{
+	padding:0 24px
+} */
+.checkout .login-wrap .type-new-user .form-user-new{
+	padding:14px 30px
+}
+/* .checkout .login-wrap .type-new-user .form-user-new>.form-group+.form-group{
+	margin-top:30px
+} */
+.checkout .login-wrap .type-new-user .form-user-new label{
+	margin-bottom:1rem
+}
+.checkout .login-wrap .type-new-user .form-user-new .checkout-w-register .form-group input{
+	width:100%;
+	max-width:400px;
+	height:40px;
+	border-radius:5px;
+	border:1px solid #e6e6e6;
+	padding:0 1.2rem;
+	font-size:.92857rem;
+	font-weight:300;
+	color:#333
+}
+.checkout .login-wrap .type-new-user .form-user-new .checkout-w-register .form-group input:focus{
+	outline:0;
+	box-shadow:0 0 .2rem #2366a6;
+	border-color:#2366a6
+}
+.checkout .login-wrap .type-new-user .form-user-new .checkout-w-register .form-button button{
+	border-radius:5px;
+	max-width:400px;
+	background-image:linear-gradient(0deg,#226eac,#429be3);
+	font-size:1.07143rem;
+	font-weight:700;
+	color:#fff;
+	border:0;
+	outline:none;
+	width:100%;
+	height:40px;
+	display:-ms-flexbox;
+	display:flex;
+	-ms-flex-pack:center;
+	justify-content:center;
+	-ms-flex-align:center;
+	align-items:center
+}
+.checkout .login-wrap .type-new-user .form-user-new .checkout-w-register .form-button button:after{
+	content:"";
+	font-family:Font Awesome\ 5 Free;
+	-webkit-font-smoothing:antialiased;
+	display:inline-block;
+	font-style:normal;
+	font-variant:normal;
+	text-rendering:auto;
+	line-height:1;
+	font-weight:900;
+	margin-left:1.25rem
+}
+.checkout .login-wrap .type-new-user .form-user-new .checkout-wo-register{
+	display:none
+}
+.checkout .login-wrap .type-new-user .form-user-new .checkout-wo-register .form-group label{
+	padding-left:0;
+	display:block
+}
+.checkout .login-wrap .type-new-user .form-user-new .checkout-wo-register .form-group label:before{
+	content:none
+}
+.checkout .login-wrap .type-new-user .form-user-new .checkout-wo-register .form-group input{
+	width:100%;
+	max-width:400px;
+	height:40px;
+	border-radius:5px;
+	border:1px solid #e6e6e6;
+	padding:0 1.2rem;
+	font-size:.92857rem;
+	font-weight:300;
+	color:#333
+}
+.checkout .login-wrap .type-new-user .form-user-new .checkout-wo-register .form-group input:focus{
+	outline:0;
+	box-shadow:0 0 .2rem #2366a6;
+	border-color:#2366a6
+}
+.checkout .login-wrap .type-new-user .form-user-new .checkout-wo-register .form-button button{
+	border-radius:5px;
+	max-width:400px;
+	background-image:linear-gradient(90deg,#226eac,#429be3);
+	font-size:1.07143rem;
+	font-weight:700;
+	color:#fff;
+	border:0;
+	outline:none;
+	width:100%;
+	height:40px;
+	display:-ms-flexbox;
+	display:flex;
+	-ms-flex-pack:center;
+	justify-content:center;
+	-ms-flex-align:center;
+	align-items:center
+}
+.checkout .login-wrap .type-new-user .form-user-new .checkout-wo-register .form-button button:after{
+	content:"";
+	font-family:Font Awesome\ 5 Free;
+	-webkit-font-smoothing:antialiased;
+	display:inline-block;
+	font-style:normal;
+	font-variant:normal;
+	text-rendering:auto;
+	line-height:1;
+	font-weight:900;
+	margin-left:1.25rem
+
+}

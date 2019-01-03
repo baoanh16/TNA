@@ -72,6 +72,8 @@
 						&:first-child
 							text-align: left
 							padding-left: 1rem
+							position: relative
+							width: 45%
 						&:nth-child(2)
 							text-align: center
 						&:nth-child(3)
@@ -100,7 +102,7 @@
 							&:nth-child(2)
 								margin-top: 1rem
 					figure
-						display: flex
+						display: inline-flex
 						align-items: center
 						margin-bottom: 0
 						img
@@ -110,6 +112,21 @@
 								font-size: r(13px)
 								font-weight: 400
 								color: lighten(black,20%)
+					.removeproduct
+						display: inline-flex
+						position: absolute
+						right: 20px
+						top: 50%
+						transform: translateY(-50%)
+						width: 25px
+						height: 25px
+						border-radius: 50%
+						background: color-get($mau, main)
+						color: white
+						display: flex
+						justify-content: center
+						align-items: center
+						cursor: pointer
 	.cart-total-price
 		margin-top: 1rem
 		text-align: right

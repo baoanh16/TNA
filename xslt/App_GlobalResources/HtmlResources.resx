@@ -210,4 +210,10 @@
   <data name="YourCartText" xml:space="preserve">
     <value>Your Cart </value>
   </data>
+  <data name="ProductLinkText" xml:space="preserve">
+    <value>/en-US/product</value>
+  </data>
+  <data name="ViewAllText" xml:space="preserve">
+    <value>View All Products</value>
+  </data>
 </root>

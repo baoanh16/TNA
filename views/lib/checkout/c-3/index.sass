@@ -1,4 +1,8 @@
 .checkout
+	&.checkout-method
+		margin-bottom: r(30px)
+		+media-breakpoint-up(lg)
+			margin-bottom: r(60px)
 	.checkout-address-edit
 		padding-bottom: r(30px)
 		+media-breakpoint-up(lg)
@@ -48,6 +52,29 @@
 						flex: 0 0 calc(50% - 90px)
 					span
 						flex: 0 0 calc(50% - 105px)
+						order: 3
+					label.error
+						margin-left: calc(50% - 90px)
+						order: 4
+			input.error
+				border: 1px solid red
+				box-shadow: 0 0 .25rem red
+			label.error
+				font-family: 'Montserrat',sans-serif
+				top: 42px
+				right: 10px
+				color: red
+				font-weight: 400
+				width: 100%
+				font-size: 11px
+				margin-top: .5rem
+				margin-left: auto
+				text-align: right
+				&:before
+					font-weight: 900
+					margin-right: .325rem
+					content: '\f06a'
+					font-family: 'Font Awesome 5 Free'
 		.check-group
 			display: flex
 			margin-bottom: 1rem
@@ -121,7 +148,7 @@
 					position: absolute
 					right: 0
 					top: 0
-					height: 100%
+					height: 40px
 					padding: 0 1.25rem
 					+grad2
 					border: 0

@@ -6,7 +6,11 @@
 	<xsl:template match="/">
 
 		<div class="row">
-			<xsl:apply-templates select="/NewsList/News"></xsl:apply-templates>
+			<xsl:apply-templates select="/NewsList/News" mode="Big"></xsl:apply-templates>
+			<div class="col-lg-6">
+				
+			<xsl:apply-templates select="/NewsList/News" mode="Small"></xsl:apply-templates>
+			</div>
 			<!-- <xsl:if test="count(News)>1">
 				<div class="col-lg-6">
 					<xsl:apply-templates select="/NewsList/News"></xsl:apply-templates>
@@ -15,7 +19,7 @@
 		</div>
 	</xsl:template>
 
-	<xsl:template match="News">
+	<xsl:template match="News" mode="Big">
 		<xsl:if test="position()=1">
 			<div class="col-lg-6">
 				<div class="top-news">
@@ -28,8 +32,8 @@
 								<xsl:attribute name="target">
 									<xsl:value-of select="target"></xsl:value-of>
 								</xsl:attribute>
-								<img>
-								<xsl:attribute name="src">
+								<img class="lazyload">
+								<xsl:attribute name="data-src">
 									<xsl:value-of select="ImageUrl"></xsl:value-of>
 								</xsl:attribute>
 								<xsl:attribute name="alt">
@@ -53,10 +57,12 @@
 				</div>
 			</div>
 		</xsl:if>
+	</xsl:template>
+
+
+	<xsl:template match="News" mode="Small">
 		<xsl:if test="position()=2">
-			<xsl:text disable-output-escaping="yes">
-				&lt;div class="col-lg-6"&gt;&lt;div class="part-news"&gt;
-			</xsl:text>
+			<xsl:text disable-output-escaping="yes">&lt;div class="part-news"&gt;</xsl:text>
 			<figure>
 				<div class="boxzoom">
 					<a>
@@ -66,8 +72,8 @@
 						<xsl:attribute name="target">
 							<xsl:value-of select="target"></xsl:value-of>
 						</xsl:attribute>
-						<img>
-						<xsl:attribute name="src">
+						<img class="lazyload">
+						<xsl:attribute name="data-src">
 							<xsl:value-of select="ImageUrl"></xsl:value-of>
 						</xsl:attribute>
 						<xsl:attribute name="alt">
@@ -95,6 +101,7 @@
 				</figcaption>
 			</figure>
 		</xsl:if>
+
 		<xsl:if test="position()=3">
 			<figure>
 				<div class="boxzoom">
@@ -105,8 +112,8 @@
 						<xsl:attribute name="target">
 							<xsl:value-of select="target"></xsl:value-of>
 						</xsl:attribute>
-						<img>
-						<xsl:attribute name="src">
+						<img class="lazyload">
+						<xsl:attribute name="data-src">
 							<xsl:value-of select="ImageUrl"></xsl:value-of>
 						</xsl:attribute>
 						<xsl:attribute name="alt">
@@ -145,8 +152,8 @@
 						<xsl:attribute name="target">
 							<xsl:value-of select="target"></xsl:value-of>
 						</xsl:attribute>
-						<img>
-						<xsl:attribute name="src">
+						<img class="lazyload">
+						<xsl:attribute name="data-src">
 							<xsl:value-of select="ImageUrl"></xsl:value-of>
 						</xsl:attribute>
 						<xsl:attribute name="alt">
@@ -172,7 +179,7 @@
 						</a>
 				</figcaption>
 			</figure>
-			<xsl:text disable-output-escaping="yes"> &lt;/div&gt;&lt;/div&gt; </xsl:text>
+			<xsl:text disable-output-escaping="yes">&lt;/div&gt;</xsl:text>
 		</xsl:if>
 	</xsl:template>
 </xsl:stylesheet>

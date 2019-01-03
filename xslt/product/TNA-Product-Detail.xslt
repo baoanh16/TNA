@@ -59,18 +59,18 @@
 										Hotline : (+84) 977 212 455
 									</p>
 								</div>
-								<div class="share" style="display:flex; align-items: center; max-width: 130px;
-								justify-content: space-between">
-									<div class="nav-item">
+								<div class="social-networks nav" style="display:flex;align-items: flex-start; margin-top: 2rem">
+									<div class="nav-item" style="transform: translateY(-1px);">
 										<div class="fb-share-button" data-href="" data-layout="button" data-size="small" data-mobile-iframe="true"><a
-											 class="fb-xfbml-parse-ignore" target="_blank" href="">Chia sẻ</a></div>
+												class="fb-xfbml-parse-ignore" target="_blank" href="">Chia sẻ</a></div>
 									</div>
-									<div class="nav-item"><a class="twitter-share-button" href="https://twitter.com/share" data-size="medium"
-										 data-text="custom share text" data-url="" data-via="twitterdev" data-related="twitterapi,twitter"></a></div>
-									<div class="nav-item">
+									<div class="nav-item" style="margin-left: 1.2rem">
+										<a class="twitter-share-button" href="https://twitter.com/share" data-size="medium"
+											data-text="custom share text" data-url="" data-via="twitterdev" data-related="twitterapi,twitter"></a></div>
+									<div class="nav-item" style="margin-left: 1.2rem">
 										<div class="g-plus" data-action="share"></div>
 									</div>
-									<div class="nav-item">
+									<div class="nav-item" style="margin-left: 1.2rem">
 										<script src="//platform.linkedin.com/in.js" type="text/javascript">lang: en_US</script>
 										<script type="IN/Share"></script>
 									</div>
