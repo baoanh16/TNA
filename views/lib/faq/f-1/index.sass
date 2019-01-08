@@ -80,6 +80,22 @@
 					height: r(40px)
 				textarea
 					height: r(100px)
+				&.frm-captcha
+					position: relative
+					.RadCaptcha_Default
+						span
+							position: absolute
+							top: 100%
+							left: 50%
+							transform: translateX(-50%)
+							color: red
+							font-size: 11px
+							&:before
+								font-weight: 900
+								margin-right: .325rem
+								content: "\f06a"
+								font-family: 'Font Awesome 5 Free'
+								margin-right: .5rem
 		.frm-btnwrap
 			display: flex
 			justify-content: center

@@ -273,9 +273,63 @@ ul, p
 .RadInput_Default
 	.riTextBox
 		border: 1px solid #d9d9d9!important
+		padding: 0 15px!important
+		font-size: .9remimportant
+		font-family: Montserrat!important
 		&:focus
 			border-color: #2366a6!important
 			box-shadow: 0 0 0.25rem #2366a6
 
 .fa-trash-o:before
 	content: "\f2ed"
+
+.createuserbutton
+	height: 40px
+	border-radius: 0
+	background: map-get($mau, main)
+	color: white
+	text-transform: uppercase
+
+.settingcontrol.regerror
+	width: 100%
+	display: flex
+	color: red
+
+.regcomplete
+	span
+		display: block 
+		text-align: center
+		font-size: r(14px)
+	input
+		height: 40px
+		border-radius: 0
+		background: map-get($mau, main)
+		color: white
+		text-transform: uppercase
+
+.form-group.btn-login
+	input
+		background: map-get($mau, main)
+		justify-content: center
+		text-transform: uppercase
+		font-size: r(14px)
+
+.form-horizontal
+	.form-group:last-child
+		a
+			+ a
+				margin-left: 1.2rem
+
+.loginstandard
+	margin-bottom: 0!important
+
+.alert-danger
+	width: 100%
+	display: flex
+	margin-bottom: 0
+	align-items: center
+	justify-content: center
+	color: red
+	padding: 0
+	height: 35px
+	margin-bottom: 0

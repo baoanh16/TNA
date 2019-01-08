@@ -32,7 +32,7 @@
 						<h3>
 							<span class="fas fa-shopping-cart"></span>
 							<span>Giỏ hàng của bạn (</span>
-							<span>2 </span><span>sản phẩm)</span>
+							<span><xsl:value-of select="/ShoppingCart/TotalProducts"></xsl:value-of> </span><span>sản phẩm)</span>
 						</h3>
 					</div>
 				</div>

@@ -112,7 +112,14 @@ $(document).ready(function () {
 	home4.slideHome4()
 	tabnav4.tabNav4()
 	home6.slideHome6()
-
+	let moveButtonFormContact = new MappingListener({
+		selector: '.canhcam-contact-2 .contact-list .frm-btnwrap',
+		desktopWrapper: '.Module-228 .col-lg-7',
+		desktopMethod: 'appendTo',
+		mobileWrapper: '.Module-228 .col-lg-7',
+		mobileMethod: 'appendTo',
+		breakpoint: 992,
+	}).watch()
 
 	$('.searchinput').on('keydown', function (e) {
 		if (e.keyCode === 13) {
