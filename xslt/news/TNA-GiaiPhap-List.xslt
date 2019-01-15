@@ -45,7 +45,7 @@
 				</div>
 				<figcaption>
 					<h4>
-						<a href="solution-detail.html">
+						<a>
 							<xsl:value-of select="Title"></xsl:value-of>
 						</a>
 						<xsl:value-of select="EditLink" disable-output-escaping="yes"></xsl:value-of>

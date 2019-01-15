@@ -204,6 +204,9 @@
 		<div class="tns-item">
 			<div class="item">
 				<img>
+				<xsl:attribute name="data-zoom-image">
+					<xsl:value-of select="ImageUrl"></xsl:value-of>
+				</xsl:attribute>
 				<xsl:attribute name="src">
 					<xsl:value-of select="ThumbnailUrl"></xsl:value-of>
 				</xsl:attribute>

@@ -24,6 +24,7 @@
     "swiper": "@types/swiper#^4.4.2",
     "lightgallery": "^1.6.11",
     "tiny-slider": "^2.9.1",
-    "aos": "^2.3.4"
+    "aos": "^2.3.4",
+    "elevatezoom": "^2.2.3"
   }
 }

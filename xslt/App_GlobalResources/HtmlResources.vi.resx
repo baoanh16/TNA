@@ -216,4 +216,7 @@
   <data name="ViewAllText" xml:space="preserve">
     <value>Xem tất cả</value>
   </data>
+  <data name="ContinueCheckoutText" xml:space="preserve">
+    <value>Tiếp tục thanh toán</value>
+  </data>
 </root>

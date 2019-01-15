@@ -284,28 +284,21 @@ ul, p
 	content: "\f2ed"
 
 .createuserbutton
+	font-weight: 400!important
 	height: 40px
 	border-radius: 0
 	background: map-get($mau, main)
 	color: white
 	text-transform: uppercase
+	&:hover
+		color: white
 
 .settingcontrol.regerror
 	width: 100%
 	display: flex
 	color: red
+	justify-content: flex-end
 
-.regcomplete
-	span
-		display: block 
-		text-align: center
-		font-size: r(14px)
-	input
-		height: 40px
-		border-radius: 0
-		background: map-get($mau, main)
-		color: white
-		text-transform: uppercase
 
 .form-group.btn-login
 	input
@@ -331,5 +324,5 @@ ul, p
 	justify-content: center
 	color: red
 	padding: 0
-	height: 35px
+	padding: 7px 0
 	margin-bottom: 0

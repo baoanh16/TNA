@@ -2,14 +2,57 @@
 	padding: r(40px) 0
 	+media-breakpoint-up(lg)
 		padding: r(60px) 0
-.login-panel
+.login-panel, .signup-panel
 	background: white
-	padding: 0 15px
-	box-shadow: 0px 3px 30px color-rgba(black,0.1)
+	padding: 20px
+	box-shadow: 0px 0px 1.25rem color-rgba(black,0.1)
 	border-radius: 5px
 	border: 1px solid darken(white,10%)
 .signup-form, .login-form 
 	width: 100%
+	.form-horizontal
+		display: flex
+		flex-direction: column
+		div:nth-child(1)
+			order: 1
+		div:nth-child(2)
+			order: 2
+		div:nth-child(3)
+			order: 3
+		div:nth-child(4)
+			order: 5
+		div:nth-child(5)
+			order: 5
+		div:nth-child(6)
+			order: 5
+		div:nth-child(7)
+			order: 5
+		div:nth-child(8)
+			order: 5
+		div:nth-child(9)
+			order: 5
+		span:nth-child(10)
+			order: 4
+		div:nth-child(11)
+			order: 5
+	.regcomplete
+		display: flex
+		flex-direction: column
+		align-items: center
+		input[type='submit']
+			margin-top: 20px
+			height: 40px
+			border-radius: 0
+			background: map-get($mau, main)
+			color: white
+			text-transform: uppercase
+			&:hover
+				color: white
+		span
+			display: block 
+			text-align: center
+			font-size: r(14px)
+			text-align: justify
 	.headtitle
 		margin-bottom: 10px
 		color: color-get($mau, main)
@@ -17,12 +60,18 @@
 		font-size: r(15px)
 		line-height: 30px
 		font-weight: 700
+		text-align: center
 		border-bottom: 1px solid darken($white,10%)
+	.panel
+		display: flex
+		flex-direction: column
 	.panel-heading
 		margin-bottom: 5px
 		color: darken($white,60%)
 	.form-group
 		margin-bottom: 10px
+		&.loginopenid
+			margin-bottom: 0
 		label 
 			font-size: r(14px)
 			margin-bottom: 5px
@@ -37,6 +86,21 @@
 			&:active, &:focus
 				border-color: color-get($mau, main)
 				box-shadow: 0 0 .25rem color-get($mau, main)
+		input[type="submit"]
+			display: block
+			width: 100%
+			line-height: 36px
+			padding: 0px 20px
+			border-radius: 0
+			+grad2
+			height: 40px
+			color: white
+			font-weight: 400!important
+			font-size: r(16px)
+			border: none
+			text-transform: uppercase
+			&:hover
+				background: color-get($mau, main)
 		select
 			padding: 10px 15px
 		.settingcontrol
@@ -107,28 +171,29 @@
 		content: '\f06a'
 		font-family: 'Font Awesome 5 Free'
 
-	.btnwrap
-		text-align: center
-		padding: 10px 0
-	input[type="submit"]
-		display: block
-		width: 100%
-		line-height: 36px
-		padding: 0px 20px
-		border-radius: 0
-		+grad2
-		color: white
-		font-weight: 300 !important
-		font-size: r(13px)
-		border: none
-		text-transform: uppercase
-		&:hover
-			background: color-get($mau, main)
-	table
-		tbody
-			tr
-				td
-					padding: 5px 0
+.btnwrap
+	text-align: center
+	padding: 10px 0
+input[type="submit"]
+	display: block
+	width: 100%
+	line-height: 36px
+	padding: 0px 20px
+	border-radius: 0
+	+grad2
+	height: 40px
+	color: white
+	font-weight: 400!important
+	font-size: r(16px)
+	border: none
+	text-transform: uppercase
+	&:hover
+		background: color-get($mau, main)
+table
+	tbody
+		tr
+			td
+				padding: 5px 0
 .login-form
 	.form-group
 		a
@@ -144,7 +209,8 @@
 				padding-left: 24px
 				&:before
 					content: ''
-					font-family: fontawesome
+					font-weight: 900
+					font-family: 'Font Awesome 5 Free'
 					display: block
 					width: 16px
 					height: 16px
@@ -159,7 +225,9 @@
 					transition: all .4s ease-in-out
 				&.active
 					&:before
-						content: '\f00c'
+						content: "\f00c"
 		&:nth-child(1), &:nth-child(2)
 			label
 				display: none
+	.alert.alert-danger
+		text-align: center

@@ -90,7 +90,7 @@
 						(BIDV) - CHI NHÁNH: HỒ CHÍ MINH</p>
 				</div>
 				<div class="agree" style="margin-top: .5rem">
-				<input id="PaymentAgree" type="checkbox" checked="checked" name="PaymentAgree" aria-required=""/>
+				<input id="PaymentAgree" type="checkbox" name="PaymentAgree" aria-required=""/>
 				<label for="PaymentAgree">Tôi đã đọc và đồng ý điều khoản trên</label>
 				<!-- <label for="PaymentAgree">
 						<xsl:value-of select="/CheckoutMethod/AgreeText"></xsl:value-of>
@@ -107,7 +107,8 @@
 					<xsl:text>/cart</xsl:text>
 				</xsl:attribute>
 				<span class="mdi mdi-chevron-left"></span>
-				<span>Quay lại</span>
+				<span>
+					<xsl:value-of select="/CheckoutMethod/BackText"></xsl:value-of></span>
 			</a>
 			<a class="btn btn-next">
 				<xsl:attribute name="onclick">
@@ -116,8 +117,9 @@
 					<xsl:text>');return false;</xsl:text>
 				</xsl:attribute>
 				<span>
-					<!-- <xsl:value-of select="/CheckoutAddress/ContinueShoppingText"></xsl:value-of> -->
-					Tiếp tục
+					<!-- <xsl:value-of select="/CheckoutMethod/ContinueShoppingText"></xsl:value-of> -->
+					
+					<xsl:value-of select="/CheckoutMethod/ContinueCheckoutText"></xsl:value-of>
 				</span>
 				<span class="mdi mdi-chevron-right"></span>
 			</a>

@@ -90,7 +90,7 @@ export class Header {
 		})
 	}
 	toggleUser() {
-		$('.user').click(function () {
+		$('.user').hover(function () {
 			$(this).find('.user-panel').fadeToggle(500)
 		})
 	}
