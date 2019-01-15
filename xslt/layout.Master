@@ -106,7 +106,8 @@ script(src='//oss.maxcdn.com/respond/1.4.2/respond.min.js')
 									<div class="user-panel">
 										<ul>
 											<portal:LoginLink ID="LoginLink" runat="server" RenderAsListItem="true" />
-											<portal:welcomemessage id="WelcomeMessage" runat="server" RenderAsListItem="true" listitemcss="firstnav" />
+											<portal:welcomemessage id="WelcomeMessage" runat="server" wrapinprofilelink="true" profilelink="~/Account/UserProfile.aspx"
+											 RenderAsListItem="true" listitemcss="firstnav" />
 											<portal:RegisterLink ID="RegisterLink" runat="server" RenderAsListItem="true" />
 											<portal:LogoutLink ID="LogoutLink" runat="server" RenderAsListItem="true" />
 										</ul>

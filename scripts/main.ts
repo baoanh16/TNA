@@ -244,7 +244,7 @@ $(document).ready(function () {
 	});
 	if ($('.user .firstnav').length > 0) {
 		let moveButtonFormContact = new MappingListener({
-			selector: '.user .firstnav span',
+			selector: '.user .firstnav a',
 			desktopWrapper: '.user-toggle',
 			desktopMethod: 'appendTo',
 			mobileWrapper: '.user-toggle',
@@ -252,7 +252,7 @@ $(document).ready(function () {
 			breakpoint: 992,
 		}).watch()
 		let moveButtonFormContact2 = new MappingListener({
-			selector: '.user .user-panel li a',
+			selector: '.user .user-panel li:nth-child(2) a',
 			desktopWrapper: '.user-toggle',
 			desktopMethod: 'appendTo',
 			mobileWrapper: '.user-toggle',
@@ -260,7 +260,7 @@ $(document).ready(function () {
 			breakpoint: 992,
 		}).watch()
 		$('.user-toggle').addClass('logined')
-		$('.firstnav').remove(0)
+		$('.firstnav').remove()
 		$('.user-panel').remove()
 	};
 	// $('.product-images .list-images .item img').elevateZoom({
