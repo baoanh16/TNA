@@ -48,6 +48,7 @@
 						.fa-exclamation-triangle
 							display: inline-block
 							width: 100%
+							max-width: 400px
 							text-align: right
 							font-family: 'Montserrat', sans-serif
 							font-weight: 500
@@ -88,6 +89,11 @@
 				.form-group
 					display: flex
 					flex-wrap: wrap
+					a
+						font-size: r(14px)
+						color: map-get($mau, main)
+						+ a
+							margin-left: 1.25rem
 					.fa-exclamation-triangle
 						display: inline-block
 						width: 100%

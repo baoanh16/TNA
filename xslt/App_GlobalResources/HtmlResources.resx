@@ -216,4 +216,7 @@
   <data name="ViewAllText" xml:space="preserve">
     <value>View All Products</value>
   </data>
+  <data name="ContinueCheckoutText" xml:space="preserve">
+    <value>Process Checkout</value>
+  </data>
 </root>

@@ -8,7 +8,8 @@
 		"_plugins/mapping.js",
 		"bower_components/lightgallery/dist/js/lightgallery-all.min.js",
 		"bower_components/tiny-slider/dist/min/tiny-slider.js",
-		"bower_components/aos/dist/aos.js"
+		"bower_components/aos/dist/aos.js",
+		"bower_components/elevatezoom/jquery.elevateZoom-2.2.3.min.js"
 	],
 	"styles": [
 		"bower_components/font-awesome/css/all.min.css",

@@ -12,6 +12,20 @@ export class ProductDeatil {
 				controlsContainer: "#customize-controls",
 				swipeAngle: false,
 			})
+			Bigslider.events.on('transitionEnd', function () {
+				if ($(window).width() > 992) {
+					$('.zoomContainer').remove();
+
+					$('.list-images .tns-slide-active img').elevateZoom({
+						zoomWindowWidth: $('.list-images .tns-slide-active img').height(),
+						zoomWindowHeight: $('.list-images .tns-slide-active img').height(),
+						scrollZoom: true
+					})
+				} else {
+					$('.zoomContainer').remove();
+
+				}
+			})
 		}
 		if ($('.canhcam-product-detail-1 .list-thumb').length) {
 			let Smallslider = tns({

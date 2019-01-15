@@ -145,6 +145,7 @@
 								margin-right: 0
 								width: 100%
 						button
+							cursor: pointer
 							position: absolute
 							top: 15px
 							right: 15%
@@ -202,7 +203,23 @@
 					max-width: 360px
 				.user
 					.user-toggle
-						display: none
+						@media (max-width: 991.98px)
+							display: none
+							&.logined
+								display: flex
+								padding: 1rem
+								font-size: 16px
+								a,span
+									display: flex
+									flex-direction: column
+									align-items: center
+									color: white
+								a:last-child
+									margin-left: 2rem
+						@media (min-width: 992px)
+							&.logined
+								a
+									margin-left: 1rem
 					.user-panel
 						padding: 1rem
 						ul
@@ -392,12 +409,15 @@
 							padding: 0 10px
 							cursor: pointer
 							.user-toggle
-								span
-									color: darken(white,40%)
+								&.logined
+									a
+										margin-left: 1rem
+									span
+										color: darken(white,40%)
 							.user-panel
 								display: none
 								position: absolute
-								top: 26px
+								top: 20px
 								width: 280px
 								right: 0
 								+grad2
@@ -412,12 +432,13 @@
 										max-width: 50%
 										flex: 0 0 50%
 										position: relative
-										a
+										a, span
 											display: flex
-											flex-direction: row
+											flex-direction: column
 											align-items: center
 											color: white
 											padding: .5rem
+											height: 100%
 										&:first-child
 											a,span
 												&:before
@@ -427,10 +448,11 @@
 													color: white
 													font-size: r(24px)
 											span
-												display: flex
-												flex-direction: column
-												align-items: center
-												color: white
+												// margin-top: .55rem
+												// display: flex
+												// flex-direction: column
+												// align-items: center
+												// color: white
 										&:last-child
 											border-left: 1px solid white
 											a
@@ -440,6 +462,9 @@
 													+fontawesome('\f2f6', $faf)
 													color: white
 													font-size: r(24px)
+							&:hover
+								.user-panel
+									display: block
 						.cart
 							padding: 0 14px 0 10px
 							.cart-panel

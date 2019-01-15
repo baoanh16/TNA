@@ -1,0 +1,275 @@
+
+.user-sidebar
+	position: relative
+	margin-top: 0
+	margin: 40px 0
+	@media (max-width: 991.98px)
+		&:after
+			content: '\f107'
+			font-family: 'Font Awesome 5 Free'
+			font-weight: 900
+			position: absolute
+			top: 50%
+			right: 15px
+			transform: translateY(-50%)
+			color: map-get($mau, main)
+			font-size: 1.5rem
+	.userinfo
+		border: 1px solid map-get($mau, main)
+		background: color-rgba(lighten(map-get($mau, main),25%),.4 )
+		border-radius: 5px
+		overflow: hidden
+		figure
+			margin-bottom: 0
+			display: flex
+			flex-wrap: wrap
+			padding: 15px
+			&:after
+				content: ''
+				display: table
+				width: 100%
+				clear: both
+			.user-img
+				width: 80px
+				flex: 0 0 80px
+				float: left
+				@media (max-width: 1199.98px)
+					width: 60px
+					flex: 0 0 60px
+			figcaption
+				width: calc(100% - 80px)
+				display: flex
+				margin-left: .5rem
+				flex-wrap: wrap
+				align-items: center
+				align-content: center
+				@media (max-width: 1199.98px)
+					padding: 7px 15px
+				.title
+					color: #333
+					opacity: 0.8
+					font-weight: 600
+					font-size: 13px
+					width: 100%
+				.user-name
+					text-transform: uppercase
+					font-weight: 700
+					font-size: 0.875rem
+					color: map-get($mau, main)
+					width: 100%
+				.user-rank
+					font-size: 13px
+					font-weight: bold
+					color: rgba(255, 255, 255, 0.8)
+					display: none
+					.fa
+						color: #FFC107
+						font-size: 1rem
+		.btn-muasi
+			margin: 0px 15px 15px
+			display: block
+			background: #e6e6e6
+			text-align: center
+			text-transform: uppercase
+			color: map-get($mau, main)
+			font-weight: 700
+			border-radius: 5px
+			padding: 5px 0
+			box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3)
+
+.user-sidelink
+	margin: 40px 0
+	ul
+		border-right: 1px solid #e6e6e6
+		li
+			display: block
+			&:before
+				display: none
+			a
+				display: block
+				padding: 5px 0
+				font-weight: 500
+				color: #666666
+				position: relative
+				font-size: 0.875rem
+				@media (max-width: 991.98px)
+					font-size: 13px
+				&:after
+					content: ''
+					display: block
+					width: 2px
+					position: absolute
+					top: 0
+					right: -1px
+					bottom: 100%
+					background: map-get($mau, main)
+					transition: all ease-out 0.5s
+			&:hover, &.active
+				a
+					color: #000
+					&:after
+						bottom: 0
+
+
+
+.user-page
+	margin: 40px 0
+	background: white
+	position: relative
+	@media (max-width:  991.98px)
+		.user-page
+			margin-top: 0
+	>.row
+		>.col-12
+			margin-bottom: 15px
+	.postname
+		font-size: 24px
+		text-transform: uppercase
+		font-weight: 600
+		margin-bottom: 30px
+		border-left: 3px solid map-get($mau, main)
+		padding-left: 10px
+	.posttitle 
+		margin-bottom: 0
+		font-size: 13px
+		line-height: 1.5
+		min-height: 27px
+		font-weight: 600
+	.account-form
+		max-width: 400px
+		width: 100%
+		// margin: 0 auto
+		.form-group
+			select
+				display: block
+				width: 100%
+				height: calc(2.25rem + 2px)
+				padding: .375rem .75rem
+				font-size: 1rem
+				font-weight: 400
+				line-height: 1.5
+				color: #495057
+				background-color: #fff
+				background-clip: padding-box
+				border: 1px solid #ced4da
+				border-radius: .25rem
+				transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out
+	.info-detail, .address-list
+		border: 1px solid #e6e6e6
+		background: #f7f7f7
+		border-radius: 5px
+		padding: 15px
+		font-size: 13px
+		line-height: 1
+		.group
+			display: flex
+			margin-bottom: 10px
+			align-items: center
+		.label
+			flex: 0 0 30%
+		.detail
+			flex: 0 0 70%
+			font-weight: 600
+			font-size: 15px
+		.type
+			margin-bottom: 8px
+			font-weight: 500
+			font-size: 15px
+		.name
+			font-size: r(15px)
+			margin-bottom: .4rem
+		.addr-detail
+			ul
+				li
+					font-size: r(13px)
+					font-weight: 400
+					margin-bottom: .5rem
+		.dashboard-account
+			margin-bottom: 1rem
+	.link
+		font-size: 13px
+		color: map-get($mau, main)
+		background: #eff9fd
+		border: 1px solid #abdef4
+		padding: 3px 10px
+		font-weight: 600
+		border-radius: 5px
+		position: absolute
+		top: -5px
+		right: 15px
+		&:after
+			content: '\f105'
+			font-family: 'Font Awesome 5 Free'
+			font-weight: 900
+			margin-left: 10px
+		&:hover
+			color: white
+			background: map-get($mau, main)
+			border-color: map-get($mau, main)
+	.btn-addaddr
+		font-size: 13px
+		color: map-get($mau, main)
+		background: #eff9fd
+		border: 1px solid #abdef4
+		padding: 3px 10px
+		font-weight: 600
+		border-radius: 5px
+		position: absolute
+		top: 3px
+		right: 0
+		&:after
+			content: '\f044'
+			font-family: 'Font Awesome 5 Free'
+			font-weight: 900
+			margin-left: 10px
+			font-weight: normal
+		&:hover
+			color: white
+			background: map-get($mau, main)
+			border-color: map-get($mau, main)
+	.table
+		font-size: 0.875rem
+		background: white
+		margin-bottom: 0
+		border: 1px solid #e6e6e6
+		border-radius: 5px
+		overflow: hidden
+		color: #666666
+		a
+			color: #333
+			font-weight: 500
+			&:hover
+				color: map-get($mau, main)
+		.point
+			font-weight: 700
+			color: map-get($mau, main)
+		.link-detail
+			color: map-get($mau, main)
+			font-weight: normal
+			margin-left: 10px
+			&:hover
+				text-decoration: underline
+		th
+			border: none
+			background: #f2f2f2
+			color: #333
+			white-space: nowrap
+			border-bottom: 1px solid #e6e6e6
+		td
+			border: none
+			font-size: 13px
+			vertical-align: middle
+			.alert-success, .alert-warning, .alert-primary, .alert-info
+				background: none
+				font-weight: 500
+				-webkit-filter: brightness(150%)
+				filter: brightness(150%)
+		th,td
+			white-space: nowrap
+			padding: 7px 15px
+			&:nth-child(3)
+				white-space: normal
+				@media (max-width: 767.98px)
+					white-space: nowrap
+		tr:nth-child(even)
+			background: #f7f7f7

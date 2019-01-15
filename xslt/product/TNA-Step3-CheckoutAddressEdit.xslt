@@ -303,7 +303,9 @@
 					<xsl:value-of select="/cart"></xsl:value-of>
 				</xsl:attribute>
 				<span class="mdi mdi-chevron-left"></span>
-				<span>Tiếp tục mua hàng</span>
+				<span>
+					<xsl:value-of select="/CheckoutAddress/BackText"></xsl:value-of>
+					</span>
 			</a>
 			<a class="btn btn-next" href="javascript:void(0)">
 				<xsl:attribute name="onclick">
@@ -312,7 +314,7 @@
 					<xsl:text>');return false;</xsl:text>
 				</xsl:attribute>
 				<span>
-					<xsl:value-of select="/CheckoutAddress/ContinueShoppingText"></xsl:value-of>
+					<xsl:value-of select="/CheckoutAddress/ContinueCheckoutText"></xsl:value-of>
 				</span>
 				<span class="mdi mdi-chevron-right"></span>
 			</a>
