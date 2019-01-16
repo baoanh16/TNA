@@ -260,8 +260,8 @@ $(document).ready(function () {
 			breakpoint: 992,
 		}).watch()
 		$('.user-toggle').addClass('logined')
-		$('.firstnav').remove()
-		$('.user-panel').remove()
+		$('.firstnav').hide()
+		$('.user-panel').hide()
 	};
 	// $('.product-images .list-images .item img').elevateZoom({
 	// 	zoomWindowFadeIn: 100,
