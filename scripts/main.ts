@@ -252,7 +252,7 @@ $(document).ready(function () {
 			breakpoint: 992,
 		}).watch()
 		let moveButtonFormContact2 = new MappingListener({
-			selector: '.user .user-panel li:nth-child(2) a',
+			selector: '.user li:nth-child(2) a',
 			desktopWrapper: '.user-toggle',
 			desktopMethod: 'appendTo',
 			mobileWrapper: '.user-toggle',

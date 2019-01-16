@@ -203,6 +203,8 @@
 					max-width: 360px
 				.user
 					.user-toggle
+						.fas
+							color: #999
 						@media (max-width: 991.98px)
 							display: none
 							&.logined
@@ -210,6 +212,7 @@
 								padding: 1rem
 								font-size: 16px
 								a,span
+									color: #2366a6
 									display: flex
 									flex-direction: column
 									align-items: center
@@ -219,6 +222,7 @@
 						@media (min-width: 992px)
 							&.logined
 								a
+									color: #2366a6
 									margin-left: 1rem
 					.user-panel
 						padding: 1rem
@@ -409,9 +413,12 @@
 							padding: 0 10px
 							cursor: pointer
 							.user-toggle
+								.fas
+									color: #999
 								&.logined
 									a
 										margin-left: 1rem
+										color: #2366a6
 									span
 										color: darken(white,40%)
 							.user-panel
