@@ -3,15 +3,25 @@
  exclude-result-prefixes="msxsl">
 	<xsl:output method="html" indent="yes" />
 
-	<xsl:template match="/">
+	<xsl:template match="/"> 
 		<div class="row solution-title">
 			<div class="col-12">
 				<h2 class="tna__title tna__title--main">
 					<xsl:value-of select="/NewsList/ZoneTitle"></xsl:value-of>
 				</h2>
 				<div class="form-search">
-					<input type="text" />
+					<input type="text" id="txtkeyword" >
+						<xsl:attribute name="data-value">
+							<xsl:value-of select="/NewsList/KeyWord"></xsl:value-of>
+						</xsl:attribute>
+					</input>
 					<button>Submit</button>
+					
+					<input type="hidden" id="urlKeywordUrlOutParam" >
+						<xsl:attribute name="value">
+							<xsl:value-of select="/NewsList/KeywordUrlOutParam"></xsl:value-of>
+						</xsl:attribute>
+					</input>
 				</div>
 			</div>
 		</div>
@@ -45,7 +55,7 @@
 				</div>
 				<figcaption>
 					<h4>
-						<a>
+						<a href="solution-detail.html">
 							<xsl:value-of select="Title"></xsl:value-of>
 						</a>
 						<xsl:value-of select="EditLink" disable-output-escaping="yes"></xsl:value-of>

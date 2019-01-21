@@ -304,8 +304,7 @@
 				</xsl:attribute>
 				<span class="mdi mdi-chevron-left"></span>
 				<span>
-					<xsl:value-of select="/CheckoutAddress/BackText"></xsl:value-of>
-					</span>
+					<xsl:value-of select="/CheckoutAddress/BackText"></xsl:value-of></span>
 			</a>
 			<a class="btn btn-next" href="javascript:void(0)">
 				<xsl:attribute name="onclick">

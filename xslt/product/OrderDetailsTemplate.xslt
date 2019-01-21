@@ -6,10 +6,10 @@
     <table style="width: 100%; border-collapse: collapse; border-spacing: 0px;">
       <thead>
         <tr style="border: 1px solid #001530; background: #001530;">
-          <th style="border: 1px solid #e6e6e6; text-align: center; color: #ffffff; font-size: 14px; font-weight: 500; text-transform: uppercase; height: 32px; width: 40%; background: none 0% 0% repeat scroll #00aeef;">Sản phẩm</th>
-          <th style="border: 1px solid #e6e6e6; text-align: center; color: #ffffff; font-size: 14px; font-weight: 500; text-transform: uppercase; height: 32px; width: 20%; background: none 0% 0% repeat scroll #00aeef;">Đơn giá</th>
-          <th style="border: 1px solid #e6e6e6; text-align: center; color: #ffffff; font-size: 14px; font-weight: 500; text-transform: uppercase; height: 32px; width: 20%; background: none 0% 0% repeat scroll #00aeef;">Số lượng</th>
-          <th style="border: 1px solid #e6e6e6; text-align: center; color: #ffffff; font-size: 14px; font-weight: 500; text-transform: uppercase; height: 32px; width: 20%; background: none 0% 0% repeat scroll #00aeef;">Thành tiền</th>
+          <th style="border: 1px solid #e6e6e6; text-align: center; color: #ffffff; font-size: 14px; font-weight: 500; text-transform: uppercase; height: 32px; width: 40%; background: none 0% 0% repeat scroll #ff0000;">Sản phẩm</th>
+          <th style="border: 1px solid #e6e6e6; text-align: center; color: #ffffff; font-size: 14px; font-weight: 500; text-transform: uppercase; height: 32px; width: 20%; background: none 0% 0% repeat scroll #ff0000;">Đơn giá</th>
+          <th style="border: 1px solid #e6e6e6; text-align: center; color: #ffffff; font-size: 14px; font-weight: 500; text-transform: uppercase; height: 32px; width: 20%; background: none 0% 0% repeat scroll #ff0000;">Số lượng</th>
+          <th style="border: 1px solid #e6e6e6; text-align: center; color: #ffffff; font-size: 14px; font-weight: 500; text-transform: uppercase; height: 32px; width: 20%; background: none 0% 0% repeat scroll #ff0000;">Thành tiền</th>
         </tr>
       </thead>
       <tbody>
