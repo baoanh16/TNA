@@ -1,0 +1,51 @@
+.canhcam-job-1
+	padding-top: r(30px)
+	padding-bottom: r(30px)
+	.jobs-list
+		h1
+			margin-bottom: r(30px)
+		.table
+			margin-bottom: 0
+			thead
+				background: rgb(38,116,179)
+				background: -moz-linear-gradient(left, rgba(38,116,179,1) 0%, rgba(41,137,216,1) 50%, rgba(125,185,232,1) 100%)
+				background: -webkit-linear-gradient(left, rgba(38,116,179,1) 0%,rgba(41,137,216,1) 50%,rgba(125,185,232,1) 100%)
+				background: linear-gradient(to right, rgba(38,116,179,1) 0%,rgba(41,137,216,1) 50%,rgba(125,185,232,1) 100%)
+				filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2674b3', endColorstr='#7db9e8',GradientType=1 )
+				tr
+					th
+						border: none
+						color: #ffffff
+						text-transform: uppercase
+						font-size: r(16px)
+						font-weight: 500
+						text-align: center
+						&:first-child
+							text-align: left
+			tbody
+				tr
+					th , td , a
+						border: none
+						color: #666666
+						font-size: 1rem
+					th
+						a
+							font-weight: 500
+					td
+						font-weight: 400
+						text-align: center
+					&:nth-child(odd)
+						background: #f5f5f5
+	+media-breakpoint-up(lg)
+		padding-top: r(60px)
+		.jobs-list
+			.table
+				tbody
+					tr
+						th
+							a
+								transition: all .3s ease-in-out
+						&:hover
+							a
+								color: color-get($mau,main)
+
