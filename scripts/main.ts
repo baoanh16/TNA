@@ -56,7 +56,16 @@ document.addEventListener('scroll', () => {
 })
 
 $(document).ready(function () {
-	AOS.init();
+	function aosRun(x) {
+		if (x.matches) {
+			AOS.init();
+		} else {
+			$('[data-aos]').removeAttr('data-aos')
+		}
+	}
+	let aosBP = window.matchMedia("(min-width: 768px)")
+	aosRun(aosBP);
+	aosBP.addListener(aosRun);
 	findImage();
 	// Header
 	header.moveLanguage();

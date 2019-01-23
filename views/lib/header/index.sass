@@ -96,6 +96,9 @@
 					line-height: 30px
 					+media-breakpoint-up(sm)
 						display: none
+					span.fas
+						width: 20px
+						color: darken(white,40%)
 				.search-panel
 					position: fixed
 					top: 0
@@ -106,9 +109,9 @@
 					z-index: 10
 					+tr(.4)
 					+media-breakpoint-up(sm)
-						max-width: 360px
+						max-width: 200px
 						position: initial
-						width: 360px
+						width: 200px
 					+media-breakpoint-down(xs)
 						transform: translateX(-100%)
 						&.active
@@ -173,8 +176,21 @@
 					color: color-get($mau, main)
 					line-height: 20px
 			.logo-wrap
-				.logo-text
-					display: none
+				@media (max-width: 991px)
+					a
+						display: flex
+						.logo-text
+							display: inline-flex
+							flex-direction: column
+							color: lighten(black, 20%)
+							justify-content: center
+							h2
+								font-weight: 700
+								font-size: r(16px)
+								margin-bottom: 0
+							span
+								font-weight: 500
+								font-size: r(11px)
 				.logo
 					.desktop
 						max-height: 70px
