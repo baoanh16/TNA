@@ -30,11 +30,11 @@ export class Header {
 		}).watch()
 	};
 	moveSearch() {
-		let moveUser = new MappingListener({
+		let moveSearch = new MappingListener({
 			selector: '.search',
 			desktopWrapper: '.toolbar',
 			desktopMethod: 'appendTo',
-			mobileWrapper: '.menu-wrap .logo-wrap',
+			mobileWrapper: '.menu-wrap .user',
 			mobileMethod: 'insertAfter',
 			breakpoint: 992,
 		}).watch()

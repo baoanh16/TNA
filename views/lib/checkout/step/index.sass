@@ -9,30 +9,42 @@
 			overflow: hidden
 	.step
 		background: darken(white,4%)
-		padding: 10px 0
+		padding: 8px 0
 		flex: 0 0 25%
 		+media-breakpoint-up(sm)
 			padding-left: .75rem
 		+media-breakpoint-up(md)
 			position: relative
-			&:after
-				content: ''
-				position: absolute
-				width: 16px
-				height: 100%
-				top: 50%
-				transform: translateY(-50%)
-				right: 0
-				background-image: url('../img/checkout_step_icon_1.jpg')
-				background-position: 100%
-				background-size: cover
-				background-repeat: no-repeat
+			// &:after
+				// content: ''
+				// position: absolute
+				// width: 16px
+				// height: 100%
+				// top: 0
+				// right: 0
+				// background-image: url('../img/step_icon.png')
+				// background-position: 100%
+				// background-size: cover
+				// background-repeat: no-repeat
 			&.active
-				&:after
-					background-image: url('../img/checkout_step_icon_3.jpg')
+				background-image: url('../img/step_icon.png')
+				background-position-x: 100%
+				// &:after
+				// 	background-image: url('../img/step_icon_active.png')
 			&.finished
+				background-image: url('../img/step_icon.png')
+				background-position-x: 0%
+				overflow: hidden
 				&:after
-					background-image: url('../img/checkout_step_icon_2.jpg')
+					position: absolute
+					width: 50px
+					height: 50px
+					border-top: 2px solid white
+					border-right: 2px solid white
+					top: 0
+					right: 0
+					content: ''
+					transform: rotateY(50deg) rotateZ(47deg)
 			&:last-child
 				&:after
 					content: none
@@ -64,7 +76,6 @@
 					justify-content: center
 					font-weight: 500
 		&.active, &.finished
-			background-image: linear-gradient(to top, rgb(247,151,30) 0%, rgb(255,210,0) 100%)
 			p
 				span
 					&:first-child

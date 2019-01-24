@@ -8,7 +8,8 @@ html, body
 +media-breakpoint-down(sm)
 	.container
 		max-width: 100%
-
+img
+	max-width: 100%
 a
 	&:hover
 		text-decoration: none
@@ -16,7 +17,7 @@ a
 // 	background: rgba(0,0,0,.5)
 .tna__title
 	font-weight: 700
-	font-size: r(24px)
+	font-size: 1.35rem
 	margin-bottom: r(20px)
 	text-align: center
 	text-transform: uppercase
@@ -31,6 +32,9 @@ a
 		color: color-get($mau,extra-3)
 	&--main
 		color: color-get($mau, main)
+	@media (min-width: 768px)
+		br
+			display: none
 
 ul, p
 	padding-left: 0

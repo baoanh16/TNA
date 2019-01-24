@@ -279,6 +279,13 @@ $(document).ready(function () {
 	// 	lensFadeOut: 50,
 	// 	scrollZoom: true
 	// });
+	var arr = document.querySelectorAll('.boxzoom')
+	var max = arr[0].clientHeight
+	for (var i = 0; i++; i < arr.length) {
+		if (arr[i].clientHeight >= max) {
+			max = arr[i].clientHeight
+		}
+	} $('.boxzoom').height(max)
 });
 
 

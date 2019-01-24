@@ -81,15 +81,7 @@ script(src='//oss.maxcdn.com/respond/1.4.2/respond.min.js')
 				<div class="desktop-container container">
 					<div class="row no-gutters menu-wrap">
 						<div class="logo-wrap">
-							<a href="/">
-								<div class="logo">
-									<img class="desktop" src="/Data/Sites/1/skins/default/img/logo_1.png" alt="logo">
-									<img class="mobile" src="/Data/Sites/1/skins/default/img/logo_2.png" alt="logo">
-								</div>
-								<div class="logo-text">
-									<h2>TNA IT SOLUTION</h2><span>Together we grow</span>
-								</div>
-							</a>
+							<portal:modulewrapper id="mdl277" runat="server" configuremoduleid="277" />
 						</div>
 						<div class="main-navbar">
 							<div class="toolbar">

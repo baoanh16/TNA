@@ -94,55 +94,56 @@
 					right: 80px
 					font-size: 18px
 					line-height: 30px
+					display: none
 					+media-breakpoint-up(sm)
-						display: none
 					span.fas
 						width: 20px
 						color: darken(white,40%)
 				.search-panel
-					position: fixed
-					top: 0
-					left: 0
-					width: 100%
-					height: 60px
-					background: white
-					z-index: 10
-					+tr(.4)
-					+media-breakpoint-up(sm)
-						max-width: 200px
-						position: initial
-						width: 200px
-					+media-breakpoint-down(xs)
-						transform: translateX(-100%)
-						&.active
-							transform: translateX(0)
+					// position: fixed
+					// top: 0
+					// left: 0
+					// width: 100%
+					// height: 60px
+					// background: white
+					// z-index: 10
+					// +tr(.4)
+					// +media-breakpoint-up(sm)
+					// 	max-width: 200px
+					// 	position: initial
+					// 	width: 200px
+					// +media-breakpoint-down(xs)
+					// 	transform: translateX(-100%)
+					// 	&.active
+					// 		transform: translateX(0)
 					.search-turn-off
-						position: absolute
-						top: 0
-						right: 0
-						width: 10%
-						height: 100%
-						+mainGradRev
-						display: flex
-						justify-content: center
-						align-items: center
-						color: white
-						font-size: r(18px)
-						+media-breakpoint-up(sm)
-							display: none
+						// position: absolute
+						// top: 0
+						// right: 0
+						// width: 10%
+						// height: 100%
+						// +mainGradRev
+						// display: flex
+						// justify-content: center
+						// align-items: center
+						// color: white
+						// font-size: r(18px)
+						// +media-breakpoint-up(sm)
+						display: none
 					.searchbox
 						width: 100%
 						height: 100%
 						display: flex
 						justify-content: center
 						align-items: center
-						+media-breakpoint-up(sm)
-							position: relative
+						position: relative
+						padding: 15px
+						// +media-breakpoint-up(sm)
 						input
 							height: 30px
-							width: 80%
+							width: 100%
 							+formcontrol
-							margin-right: 10%
+							// margin-right: 10%
 							+formfocus
 							+media-breakpoint-up(sm)
 								margin-right: 0
@@ -151,7 +152,7 @@
 							cursor: pointer
 							position: absolute
 							top: 15px
-							right: 15%
+							right: 15px
 							height: 30px
 							width: 30px
 							font-size: 0
@@ -177,9 +178,11 @@
 					line-height: 20px
 			.logo-wrap
 				@media (max-width: 991px)
-					a
+					.ModuleContent
 						display: flex
-						.logo-text
+					.logo-text
+						display: flex
+						a
 							display: inline-flex
 							flex-direction: column
 							color: lighten(black, 20%)
@@ -188,9 +191,11 @@
 								font-weight: 700
 								font-size: r(16px)
 								margin-bottom: 0
+								color: #333
 							span
 								font-weight: 500
 								font-size: r(11px)
+								color: #333
 				.logo
 					.desktop
 						max-height: 70px
@@ -378,11 +383,13 @@
 							font-weight: 700
 							font-size: r(18px)
 							margin-bottom: 0
+							color: #333
 							+media-breakpoint-up(xl)
 								font-size: r(24px)
 						span
 							font-weight: 500
 							font-size: r(13px)
+							color: #333
 							+media-breakpoint-up(xl)
 								font-size: r(15px)
 				.main-navbar
@@ -412,7 +419,8 @@
 								top: 74px
 								display: flex
 								height: initial
-								padding: 10px
+								// padding: 10px
+								width: 320px
 								background: color-rgba(color-get($mau, main), .2)
 								transform: translateY(10px)
 								opacity: 0
@@ -423,7 +431,8 @@
 									visibility: visible
 									
 								button
-									top: 0
+									top: 15px
+									right: 15px
 						.user
 							+borderHeader
 							padding: 0 10px

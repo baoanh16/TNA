@@ -4,7 +4,7 @@ export class Home6 {
 			let carouselSlider = tns({
 				loop: true,
 				container: '.canhcam-home-6 .wrap-partner',
-				items: 1,
+				items: 2,
 				mouseDrag: true,
 				controls: true,
 				controlsContainer: "#home6-controls",
@@ -14,12 +14,13 @@ export class Home6 {
 				autoplayTimeout: 3000,
 				autoplayButtonOutput: false,
 				gutter: 30,
+				slideBy: 'page',
 				responsive: {
 					500: {
-						items: 2
+						items: 3
 					},
 					768: {
-						items: 3
+						items: 4
 					},
 					992: {
 						items: 6
