@@ -279,13 +279,27 @@ $(document).ready(function () {
 	// 	lensFadeOut: 50,
 	// 	scrollZoom: true
 	// });
-	var arr = document.querySelectorAll('.boxzoom')
-	var max = arr[0].clientHeight
-	for (var i = 0; i++; i < arr.length) {
-		if (arr[i].clientHeight >= max) {
-			max = arr[i].clientHeight
+	function FixSized() {
+		$('.tna-product-item .boxzoom').each(function () {
+			$(this).removeAttr('style')
+		})
+		var max = $('.tna-product-item .boxzoom').height();
+		for (let i = 0; i < $('.tna-product-item .boxzoom').length; i++) {
+			if ($($('.tna-product-item .boxzoom')[i]).height() > max) {
+				max = $($('.tna-product-item .boxzoom')[i]).height();
+			}
 		}
-	} $('.boxzoom').height(max)
+		console.log(max)
+		$('.tna-product-item .boxzoom').each(function () {
+			$(this).height(max)
+		})
+	}
+	$(window).on('scroll', function () {
+		FixSized()
+	})
+	$(window).on('resize', function () {
+		FixSized()
+	})
 });
 
 
@@ -335,4 +349,5 @@ function ProcessAjax(pageurl, obj) {
 $(window).on('resize', function () {
 	$('.backdrop').fadeOut()
 	$('.cc-header .nav').removeClass('active')
+
 })
