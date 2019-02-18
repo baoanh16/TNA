@@ -25,9 +25,11 @@
 				input
 					border: 0
 					background: none
-					width: 87%
 					height: 100%
 					padding: .5rem
+					width: 100%
+					@media (min-width: 992px)
+						width: 87%
 					&:focus
 						outline: none
 				button
@@ -84,6 +86,11 @@
 			.tna-product-item
 				figure
 					margin-bottom: r(30px)
+					figcaption
+						h4 
+							+line(2)
+							height: 50px
+							padding: 0 .5rem
 				&:last-child
 					figure
 						margin-bottom: 0

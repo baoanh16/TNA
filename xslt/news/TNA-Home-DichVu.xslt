@@ -31,7 +31,7 @@
 			<figure>
 				<div class="boxzoom">
 					<img class="lazyload">
-					<xsl:attribute name="data-src">
+					<xsl:attribute name="src">
 						<xsl:value-of select="ImageUrl"></xsl:value-of>
 					</xsl:attribute>
 					<xsl:attribute name="alt">

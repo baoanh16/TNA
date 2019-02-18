@@ -33,7 +33,7 @@
 									<xsl:value-of select="target"></xsl:value-of>
 								</xsl:attribute>
 								<img class="lazyload">
-								<xsl:attribute name="data-src">
+								<xsl:attribute name="src">
 									<xsl:value-of select="ImageUrl"></xsl:value-of>
 								</xsl:attribute>
 								<xsl:attribute name="alt">
@@ -73,7 +73,7 @@
 							<xsl:value-of select="target"></xsl:value-of>
 						</xsl:attribute>
 						<img class="lazyload">
-						<xsl:attribute name="data-src">
+						<xsl:attribute name="src">
 							<xsl:value-of select="ImageUrl"></xsl:value-of>
 						</xsl:attribute>
 						<xsl:attribute name="alt">
@@ -113,7 +113,7 @@
 							<xsl:value-of select="target"></xsl:value-of>
 						</xsl:attribute>
 						<img class="lazyload">
-						<xsl:attribute name="data-src">
+						<xsl:attribute name="src">
 							<xsl:value-of select="ImageUrl"></xsl:value-of>
 						</xsl:attribute>
 						<xsl:attribute name="alt">
@@ -153,7 +153,7 @@
 							<xsl:value-of select="target"></xsl:value-of>
 						</xsl:attribute>
 						<img class="lazyload">
-						<xsl:attribute name="data-src">
+						<xsl:attribute name="src">
 							<xsl:value-of select="ImageUrl"></xsl:value-of>
 						</xsl:attribute>
 						<xsl:attribute name="alt">

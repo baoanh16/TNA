@@ -31,13 +31,17 @@
 									<xsl:value-of select="/ProductDetail/EditLink" disable-output-escaping="yes"></xsl:value-of>
 								</h1>
 								<div class="content price">
-									<div class="content-title price-new">
-										<xsl:value-of select="/ProductDetail/Price"></xsl:value-of>
-										<span>(Giá đã bao gồm VAT)</span>
-									</div>
-									<div class="content-des price-old">
-										<xsl:value-of select="/ProductDetail/OldPrice"></xsl:value-of>
-									</div>
+									<xsl:if test="Price != ''">
+										<div class="content-title price-new">
+											<xsl:value-of select="/ProductDetail/Price"></xsl:value-of>
+											<span>(Giá đã bao gồm VAT)</span>
+										</div>
+									</xsl:if>
+									<xsl:if test="OldPrice != ''">
+										<div class="content-des price-old">
+											<xsl:value-of select="/ProductDetail/OldPrice"></xsl:value-of>
+										</div>
+									</xsl:if>
 								</div>
 								<div class="content">
 									<div class="content-title">Mã sản phẩm</div>
@@ -47,12 +51,24 @@
 								</div>
 								<xsl:value-of select="/ProductDetail/BriefContent" disable-output-escaping="yes"></xsl:value-of>
 								<div class="product-button">
-									<a class="btn addcart" onclick="AjaxCart.addproducttocart_catalog(this);return false;">
-										<xsl:attribute name="data-productid">
-											<xsl:value-of select="/ProductDetail/ProductId"></xsl:value-of>
-										</xsl:attribute>
-										Mua ngay
-									</a>
+									<xsl:choose>
+										<xsl:when test="Price != ''">
+											<a class="btn addcart" onclick="AjaxCart.addproducttocart_catalog(this);return false;">
+												<xsl:attribute name="data-productid">
+													<xsl:value-of select="/ProductDetail/ProductId"></xsl:value-of>
+												</xsl:attribute>
+												Mua ngay
+											</a>
+										</xsl:when>
+										<xsl:otherwise>
+											<a class="btn addcart" href="tel:0977212455">
+												<xsl:attribute name="data-productid">
+													<xsl:value-of select="/ProductDetail/ProductId"></xsl:value-of>
+												</xsl:attribute>
+												Liên Hệ
+											</a>
+										</xsl:otherwise>
+									</xsl:choose>
 								</div>
 								<div class="product-hotline">
 									<p>

@@ -59,15 +59,35 @@
 							<xsl:value-of select="Code"></xsl:value-of>
 						</div>
 						<div class="price">
+					<xsl:choose>
+						<xsl:when test="Price != ''">
 							<xsl:value-of select="Price"></xsl:value-of>
+						</xsl:when>
+						<xsl:otherwise>
+							<xsl:text>Liên Hệ</xsl:text>
+						</xsl:otherwise>
+					</xsl:choose>
 						</div>
-						<a class="addcart"  onclick="AjaxCart.addproducttocart_catalog(this);return false;">
-										<xsl:attribute name="data-productid">
-											<xsl:value-of select="ProductId"></xsl:value-of>
-										</xsl:attribute>
-							<!-- <xsl:value-of select="/ProductList/BuyText"></xsl:value-of> -->
-							Thêm vào giỏ hàng
-						</a>
+						<xsl:choose>
+							<xsl:when test="Price != ''">
+								<a class="addcart"  onclick="AjaxCart.addproducttocart_catalog(this);return false;">
+									<xsl:attribute name="data-productid">
+										<xsl:value-of select="ProductId"></xsl:value-of>
+									</xsl:attribute>
+									<!-- <xsl:value-of select="/ProductList/BuyText"></xsl:value-of> -->
+									Thêm vào giỏ hàng
+								</a>
+							</xsl:when>
+							<xsl:otherwise>
+								<a class="addcart" disabled="">
+								<xsl:attribute name="href">
+									<xsl:value-of select="Url"></xsl:value-of>
+								</xsl:attribute>
+									<!-- <xsl:value-of select="/ProductList/BuyText"></xsl:value-of> -->
+								<xsl:text>Chi tiết sản phẩm</xsl:text>
+								</a>
+							</xsl:otherwise>
+						</xsl:choose>
 					</figcaption>
 				</figure>
 			</div>

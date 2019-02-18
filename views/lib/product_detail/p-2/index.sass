@@ -4,21 +4,21 @@
 		.nav-control
 			ul
 				display: flex
-				justify-content: center
 				align-items: center
-				flex-direction: column
+				flex-direction: row
+				justify-content: flex-start
 				list-style: none
 				padding-left: 0
 				margin-bottom: 0
 				li
 					a
-						padding: .93rem 2rem
+						padding: .5rem .85rem
+						font-size: r(14px)
 						background: #ebebeb
 						color: #333333
 						font-weight: 500
-						font-size: r(16px)
 						display: block
-						margin-bottom: .5rem
+						// margin-bottom: .5rem
 						&.active
 							background: #1f5d9d
 							color: #ffffff
@@ -36,10 +36,10 @@
 		.product-list
 			.nav-control
 				ul
-					flex-direction: row
-					justify-content: flex-start
 					li
 						a
+							padding: .93rem 2rem
+							font-size: r(16px)
 							margin-bottom: 0
 						+ li
 							a

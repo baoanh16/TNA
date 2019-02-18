@@ -65,7 +65,7 @@
 	</xsl:template>
 
 	<xsl:template match="Product">
-		<div class="col-sm-6 col-lg-4 tna-product-item">
+		<div class="col-6 col-sm-4 col-md-3 tna-product-item">
 			<figure>
 				<div class="boxzoom">
 					<a>
@@ -120,9 +120,14 @@
 						<xsl:value-of select="Code"></xsl:value-of>
 					</div>
 					<div class="price">
-						<xsl:if test="Price != ''">
+					<xsl:choose>
+						<xsl:when test="Price != ''">
 							<xsl:value-of select="Price"></xsl:value-of>
-						</xsl:if>
+						</xsl:when>
+						<xsl:otherwise>
+							<xsl:text>Liên Hệ</xsl:text>
+						</xsl:otherwise>
+					</xsl:choose>
 					</div>
 				</figcaption>
 			</figure>

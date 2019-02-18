@@ -4,7 +4,7 @@ export class Carousel1 {
 			let carouselSlider = tns({
 				loop: true,
 				container: '.canhcam-carousel-1 .carousel-body',
-				items: 1,
+				items: 2.5,
 				mouseDrag: true,
 				controls: true,
 				controlsContainer: "#carousel-controls",
@@ -13,7 +13,7 @@ export class Carousel1 {
 				gutter: 30,
 				responsive: {
 					500: {
-						items: 2
+						items: 3
 					},
 					768: {
 						items: 3

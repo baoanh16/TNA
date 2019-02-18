@@ -16,7 +16,7 @@
 					<xsl:text>nav-item child</xsl:text>
 				</xsl:attribute>
 			</xsl:if>
-			<!-- <xsl:if test="IsActive='true' and count(Zone)>0">
+			<xsl:if test="IsActive='true' and count(Zone)>0">
 				<xsl:attribute name="class">
 					<xsl:text>nav-item child active</xsl:text>
 				</xsl:attribute>
@@ -25,7 +25,7 @@
 				<xsl:attribute name="class">
 					<xsl:text>nav-item active</xsl:text>
 				</xsl:attribute>
-			</xsl:if> -->
+			</xsl:if>
 				
 			<a class="nav-link">
 				<xsl:attribute name="href">
