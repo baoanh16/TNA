@@ -61,7 +61,7 @@
 											</a>
 										</xsl:when>
 										<xsl:otherwise>
-											<a class="btn addcart" href="tel:0977212455">
+											<a class="btn addcart" onclick="AjaxCart.addproducttocart_catalog(this);return false;">
 												<xsl:attribute name="data-productid">
 													<xsl:value-of select="/ProductDetail/ProductId"></xsl:value-of>
 												</xsl:attribute>

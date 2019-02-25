@@ -93,14 +93,11 @@
 						</a>
 					</xsl:if>
 					<a class="btn btn-next" onclick="setLocation('/dang-nhap');return false;">
-						<!-- <xsl:attribute name="onclick"> -->
-							<!-- <xsl:text>setLocation('</xsl:text>
+						<!-- <xsl:attribute name="onclick">
+							<xsl:text>setLocation('</xsl:text>
 							<xsl:value-of select="/ShoppingCart/CheckoutPageUrl"></xsl:value-of>
-							<xsl:text>')</xsl:text> -->
-							<!-- <xsl:text>setLocation('</xsl:text>
-							<xsl:value-of select="/ShoppingCart/CheckoutPageUrl"></xsl:value-of>
-							<xsl:text>')</xsl:text> -->
-						<!-- </xsl:attribute> -->
+							<xsl:text>')</xsl:text>
+						</xsl:attribute> -->
 						<span>
 							<xsl:value-of select="/ShoppingCart/CheckoutProcessText"></xsl:value-of>
 						</span>
@@ -144,13 +141,14 @@
 						<p>
 							<xsl:value-of select="Code" disable-output-escaping="yes"></xsl:value-of>
 						</p>
+            <xsl:apply-templates select="Attributes"></xsl:apply-templates>
 					</figcaption>
 				</figure>
-				<div class="removeproduct">
-					<a onclick="AjaxCart.removefromcart(this);return false;">
+				<div class="removeproduct" onclick="AjaxCart.removefromcart(this);return false;">
 						<xsl:attribute name="data-itemguid">
 							<xsl:value-of select="ItemGuid"></xsl:value-of>
 						</xsl:attribute>
+					<a >
 						<span class="mdi mdi-close"></span>
 						<!-- <xsl:text>Bỏ sản phẩm</xsl:text> -->
 						<!--<xsl:value-of select="/ShoppingCart/RemoveText"></xsl:value-of>-->
@@ -172,14 +170,7 @@
 					</div>
 				</xsl:if>
 				<div class="new">
-				
-					<xsl:choose>
-						<xsl:when test="Price != ''">
-							<xsl:value-of select="OriginalPrice"></xsl:value-of>
-						</xsl:when>
-						<xsl:otherwise>N/A</xsl:otherwise>
-					</xsl:choose>
-					<!-- <xsl:value-of select="OriginalPrice"></xsl:value-of> -->
+					<xsl:value-of select="OriginalPrice"></xsl:value-of>
 				</div>
 				<xsl:if test="DiscountPercentage !=''">
 					<div class="sale">
@@ -211,6 +202,18 @@
 		</tr>
 	</xsl:template>
 
+  <xsl:template match="Attributes">
+    <div class="size">
+      <xsl:value-of select="Title"></xsl:value-of>
+      <xsl:text>: </xsl:text>
+      <xsl:apply-templates select="Options"></xsl:apply-templates>
+    </div>
+  </xsl:template>
+  <xsl:template match="Options">
+    <xsl:if test="IsActive='true'">
+      <xsl:value-of select="Title"></xsl:value-of>
+    </xsl:if>
+  </xsl:template>
 	<!-- <xsl:template match="CartItem" mode="Gifts">
 		<xsl:if test="GiftDescription!=''">
 			<div class="row flex flex-wrap">

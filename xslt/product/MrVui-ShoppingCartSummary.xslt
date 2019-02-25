@@ -144,14 +144,7 @@
 			</td>
 			<td>
 				<p class="price">
-					<xsl:choose>
-						<xsl:when test="Price != ''">
-							<xsl:value-of select="Price"></xsl:value-of>
-						</xsl:when>
-						<xsl:otherwise>
-							<xsl:text>N/A</xsl:text>
-						</xsl:otherwise>
-					</xsl:choose>
+					<xsl:value-of select="Price"></xsl:value-of>
 				</p>
 				<p> <span>x </span>
 					<span class="quantity">
