@@ -51,14 +51,14 @@
 								</div>
 								<xsl:value-of select="/ProductDetail/BriefContent" disable-output-escaping="yes"></xsl:value-of>
 								<div class="product-button">
-									<xsl:choose>
-										<xsl:when test="Price != ''">
 											<a class="btn addcart" onclick="AjaxCart.addproducttocart_catalog(this);return false;">
 												<xsl:attribute name="data-productid">
 													<xsl:value-of select="/ProductDetail/ProductId"></xsl:value-of>
 												</xsl:attribute>
 												Mua ngay
 											</a>
+									<!-- <xsl:choose>
+										<xsl:when test="Price != ''">
 										</xsl:when>
 										<xsl:otherwise>
 											<a class="btn addcart" onclick="AjaxCart.addproducttocart_catalog(this);return false;">
@@ -68,7 +68,7 @@
 												Liên Hệ
 											</a>
 										</xsl:otherwise>
-									</xsl:choose>
+									</xsl:choose> -->
 								</div>
 								<div class="product-hotline">
 									<p>
